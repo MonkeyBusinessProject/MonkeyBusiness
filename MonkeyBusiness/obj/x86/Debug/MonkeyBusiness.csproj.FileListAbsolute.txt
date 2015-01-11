@@ -1,0 +1,8 @@
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.csprojResolveAssemblyReference.cache
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.exe
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.pdb
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\GameStateManager.dll
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\GameStateManager.pdb
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb
