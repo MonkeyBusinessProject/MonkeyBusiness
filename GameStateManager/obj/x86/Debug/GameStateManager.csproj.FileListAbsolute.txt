@@ -1,0 +1,11 @@
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\GameStateManager\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\GameStateManager\bin\x86\Debug\GameStateManager.dll
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\GameStateManager\bin\x86\Debug\GameStateManager.pdb
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\GameStateManager\obj\x86\Debug\GameStateManager.dll
+c:\users\user1\documents\visual studio 2010\Projects\MonkeyBusiness\GameStateManager\obj\x86\Debug\GameStateManager.pdb
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\obj\x86\Debug\GameStateManager.csprojResolveAssemblyReference.cache
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\obj\x86\Debug\GameStateManager.dll
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\bin\x86\Debug\GameStateManager.dll
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\bin\x86\Debug\GameStateManager.pdb
+C:\Users\ALLFAMILY\Documents\MonkeyBusiness\GameStateManager\obj\x86\Debug\GameStateManager.pdb
