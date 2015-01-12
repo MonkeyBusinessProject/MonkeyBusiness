@@ -10,7 +10,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.MiniGames
 {
-    class Level01 : MiniGame
+    class Level02 : MiniGame
     {
         Player player;
         private Texture2D SpriteTexture;
@@ -20,7 +20,7 @@ namespace MonkeyBusiness.MiniGames
         /// Constractor
         /// </summary>
         /// <param name="manager">The game state manager</param>
-        public Level01(Manager manager) : base(manager)
+        public Level02(Manager manager) : base(manager)
         {
         }
 
@@ -65,7 +65,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void LoadContent()
         {
-            SpriteTexture = Content.Load<Texture2D>("monkey");
+            SpriteTexture = Content.Load<Texture2D>("monkey2");
             Vector2 pos = new Vector2(100, 100);
 
 

@@ -86,6 +86,18 @@ namespace MonkeyBusiness.MiniGames
         /// <summary>
         /// Unload content (if needed)
         /// </summary>
-        public override void UnloadContent() { }
+        public override void UnloadContent()
+        {
+            try
+            {
+                UpdateGraphicDevices();
+                graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+                objects.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

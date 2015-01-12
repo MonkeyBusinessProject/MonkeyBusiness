@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="GameStateManager\Manager.cs" />
     <Compile Include="GameStateManager\MiniGame.cs" />
+    <Compile Include="MiniGames\Copy of Level01.cs" />
     <Compile Include="MiniGames\Level01.cs" />
     <Compile Include="MiniGames\LevelSample.cs" />
     <Compile Include="Objects\InteractiveObject.cs" />

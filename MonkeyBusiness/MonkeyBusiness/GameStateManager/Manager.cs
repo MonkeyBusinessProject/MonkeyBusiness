@@ -21,8 +21,8 @@ namespace GameStateManager
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        Queue<MiniGame> miniGames = new Queue<MiniGame>();
-        Queue<MiniGame> miniGamesDone = new Queue<MiniGame>();
+        Stack<MiniGame> miniGames = new Stack<MiniGame>();
+        Stack<MiniGame> miniGamesDone = new Stack<MiniGame>();
         MiniGame miniGame;
         public int count = 0;// TODO: remove, just for debugging
         bool isRunning = false;
@@ -110,6 +110,20 @@ namespace GameStateManager
 
             if(isRunning)
                 miniGame.Update(gameTime);
+            //// TODO: Remove
+            /*
+            if (count == 100)
+            {
+                NextMiniGame();
+            }
+            if (count == 200)
+            {
+                LastMiniGame();
+                count = 0;
+            }
+            count++;
+             */
+            ////
 
             base.Update(gameTime);
         }
@@ -135,7 +149,9 @@ namespace GameStateManager
         private void AddAllMiniGames()
         {
             // TODO: Add all mini-games
-            miniGames.Enqueue(new Level01(this));
+            miniGames.Push(new Level02(this));
+            miniGames.Push(new Level01(this));
+
         }
 
         private void FirstMiniGame()
@@ -158,8 +174,21 @@ namespace GameStateManager
             try
             {
                 miniGame.UnloadContent();
-                miniGamesDone.Enqueue(miniGame);
-                miniGames.Dequeue();
+                miniGamesDone.Push(miniGames.Pop());
+                FirstMiniGame();
+                miniGame.LoadContent();
+            }
+            catch (Exception ex)
+            {
+                isRunning = false;
+            }
+        }
+        private void PreviousMiniGame()
+        {
+            try
+            {
+                miniGame.UnloadContent();
+                miniGames.Push(miniGamesDone.Pop());
                 FirstMiniGame();
                 miniGame.LoadContent();
             }
