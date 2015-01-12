@@ -16,35 +16,53 @@ namespace MonkeyBusiness.MiniGames
         private Texture2D SpriteTexture;
         List<DrawableObject> objects = new List<DrawableObject>();
 
+        /// <summary>
+        /// Constractor
+        /// </summary>
+        /// <param name="manager">The game state manager</param>
         public Level01(Manager manager) : base(manager)
         {
-
         }
 
+        /// <summary>
+        /// Initialization code.
+        /// Add whatever you want.
+        /// </summary>
         public override void Initialize() {
             manager.IsMouseVisible = true;
         }
 
+        /// <summary>
+        /// Draw all objects on screen.
+        /// </summary>
         public override void Draw()
         {
-            GetGraphicDevice();
+            UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
-            foreach(DrawableObject drawableObject in objects)
-                drawableObject.Draw(spriteBatch);
-            manager.score.Draw(spriteBatch);
+            Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
 
             spriteBatch.End();
         }
 
+        /// <summary>
+        /// Update all objects' state
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
             player.HandleInput();
-            foreach(InteractiveObject interactiveObject in objects)
-                interactiveObject.Update(gameTime);
+
+            Utillities.UpdateAllObjects(objects, gameTime, viewport);
         }
 
+        /// <summary>
+        /// Load content
+        /// Here you should:
+        ///     1. Load objects' textures
+        ///     2. Add all objects to the object' list
+        /// </summary>
         public override void LoadContent()
         {
             SpriteTexture = Content.Load<Texture2D>("monkey");
@@ -57,6 +75,20 @@ namespace MonkeyBusiness.MiniGames
             objects.Add(player);
         }
 
-        public override void UnloadContent() { }
+        /// <summary>
+        /// Unload content (if needed)
+        /// </summary>
+        public override void UnloadContent()
+        {
+            try
+            {
+                UpdateGraphicDevices();
+                graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

@@ -10,6 +10,7 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using MonkeyBusiness.MiniGames;
 using MonkeyBusiness.Objects;
+using MonkeyBusiness;
 
 namespace GameStateManager
 {
@@ -20,9 +21,10 @@ namespace GameStateManager
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        List<MiniGame> miniGames = new List<MiniGame>();
+        Queue<MiniGame> miniGames = new Queue<MiniGame>();
+        Queue<MiniGame> miniGamesDone = new Queue<MiniGame>();
         MiniGame miniGame;
-        public int count = 0;
+        public int count = 0;// TODO: remove, just for debugging
         bool isRunning = false;
         public Score score;
 
@@ -133,7 +135,7 @@ namespace GameStateManager
         private void AddAllMiniGames()
         {
             // TODO: Add all mini-games
-            miniGames.Add(new Level01(this));
+            miniGames.Enqueue(new Level01(this));
         }
 
         private void FirstMiniGame()
@@ -156,7 +158,8 @@ namespace GameStateManager
             try
             {
                 miniGame.UnloadContent();
-                miniGames.Remove(miniGame);
+                miniGamesDone.Enqueue(miniGame);
+                miniGames.Dequeue();
                 FirstMiniGame();
                 miniGame.LoadContent();
             }

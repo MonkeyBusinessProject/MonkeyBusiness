@@ -14,17 +14,25 @@ namespace GameStateManager
         protected GraphicsDeviceManager graphics;
         protected SpriteBatch spriteBatch;
         protected ContentManager Content;
+        protected Viewport viewport;
+
 
         public MiniGame(Manager manager)
         {
             this.manager = manager;
-            GetGraphicDevice();
+            UpdateGraphicDevices();
             this.Content = manager.Content;
         }
-        public void GetGraphicDevice()
+        public void UpdateGraphicDevices()
         {
-            this.graphics = manager.getGraphicDevice();
-            this.spriteBatch = manager.getSpriteBatch();
+            try
+            {
+                this.graphics = manager.getGraphicDevice();
+                this.spriteBatch = manager.getSpriteBatch();
+                this.viewport = manager.GraphicsDevice.Viewport;
+            }catch(Exception ex){
+
+            }
         }
         public abstract void Initialize();
         public abstract void Draw();

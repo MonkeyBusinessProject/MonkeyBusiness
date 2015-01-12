@@ -10,46 +10,66 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.MiniGames
 {
-    //TODO : change class name
-    //TODO: add your mini game to the manager
+    // TODO: change class name
+    // TODO: add your mini game to the manager
     class LevelSample : MiniGame
     {
         #region Fields
+        // TODO: add all objects
         List<DrawableObject> objects = new List<DrawableObject>();
         #endregion
 
+        /// <summary>
+        /// Constractor
+        /// </summary>
+        /// <param name="manager">The game state manager</param>
         public LevelSample(Manager manager)
             : base(manager)
         {
-
+            // TODO: Change constractor's name
         }
 
+        /// <summary>
+        /// Initialization code.
+        /// Add whatever you want.
+        /// </summary>
         public override void Initialize()
         {
             manager.IsMouseVisible = true;//Or not...
         }
 
+        /// <summary>
+        /// Draw all objects on screen.
+        /// </summary>
         public override void Draw()
         {
-            GetGraphicDevice();
+            UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
-            foreach (DrawableObject drawableObject in objects)
-                drawableObject.Draw(spriteBatch);
-            manager.score.Draw(spriteBatch);
+            Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
 
             spriteBatch.End();
         }
 
+        /// <summary>
+        /// Update all objects' state
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            //TODO: Handle input
+            // TODO: Handle input
             //Example:          player.HandleInput();
-            foreach (InteractiveObject thisObject in objects)
-                thisObject.Update(gameTime);
+
+            Utillities.UpdateAllObjects(objects, gameTime, viewport);
         }
 
+        /// <summary>
+        /// Load content
+        /// Here you should:
+        ///     1. Load objects' textures
+        ///     2. Add all objects to the object' list
+        /// </summary>
         public override void LoadContent()
         {
             //TODO: Load Content
@@ -63,6 +83,9 @@ namespace MonkeyBusiness.MiniGames
             //Example:            objects.Add(player);
         }
 
+        /// <summary>
+        /// Unload content (if needed)
+        /// </summary>
         public override void UnloadContent() { }
     }
 }
