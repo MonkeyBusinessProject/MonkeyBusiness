@@ -58,7 +58,7 @@ namespace GameStateManager
 
             AddAllMiniGames();
 
-            FirstMiniGame();
+            SetFirstMiniGameAsCurrent();
             base.Initialize();
         }
 
@@ -149,51 +149,46 @@ namespace GameStateManager
         private void AddAllMiniGames()
         {
             // TODO: Add all mini-games
+            //Add in reversed order
             miniGames.Push(new Level02(this));
             miniGames.Push(new Level01(this));
 
         }
 
-        private void FirstMiniGame()
+        private void SetFirstMiniGameAsCurrent()
         {
-            try
+            if (miniGames.Count != 0)
             {
                 miniGame = miniGames.First<MiniGame>();
                 miniGame.Initialize();
                 isRunning = true;
-            }
-            catch (Exception ex)
-            {
+            }else{
                 isRunning = false;
                 //TODO: stop running alert
             }
         }
 
-        private void NextMiniGame()
+        private void SetNextMiniGameAsCurrent()
         {
-            try
+            if (miniGames.Count != 0)
             {
                 miniGame.UnloadContent();
                 miniGamesDone.Push(miniGames.Pop());
-                FirstMiniGame();
+                SetFirstMiniGameAsCurrent();
                 miniGame.LoadContent();
-            }
-            catch (Exception ex)
-            {
+            }else{
                 isRunning = false;
             }
         }
-        private void PreviousMiniGame()
+        private void SetPreviousMiniGameAsCurrent()
         {
-            try
+            if (miniGamesDone.Count != 0)
             {
                 miniGame.UnloadContent();
                 miniGames.Push(miniGamesDone.Pop());
-                FirstMiniGame();
+                SetFirstMiniGameAsCurrent();
                 miniGame.LoadContent();
-            }
-            catch (Exception ex)
-            {
+            }else{
                 isRunning = false;
             }
         }
