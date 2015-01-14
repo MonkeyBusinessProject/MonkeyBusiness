@@ -25,10 +25,20 @@ namespace MonkeyBusiness.Objects
         /// This function allows the player to move toward a target.
         /// </summary>
         /// <param name="target">Vector2. Stores the target destination.</param>
-        public void GoToTarget(Vector2 target)
+        public void GoToTarget()
         {
             Vector2 velocity = speed * Utillities.Normalize(this.target - this.center);
             this.SetVelocity(velocity);
+        }
+
+        private void SetTarget(Vector2 target)
+        {
+            this.target = target;
+        }
+
+        private void SetTarget(float X, float Y)
+        {
+            this.target = new Vector2(X, Y);
         }
 
         /// <summary>
@@ -44,13 +54,31 @@ namespace MonkeyBusiness.Objects
                 this.SetVelocity(Vector2.Zero);
                 this.SetCenter(this.target);
             }
-
+            
             //If halting time had passed or outside screen
-            if (HaltingTimePassed(gameTime) || OutsideScreen(viewport))
+            base.StopIfNeeded(gameTime, viewport);
+        }
+
+        protected override void IsOutsideScreen(Viewport viewport)
+        {
+            if (this.position.X < 0)
             {
-                this.SetVelocity(Vector2.Zero);
-                this.target = this.center;
+                SetTarget(this.width / 2, this.target.Y);
             }
+            if (this.position.Y < 0)
+            {
+                SetTarget(this.target.X, this.height / 2);
+            }
+            if (this.position.X > viewport.Width - this.width)
+            {
+                SetTarget(viewport.Width - this.width / 2, this.target.Y);
+            }
+            if (this.position.Y > viewport.Height - this.height)
+            {
+                SetTarget(this.target.X, viewport.Height - this.height / 2);
+            }
+            base.IsOutsideScreen(viewport);
+            
         }
 
         #region Input
@@ -73,9 +101,9 @@ namespace MonkeyBusiness.Objects
         public void HandleMouse(MouseState currentMouseState)
         {
             if (currentMouseState.LeftButton == ButtonState.Pressed)
-                this.target = new Vector2(currentMouseState.X, currentMouseState.Y);
+                SetTarget(currentMouseState.X, currentMouseState.Y);
             if(target != new Vector2(-1, -1))
-                GoToTarget(this.target);
+                GoToTarget();
         }
 
         /// <summary>

@@ -98,8 +98,9 @@ namespace MonkeyBusiness.Objects
         /// <param name="viewport"></param>
         virtual protected void StopIfNeeded(GameTime gameTime, Viewport viewport)
         {
-            if (HaltingTimePassed(gameTime) || OutsideScreen(viewport))
+            if (HaltingTimePassed(gameTime))
                 this.SetVelocity(Vector2.Zero);
+            IsOutsideScreen(viewport);
         }
 
         /// <summary>
@@ -107,31 +108,29 @@ namespace MonkeyBusiness.Objects
         /// </summary>
         /// <param name="viewport"></param>
         /// <returns></returns>
-        protected bool OutsideScreen(Viewport viewport)
+        virtual protected void IsOutsideScreen(Viewport viewport)
         {
             
             if (this.position.X < 0)
             {
                 SetPosition(0, this.position.Y);
-                return true;
+                SetVelocity(0, this.velocity.Y);
             }
             if (this.position.Y < 0)
             {
                 SetPosition(this.position.X, 0);
-                return true;
+                SetVelocity(this.velocity.X, 0);
             }
             if (this.position.X > viewport.Width - this.width)
             {
-                this.center = new Vector2(viewport.Width - this.width, this.position.Y);
-                return true;
+                SetPosition(viewport.Width - this.width, this.position.Y);
+                SetVelocity(0, this.velocity.Y);
             }
             if (this.position.Y > viewport.Height - this.height)
             {
-                this.center = new Vector2(this.position.X, viewport.Height - this.height);
-                return true;
+                SetPosition(this.position.X, viewport.Height - this.height);
+                SetVelocity(this.velocity.X, 0);
             }
-
-            return false;
         }
 
         /// <summary>

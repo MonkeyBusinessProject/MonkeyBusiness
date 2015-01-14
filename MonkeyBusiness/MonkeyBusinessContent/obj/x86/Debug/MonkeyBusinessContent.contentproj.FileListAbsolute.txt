@@ -1,1 +1,2 @@
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\MonkeyBusinessContent.contentprojResolveAssemblyReference.cache
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\MonkeyBusinessContent.contentprojResolveAssemblyReference.cache

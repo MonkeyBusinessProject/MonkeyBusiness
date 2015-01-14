@@ -29,12 +29,12 @@ namespace GameStateManager
         public Score score;
 
         #region get and set
-        public GraphicsDeviceManager getGraphicDevice()
+        public GraphicsDeviceManager GetGraphicDevice()
         {
             return graphics;
         }
 
-        public SpriteBatch getSpriteBatch()
+        public SpriteBatch GetSpriteBatch()
         {
             return spriteBatch;
         }
@@ -56,8 +56,6 @@ namespace GameStateManager
         protected override void Initialize()
         {
 
-            score = new Score(Content.Load<SpriteFont>("Score"));
-
             AddAllMiniGames();
 
             FirstMiniGame();
@@ -73,6 +71,8 @@ namespace GameStateManager
         /// </summary>
         protected override void LoadContent()
         {
+            score = new Score(Content.Load<SpriteFont>("Score"));
+
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 

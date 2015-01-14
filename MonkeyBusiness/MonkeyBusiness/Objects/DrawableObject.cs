@@ -12,19 +12,18 @@ namespace MonkeyBusiness.Objects
         #region Fields
         private Texture2D texture;
         protected Vector2 position;
-        private int textureHeight, textureWidth;
         protected int height
         {
             get
             {
-                return this.textureHeight;
+                return texture.Height;
             }
         }
         protected int width
         {
             get
             {
-                return this.textureWidth;
+                return texture.Width;
             }
         }
 
@@ -35,7 +34,6 @@ namespace MonkeyBusiness.Objects
         public DrawableObject(Texture2D texture, Vector2 position)
         {
             LoadTexture(texture);
-            this.position = new Vector2(position.X, position.Y);
             this.position = position;
         }
 
@@ -56,8 +54,6 @@ namespace MonkeyBusiness.Objects
         public void LoadTexture(Texture2D texture)
         {
             this.texture = texture;
-            textureHeight = texture.Height;
-            textureWidth = texture.Width;
         }
     }
 }

@@ -27,8 +27,8 @@ namespace GameStateManager
         {
             try
             {
-                this.graphics = manager.getGraphicDevice();
-                this.spriteBatch = manager.getSpriteBatch();
+                this.graphics = manager.GetGraphicDevice();
+                this.spriteBatch = manager.GetSpriteBatch();
                 this.viewport = manager.GraphicsDevice.Viewport;
             }catch(Exception ex){
 
