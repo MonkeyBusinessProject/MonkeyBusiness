@@ -12,10 +12,14 @@ namespace GameStateManager
     {
         protected Manager manager;
         protected GraphicsDeviceManager graphics;
+        protected GraphicsDevice device;
         protected SpriteBatch spriteBatch;
         protected ContentManager Content;
         protected Viewport viewport;
-
+        protected Texture2D backgroundTexture;
+        protected Texture2D foregroundTexture;
+       
+ 
 
         public MiniGame(Manager manager)
         {
