@@ -88,17 +88,25 @@ namespace MonkeyBusiness.MiniGames
             MonkeyTexture = Content.Load<Texture2D>("monkey");
             CanTexture = Content.Load<Texture2D>("TrashCan");
 
-            Vector2 monkeyPos = new Vector2();
-            Vector2 canPos = new Vector2();
-
-            trashcan = new InteractiveObject(CanTexture, canPos);
+            Vector2 monkeyPos = CreateRandomPosition();
+            Vector2 canPos = new Vector2(viewport.Bounds.Center.X,viewport.Bounds.Center.Y);
+            
             player = new Player(MonkeyTexture, monkeyPos);
+            trashcan = new InteractiveObject(CanTexture, canPos);
+            
             // fix next line
             // CreateTrash(10, player.Width, GraphicsDevice.Viewport.Bounds.Width, player.Height, GraphicsDevice.Viewport.Bounds.Height);
             //TODO: Load to objects' list
-
-            objects.Add(player);
             objects.Add(trashcan);
+            objects.Add(player);
+            
+        }
+
+        private Vector2 CreateRandomPosition()
+        {
+            Random rnd = new Random();
+           
+            return new Vector2(rnd.Next(0,viewport.Width), rnd.Next(0, viewport.Height));
         }
         #region trash creation
         private void CreateTrash(int number, float minX, float maxX, float minY, float maxY)
