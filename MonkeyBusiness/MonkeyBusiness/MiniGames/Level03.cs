@@ -76,7 +76,7 @@ namespace MonkeyBusiness.MiniGames
         {
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("mall backround");
+            backgroundTexture = Content.Load<Texture2D>("mallBackground");
 
 
             MonkeyTexture = Content.Load<Texture2D>("monkey");

@@ -77,8 +77,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mall background.jpg">
-      <Name>mall background</Name>
+    <Compile Include="mallBackground.jpg">
+      <Name>mallBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="money.jpg">
+      <Name>money</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

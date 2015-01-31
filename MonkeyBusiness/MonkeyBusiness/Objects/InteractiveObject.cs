@@ -13,6 +13,18 @@ namespace MonkeyBusiness.Objects
         #region Fields
         Vector2 velocity = Vector2.Zero;
         double haltingTime;
+        private string objectType="interactiveObject";
+        public string type
+        {
+            get
+            {
+                return objectType;
+            }
+            set
+            {
+                objectType = value;
+            }
+        }
         public Rectangle BoundingBox
         {
             get
@@ -42,6 +54,12 @@ namespace MonkeyBusiness.Objects
             : base(texture, position)
         {
 
+        }
+
+        public InteractiveObject(Texture2D texture, Vector2 position, string objectType)
+            : base(texture, position)
+        {
+            type = objectType;
         }
 
         #region Set Position and Velocity

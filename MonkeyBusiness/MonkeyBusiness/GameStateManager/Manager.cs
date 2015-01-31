@@ -169,7 +169,7 @@ namespace GameStateManager
             }
         }
 
-        private void SetNextMiniGameAsCurrent()
+        public void SetNextMiniGameAsCurrent()
         {
             if (miniGames.Count != 0)
             {
@@ -181,7 +181,8 @@ namespace GameStateManager
                 isRunning = false;
             }
         }
-        private void SetPreviousMiniGameAsCurrent()
+
+        public void SetPreviousMiniGameAsCurrent()
         {
             if (miniGamesDone.Count != 0)
             {

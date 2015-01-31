@@ -7,13 +7,14 @@ using Microsoft.Xna.Framework;
 using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using MonkeyBusiness;
 
 namespace MonkeyBusiness.MiniGames
 {
     class Level01 : MiniGame
     {
+        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars;
         Player player;
-        private Texture2D SpriteTexture;
         List<DrawableObject> objects = new List<DrawableObject>();
 
         /// <summary>
@@ -23,6 +24,38 @@ namespace MonkeyBusiness.MiniGames
         public Level01(Manager manager) : base(manager)
         {
         }
+
+        #region gameplay
+
+        private void CheckCollision()
+        {
+            List<DrawableObject> toRemove = new List<DrawableObject>();
+            foreach (DrawableObject interactiveObject in objects)
+            {
+                if (interactiveObject is InteractiveObject)
+                {
+                    if(player.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == "dollar"){
+                        manager.score.addScores(scoreForDollar);
+                        toRemove.Add(interactiveObject);
+                    }
+                }
+            }
+            foreach (DrawableObject interactiveObject in toRemove)
+            {
+                objects.Remove(interactiveObject);
+            }
+        }
+
+
+        private void CheckWinning()
+        {
+            if (manager.score.score == totalScores)
+                manager.SetNextMiniGameAsCurrent();
+        }
+
+        #endregion
+        
+        #region basic functions
 
         /// <summary>
         /// Initialization code.
@@ -53,6 +86,8 @@ namespace MonkeyBusiness.MiniGames
         public override void Update(GameTime gameTime)
         {
             player.HandleInput();
+            CheckCollision();
+            CheckWinning();
 
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
         }
@@ -65,11 +100,13 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void LoadContent()
         {
-            SpriteTexture = Content.Load<Texture2D>("monkey");
+            Texture2D SpriteTexture = Content.Load<Texture2D>("monkey");
             Vector2 pos = new Vector2(100, 100);
 
-
             player = new Player(SpriteTexture, pos);
+
+            Texture2D DollarTexture = Content.Load<Texture2D>("money");
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
 
             //Load to objects' list
             objects.Add(player);
@@ -91,5 +128,7 @@ namespace MonkeyBusiness.MiniGames
 
             }
         }
+
+        #endregion
     }
 }

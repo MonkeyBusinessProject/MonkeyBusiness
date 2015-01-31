@@ -80,8 +80,58 @@ namespace MonkeyBusiness
         /// <param name="viewport">ViewPort</param>
         public static void UpdateAllObjects(List<DrawableObject> objects, GameTime gameTime, Viewport viewport)
         {
-            foreach (InteractiveObject interactiveObject in objects)
-                interactiveObject.Update(gameTime, viewport);
+            foreach (DrawableObject interactiveObject in objects)
+                if(interactiveObject is InteractiveObject)
+                    (interactiveObject as InteractiveObject).Update(gameTime, viewport);
         }
+
+        /// <summary>
+        /// Returns random position inside the screen
+        /// </summary>
+        /// <param name="viewport"></param>
+        /// <param name="textureDimentions"></param>
+        /// <param name="rnd"></param>
+        /// <returns></returns>
+        public static Vector2 RandomPosition(Viewport viewport, Rectangle textureDimentions, Random rnd)
+        {
+            return new Vector2(rnd.Next(0, (int)(viewport.Width - textureDimentions.Width)), rnd.Next(0, (int)(viewport.Height - textureDimentions.Height)));
+        }
+
+        /// <summary>
+        /// Creates a list of a specific number of interactive objects with certian texture
+        /// </summary>
+        /// <param name="numberOfObjects"></param>
+        /// <param name="texture"></param>
+        /// <param name="viewport"></param>
+        /// <returns></returns>
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositions(int numberOfObjects, Texture2D texture, Viewport viewport)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds, rnd)));
+            }
+            return list;
+        }
+        
+        /// <summary>
+        /// Creates a list of a specific number of interactive objects with certian texture
+        /// </summary>
+        /// <param name="numberOfObjects"></param>
+        /// <param name="texture"></param>
+        /// <param name="viewport"></param>
+        /// <returns></returns>
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositions(int numberOfObjects, Texture2D texture, Viewport viewport, string type)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds, rnd), type));
+            }
+            return list;
+        }
+
     }
 }

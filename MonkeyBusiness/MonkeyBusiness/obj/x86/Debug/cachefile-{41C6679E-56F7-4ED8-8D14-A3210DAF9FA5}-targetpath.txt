@@ -1,6 +1,7 @@
 Content\monkey.xnb
 Content\monkey2.xnb
-Content\Score.xnb
 Content\TrashCan.xnb
 Content\background.xnb
-Content\mall background.xnb
+Content\Score.xnb
+Content\mallBackground.xnb
+Content\money.xnb
