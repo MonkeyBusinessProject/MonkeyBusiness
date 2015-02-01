@@ -12,6 +12,7 @@ namespace MonkeyBusiness.Objects
 
         #region Fields
         Vector2 velocity = Vector2.Zero;
+        
         double haltingTime;
         private string objectType="interactiveObject";
         public string type
@@ -107,6 +108,7 @@ namespace MonkeyBusiness.Objects
             haltingTime = gameTime.TotalGameTime.TotalSeconds + movementTime;
             SetVelocity(velocity);
         }
+        
 
         #region Stoping
         /// <summary>
