@@ -46,8 +46,19 @@ namespace MonkeyBusiness.MiniGames
                 objects.Remove(interactiveObject);
             }
         }
-
-
+        private void CheckCollisionPlayerWithTrash()
+        {
+            foreach (DrawableObject interactiveObject in objects)
+            {
+                if (interactiveObject is InteractiveObject)
+                {
+                    if (player.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == "trash")
+                    {
+                        (interactiveObject as InteractiveObject).SetVelocity(player.GetVelocity());
+                    }
+                }
+            }
+        }
         private void CheckWinning()
         {
             if (manager.score.score == totalScores)
@@ -98,6 +109,7 @@ namespace MonkeyBusiness.MiniGames
             // TODO: Handle input
             //Example:          player.HandleInput();
             player.HandleInput();
+            CheckCollisionPlayerWithTrash();
             CheckCollisionTrashToTrashcan();
             CheckWinning();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
@@ -139,9 +151,7 @@ namespace MonkeyBusiness.MiniGames
            
             return new Vector2(rnd.Next(0,viewport.Width), rnd.Next(0, viewport.Height));
         }
-        #region trash creation
-       
-        #endregion
+        
         /// <summary>
         /// Unload content (if needed)
         /// </summary>

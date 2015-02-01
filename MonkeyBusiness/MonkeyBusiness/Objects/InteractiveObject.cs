@@ -63,7 +63,7 @@ namespace MonkeyBusiness.Objects
             type = objectType;
         }
 
-        #region Set Position and Velocity
+        #region Set Position and Velocity, get Velocity
         public void SetPosition(Vector2 position)
         {
             this.position = position;
@@ -92,6 +92,10 @@ namespace MonkeyBusiness.Objects
         public void SetCenter(float X, float Y)
         {
             this.center = new Vector2(X, Y);
+        }
+        public Vector2 GetVelocity()
+        {
+            return this.velocity;
         }
         #endregion
 
