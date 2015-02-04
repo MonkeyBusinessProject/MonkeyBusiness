@@ -133,5 +133,36 @@ namespace MonkeyBusiness
             return list;
         }
 
+        /// <summary>
+        /// This function removes a list of nodes from the source list
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="source"></param>
+        /// <param name="toRemove"></param>
+        public static void RemoveNodesFromList<T>(List<T> source, List<T> toRemove)
+        {
+            foreach (T item in toRemove)
+            {
+                if (source.Contains(item))
+                    source.Remove(item);
+            }
+        }
+
+
+        public static List<DrawableObject> GetColliadedObjects(InteractiveObject mainObject, List<DrawableObject> objects, string type)
+        {
+            List<DrawableObject> collidadObjects = new List<DrawableObject>();
+            foreach (DrawableObject interactiveObject in objects)
+            {
+                if (interactiveObject is InteractiveObject)
+                {
+                    if (mainObject.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == type)
+                    {
+                        collidadObjects.Add(interactiveObject);
+                    }
+                }
+            }
+            return collidadObjects;
+        }
     }
 }

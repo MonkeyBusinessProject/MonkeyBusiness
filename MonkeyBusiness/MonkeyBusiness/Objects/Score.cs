@@ -9,7 +9,7 @@ namespace MonkeyBusiness.Objects
 {
     public class Score
     {
-        public int score;
+        public int scores;
         private SpriteFont font;
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace MonkeyBusiness.Objects
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, score.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(font, scores.ToString(), new Vector2(10, 10), Color.White);
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace MonkeyBusiness.Objects
         /// <param name="toAdd">Number of points to add</param>
         public void addScores(int toAdd)
         {
-            score += toAdd;
+            scores += toAdd;
         }
     }
 }

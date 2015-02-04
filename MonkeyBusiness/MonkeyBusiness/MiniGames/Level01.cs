@@ -14,6 +14,7 @@ namespace MonkeyBusiness.MiniGames
     class Level01 : MiniGame
     {
         const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars;
+        int initialScores;
         Player player;
         List<DrawableObject> objects = new List<DrawableObject>();
 
@@ -49,7 +50,7 @@ namespace MonkeyBusiness.MiniGames
 
         private void CheckWinning()
         {
-            if (manager.score.score == totalScores)
+            if (manager.score.scores == totalScores + initialScores)
                 manager.SetNextMiniGameAsCurrent();
         }
 
@@ -110,6 +111,7 @@ namespace MonkeyBusiness.MiniGames
 
             //Load to objects' list
             objects.Add(player);
+            initialScores = manager.score.scores;
         }
 
         /// <summary>

@@ -63,8 +63,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TrashCan.png">
-      <Name>TrashCan</Name>
+    <Compile Include="trashCan.png">
+      <Name>trashCan</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

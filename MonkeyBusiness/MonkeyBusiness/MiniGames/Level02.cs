@@ -19,9 +19,10 @@ namespace MonkeyBusiness.MiniGames
         Player player;
         InteractiveObject trashcan;
        
-        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes;
+        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes, trashMovementTime = 1;
+        int initialScores;
         List<DrawableObject> objects = new List<DrawableObject>();
-
+        private GameTime gameTime;
 
         #endregion
 
@@ -29,39 +30,23 @@ namespace MonkeyBusiness.MiniGames
 
         private void CheckCollisionTrashToTrashcan()
         {
-            List<DrawableObject> toRemove = new List<DrawableObject>();
-            foreach (DrawableObject interactiveObject in objects)
-            {
-                if (interactiveObject is InteractiveObject)
-                {
-                    if (trashcan.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == "trash")
-                    {
-                        manager.score.addScores(scoreForTrash);
-                        toRemove.Add(interactiveObject);
-                    }
-                }
-            }
-            foreach (DrawableObject interactiveObject in toRemove)
-            {
-                objects.Remove(interactiveObject);
-            }
+            List<DrawableObject> trashInTrashCan = Utillities.GetColliadedObjects(trashcan, objects, "trash");
+            manager.score.addScores(trashInTrashCan.Count * scoreForTrash);
+            Utillities.RemoveNodesFromList<DrawableObject>(objects, trashInTrashCan);
         }
+
         private void CheckCollisionPlayerWithTrash()
         {
-            foreach (DrawableObject interactiveObject in objects)
+            List<DrawableObject> trashColiddadWithPlayer = Utillities.GetColliadedObjects(player, objects, "trash");
+            foreach (DrawableObject trash in trashColiddadWithPlayer)
             {
-                if (interactiveObject is InteractiveObject)
-                {
-                    if (player.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == "trash")
-                    {
-                        (interactiveObject as InteractiveObject).SetVelocity(player.GetVelocity());
-                    }
-                }
+                Vector2 direction = new Vector2((trash as InteractiveObject).center.X - player.center.Y, (trash as InteractiveObject).center.Y - player.center.Y);
+                (trash as InteractiveObject).MoveByVector(player.GetVelocity() * 2, trashMovementTime, gameTime);
             }
         }
         private void CheckWinning()
         {
-            if (manager.score.score == totalScores)
+            if (manager.score.scores == totalScores + initialScores)
                 manager.SetNextMiniGameAsCurrent();
         }
 
@@ -84,6 +69,7 @@ namespace MonkeyBusiness.MiniGames
         public override void Initialize()
         {
             manager.IsMouseVisible = true;//Or not...
+            initialScores = manager.score.scores;
         }
 
         /// <summary>
@@ -108,6 +94,7 @@ namespace MonkeyBusiness.MiniGames
         {
             // TODO: Handle input
             //Example:          player.HandleInput();
+            this.gameTime = gameTime;
             player.HandleInput();
             CheckCollisionPlayerWithTrash();
             CheckCollisionTrashToTrashcan();
@@ -136,8 +123,8 @@ namespace MonkeyBusiness.MiniGames
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X,viewport.Bounds.Center.Y);
             
             player = new Player(MonkeyTexture, monkeyPos);
-            trashcan = new InteractiveObject(CanTexture, canPos);
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "Trash"));
+            trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash"));
            
             //TODO: Load to objects' list
             objects.Add(trashcan);
