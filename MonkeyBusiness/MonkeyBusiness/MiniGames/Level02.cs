@@ -69,7 +69,6 @@ namespace MonkeyBusiness.MiniGames
         public override void Initialize()
         {
             manager.IsMouseVisible = true;//Or not...
-            initialScores = manager.score.scores;
         }
 
         /// <summary>
@@ -129,7 +128,8 @@ namespace MonkeyBusiness.MiniGames
             //TODO: Load to objects' list
             objects.Add(trashcan);
             objects.Add(player);
-            
+
+            initialScores = manager.score.scores;
         }
 
         private Vector2 CreateRandomPosition()

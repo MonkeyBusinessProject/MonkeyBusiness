@@ -30,21 +30,9 @@ namespace MonkeyBusiness.MiniGames
 
         private void CheckCollision()
         {
-            List<DrawableObject> toRemove = new List<DrawableObject>();
-            foreach (DrawableObject interactiveObject in objects)
-            {
-                if (interactiveObject is InteractiveObject)
-                {
-                    if(player.BoundingBox.Intersects((interactiveObject as InteractiveObject).BoundingBox) && (interactiveObject as InteractiveObject).type == "dollar"){
-                        manager.score.addScores(scoreForDollar);
-                        toRemove.Add(interactiveObject);
-                    }
-                }
-            }
-            foreach (DrawableObject interactiveObject in toRemove)
-            {
-                objects.Remove(interactiveObject);
-            }
+            List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
+            manager.score.addScores(scoreForDollar * takenDollars.Count);
+            Utillities.RemoveNodesFromList<DrawableObject>(objects, takenDollars);
         }
 
 
