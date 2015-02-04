@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.Objects
 {
@@ -12,6 +13,12 @@ namespace MonkeyBusiness.Objects
         #region Fields
         private Texture2D texture;
         protected Vector2 position;
+        float timer = 0f;
+        float interval = 200f;
+        int currentFrame = 0;
+        int singleWidth = 30;
+        int singleHeight = 29;
+
         protected int height
         {
             get
@@ -45,6 +52,8 @@ namespace MonkeyBusiness.Objects
         {
             if (!isAnimated)
                 spriteBatch.Draw(texture, position, Color.White);
+            else
+
         }
 
         /// <summary>
@@ -55,5 +64,30 @@ namespace MonkeyBusiness.Objects
         {
             this.texture = texture;
         }
+
+        #region animation
+        public void AnimateRight(GameTime gameTime)
+        {
+            currentFrame = 5;
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (timer > interval)
+            {
+
+                currentFrame++;
+
+                if (currentFrame > 6)
+                {
+
+                    currentFrame = 4;
+
+                }
+
+                timer = 0f;
+
+            }
+
+        }
+        #endregion
     }
 }
