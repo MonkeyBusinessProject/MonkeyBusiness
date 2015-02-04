@@ -10,15 +10,13 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.MiniGames
 {
-    // TODO: change class name
     // TODO: add your mini game to the manager
     class Level03 : MiniGame
     {
         #region Fields
-        // TODO: add all objects
-        Player player;
-        private Texture2D MonkeyTexture;
         List<DrawableObject> objects = new List<DrawableObject>();
+        const int totalScores = 0, numberOfCollectors = 4, collectorsHeight = 50;// TODO: change
+        int initialScores, widthOfAColumn = 100;
         #endregion
 
         /// <summary>
@@ -28,9 +26,30 @@ namespace MonkeyBusiness.MiniGames
         public Level03(Manager manager)
             : base(manager)
         {
-            // TODO: Change constractor's name
+            
         }
 
+        #region gameplay
+
+
+        private void CheckWinning()
+        {
+            if (manager.score.scores == totalScores + initialScores)
+                manager.SetNextMiniGameAsCurrent();
+        }
+
+        private void CreateNoteCollectors(Texture2D texture)
+        {
+            widthOfAColumn = viewport.Width / (numberOfCollectors + 1);
+            for (int i = 0; i < numberOfCollectors; i++)
+            {
+                objects.Add(new InteractiveObject(texture, new Vector2(widthOfAColumn * (i + 1), viewport.Height - collectorsHeight), "collector" + i));
+            }
+        }
+
+        #endregion
+
+        #region basic functions
         /// <summary>
         /// Initialization code.
         /// Add whatever you want.
@@ -48,7 +67,7 @@ namespace MonkeyBusiness.MiniGames
             UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            DrawScenery();
+
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
 
             spriteBatch.End();
@@ -62,7 +81,7 @@ namespace MonkeyBusiness.MiniGames
         {
             // TODO: Handle input
             //Example:          player.HandleInput();
-            player.HandleInput();
+
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
         }
 
@@ -75,15 +94,20 @@ namespace MonkeyBusiness.MiniGames
         public override void LoadContent()
         {
             //TODO: Load Content
-            device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("mallBackground");
+            /*Example:
+            SpriteTexture = Content.Load<Texture2D>("monkey");
+            Vector2 pos = new Vector2(100, 100);
+            player = new Player(SpriteTexture, pos);
+            */
 
+            Texture2D NoteTexture = Content.Load<Texture2D>("note");
+            Texture2D NoteCollectorTexture = Content.Load<Texture2D>("notesCollector");
 
-            MonkeyTexture = Content.Load<Texture2D>("monkey");
-            Vector2 monkeyPos = new Vector2();
-            player = new Player(MonkeyTexture, monkeyPos);
+            CreateNoteCollectors(NoteCollectorTexture);
+
             //TODO: Load to objects' list
-            objects.Add(player);
+            //Example:            objects.Add(player);
+            initialScores = manager.score.scores;
         }
 
         /// <summary>
@@ -102,11 +126,6 @@ namespace MonkeyBusiness.MiniGames
 
             }
         }
-        private void DrawScenery()
-        {
-            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
-            spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
-
-        }
+        #endregion
     }
 }

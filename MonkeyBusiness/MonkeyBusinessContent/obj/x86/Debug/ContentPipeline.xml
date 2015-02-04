@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
-      <Time>2015-02-04T16:53:42.0992574+02:00</Time>
+      <Time>2015-02-04T18:57:27.2359666+02:00</Time>
     </Item>
     <Item>
       <Source>money.jpg</Source>
@@ -72,6 +72,33 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
       <Time>2015-02-04T16:53:42.0952558+02:00</Time>
+    </Item>
+    <Item>
+      <Source>alarm.png</Source>
+      <Name>alarm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\alarm.xnb</Output>
+      <Time>2015-02-04T19:03:08.3045419+02:00</Time>
+    </Item>
+    <Item>
+      <Source>note.png</Source>
+      <Name>note</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\note.xnb</Output>
+      <Time>2015-02-04T19:03:26.0453158+02:00</Time>
+    </Item>
+    <Item>
+      <Source>notesCollector.png</Source>
+      <Name>notesCollector</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\notesCollector.xnb</Output>
+      <Time>2015-02-04T19:03:41.6698781+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

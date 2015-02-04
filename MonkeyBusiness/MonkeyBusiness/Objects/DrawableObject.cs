@@ -52,7 +52,7 @@ namespace MonkeyBusiness.Objects
         {
             if (!isAnimated)
                 spriteBatch.Draw(texture, position, Color.White);
-            else
+
 
         }
 

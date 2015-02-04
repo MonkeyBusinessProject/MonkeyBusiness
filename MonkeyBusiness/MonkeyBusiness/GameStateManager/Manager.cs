@@ -151,8 +151,8 @@ namespace GameStateManager
             // TODO: Add all mini-games
             //Add in reversed order
             miniGames.Push(new Level03(this));
-            miniGames.Push(new Level02(this));
-            miniGames.Push(new Level01(this));
+            //miniGames.Push(new Level02(this));
+            //miniGames.Push(new Level01(this));
         }
 
         private void SetFirstMiniGameAsCurrent()
@@ -167,6 +167,12 @@ namespace GameStateManager
                 isRunning = false;
                 //TODO: stop running alert
             }
+        }
+
+        public void RestartMiniGame()
+        {
+            miniGame.UnloadContent();
+            miniGame.LoadContent();
         }
 
         public void SetNextMiniGameAsCurrent()

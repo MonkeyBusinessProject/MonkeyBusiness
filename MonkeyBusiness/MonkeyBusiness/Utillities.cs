@@ -11,6 +11,7 @@ namespace MonkeyBusiness
 {
     class Utillities
     {
+        public static Random rnd = new Random(DateTime.Now.Millisecond);
         /// <summary>
         /// Convert a Point to a Vector2
         /// </summary>
@@ -92,7 +93,7 @@ namespace MonkeyBusiness
         /// <param name="textureDimentions"></param>
         /// <param name="rnd"></param>
         /// <returns></returns>
-        public static Vector2 RandomPosition(Viewport viewport, Rectangle textureDimentions, Random rnd)
+        public static Vector2 RandomPosition(Viewport viewport, Rectangle textureDimentions)
         {
             return new Vector2(rnd.Next(0, (int)(viewport.Width - textureDimentions.Width)), rnd.Next(0, (int)(viewport.Height - textureDimentions.Height)));
         }
@@ -110,7 +111,7 @@ namespace MonkeyBusiness
             Random rnd = new Random((int)DateTime.Now.Ticks);
             for (int i = 0; i < numberOfObjects; i++)
             {
-                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds, rnd)));
+                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds)));
             }
             return list;
         }
@@ -128,7 +129,7 @@ namespace MonkeyBusiness
             Random rnd = new Random((int)DateTime.Now.Ticks);
             for (int i = 0; i < numberOfObjects; i++)
             {
-                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds, rnd), type));
+                list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds), type));
             }
             return list;
         }
