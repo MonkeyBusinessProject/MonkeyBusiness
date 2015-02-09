@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\alarm.xnb</Output>
-      <Time>2015-02-09T16:09:27.3543005+02:00</Time>
+      <Time>2015-02-09T16:11:50.1534681+02:00</Time>
     </Item>
     <Item>
       <Source>note.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\note.xnb</Output>
-      <Time>2015-02-09T16:09:27.3543005+02:00</Time>
+      <Time>2015-02-09T16:11:50.1544682+02:00</Time>
     </Item>
     <Item>
       <Source>notesCollector.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\notesCollector.xnb</Output>
-      <Time>2015-02-09T16:09:27.3553005+02:00</Time>
+      <Time>2015-02-09T16:11:50.1554682+02:00</Time>
     </Item>
     <Item>
       <Source>Score.spritefont</Source>
@@ -99,6 +99,15 @@
       <Options>None</Options>
       <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
       <Time>2015-01-11T23:12:22.2837715+02:00</Time>
+    </Item>
+    <Item>
+      <Source>GameFont.spritefont</Source>
+      <Name>GameFont</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
+      <Time>2015-02-09T20:40:21.5984487+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

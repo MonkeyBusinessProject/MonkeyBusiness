@@ -205,7 +205,7 @@ namespace MonkeyBusiness.Objects
         {
             if(this.velocity.X>0)
             {
-                this.
+                //this.
             }
 
         }

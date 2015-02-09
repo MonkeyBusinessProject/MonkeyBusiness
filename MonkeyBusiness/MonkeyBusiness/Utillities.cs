@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using GameStateManager;
+using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness
 {
@@ -164,6 +165,51 @@ namespace MonkeyBusiness
                 }
             }
             return collidadObjects;
+        }
+
+        public static int KeyboardNumberPressed(KeyboardState keyboardState, KeyboardState lastKeyboardState)
+        {
+            if (keyboardState.IsKeyDown(Keys.D0) || keyboardState.IsKeyDown(Keys.NumPad0) && !lastKeyboardState.IsKeyDown(Keys.D0) && !lastKeyboardState.IsKeyDown(Keys.NumPad0))
+            {
+                return 0;
+            }
+            if (keyboardState.IsKeyDown(Keys.D1) || keyboardState.IsKeyDown(Keys.NumPad1) && !lastKeyboardState.IsKeyDown(Keys.D1) && !lastKeyboardState.IsKeyDown(Keys.NumPad1))
+            {
+                return 1;
+            }
+            if (keyboardState.IsKeyDown(Keys.D2) || keyboardState.IsKeyDown(Keys.NumPad2) && !lastKeyboardState.IsKeyDown(Keys.D2) && !lastKeyboardState.IsKeyDown(Keys.NumPad2))
+            {
+                return 2;
+            }
+            if (keyboardState.IsKeyDown(Keys.D3) || keyboardState.IsKeyDown(Keys.NumPad3) && !lastKeyboardState.IsKeyDown(Keys.D3) && !lastKeyboardState.IsKeyDown(Keys.NumPad3))
+            {
+                return 3;
+            }
+            if (keyboardState.IsKeyDown(Keys.D4) || keyboardState.IsKeyDown(Keys.NumPad4) && !lastKeyboardState.IsKeyDown(Keys.D4) && !lastKeyboardState.IsKeyDown(Keys.NumPad4))
+            {
+                return 4;
+            }
+            if (keyboardState.IsKeyDown(Keys.D5) || keyboardState.IsKeyDown(Keys.NumPad5) && !lastKeyboardState.IsKeyDown(Keys.D5) && !lastKeyboardState.IsKeyDown(Keys.NumPad5))
+            {
+                return 5;
+            }
+            if (keyboardState.IsKeyDown(Keys.D6) || keyboardState.IsKeyDown(Keys.NumPad6) && !lastKeyboardState.IsKeyDown(Keys.D6) && !lastKeyboardState.IsKeyDown(Keys.NumPad6))
+            {
+                return 6;
+            }
+            if (keyboardState.IsKeyDown(Keys.D7) || keyboardState.IsKeyDown(Keys.NumPad7) && !lastKeyboardState.IsKeyDown(Keys.D7) && !lastKeyboardState.IsKeyDown(Keys.NumPad7))
+            {
+                return 7;
+            }
+            if (keyboardState.IsKeyDown(Keys.D8) || keyboardState.IsKeyDown(Keys.NumPad8) && !lastKeyboardState.IsKeyDown(Keys.D8) && !lastKeyboardState.IsKeyDown(Keys.NumPad8))
+            {
+                return 8;
+            }
+            if (keyboardState.IsKeyDown(Keys.D9) || keyboardState.IsKeyDown(Keys.NumPad9) && !lastKeyboardState.IsKeyDown(Keys.D9) && !lastKeyboardState.IsKeyDown(Keys.NumPad9))
+            {
+                return 9;
+            }
+            return -1;
         }
     }
 }
