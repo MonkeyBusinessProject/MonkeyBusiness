@@ -12,7 +12,21 @@ namespace MonkeyBusiness.Objects
 
         #region Fields
         Vector2 velocity = Vector2.Zero;
-        
+        float timer = 0f;
+        float interval = 200f;
+        int currentCol = 0;
+        int currentRow = 0;
+        const int singleWidth = 32;
+        const int singleHeight = 33;
+        #region spritesheet
+        const int uprow = 1;
+        const int leftrow = 2;
+        const int rightrow = 3;
+        const int downrow = 4;
+        const int leftcol = 1;
+        const int midcol = 2;
+        const int rightcol = 3;
+        #endregion
         double haltingTime;
         private string objectType="interactiveObject";
         public string type
@@ -171,7 +185,7 @@ namespace MonkeyBusiness.Objects
             return false;
         }
 
-        #endregion
+       
 
         #endregion
 
@@ -187,5 +201,82 @@ namespace MonkeyBusiness.Objects
             this.position += this.velocity * gameTime.ElapsedGameTime.Milliseconds;
             //TODO: animate
         }
+        public void Animate()
+        {
+            if(this.velocity.X>0)
+            {
+                this.
+            }
+
+        }
+        public void AnimateRight(GameTime gameTime)
+        {
+            currentRow = rightrow;
+            currentCol = midcol;
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (timer > interval)
+            {
+                currentCol++;
+
+                if (currentCol > rightcol)
+                {
+                    currentCol = leftcol;
+                }
+                timer = 0f;
+            }
+        }
+        public void AnimateLeft(GameTime gameTime)
+        {
+            currentRow = leftrow;
+            currentCol = midcol;
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (timer > interval)
+            {
+                currentCol++;
+
+                if (currentCol > rightcol)
+                {
+                    currentCol = leftcol;
+                }
+                timer = 0f;
+            }
+        }
+        public void AnimateUp(GameTime gameTime)
+        {
+            currentRow = uprow;
+            currentCol = midcol;
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (timer > interval)
+            {
+                currentCol++;
+
+                if (currentCol > rightcol)
+                {
+                    currentCol = leftcol;
+                }
+                timer = 0f;
+            }
+        }
+        public void AnimateDown(GameTime gameTime)
+        {
+            currentRow = downrow;
+            currentCol = midcol;
+            timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+
+            if (timer > interval)
+            {
+                currentCol++;
+
+                if (currentCol > rightcol)
+                {
+                    currentCol = leftcol;
+                }
+                timer = 0f;
+            }
+        }
+        #endregion
     }
 }
