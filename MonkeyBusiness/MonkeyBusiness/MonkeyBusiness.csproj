@@ -112,6 +112,7 @@
     <Compile Include="MiniGames\Level03.cs" />
     <Compile Include="MiniGames\Level02.cs" />
     <Compile Include="MiniGames\Level01.cs" />
+    <Compile Include="MiniGames\LevelLast.cs" />
     <Compile Include="MiniGames\LevelSample.cs" />
     <Compile Include="Objects\InteractiveObject.cs" />
     <Compile Include="Objects\DrawableObject.cs" />

@@ -10,40 +10,38 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.MiniGames
 {
-    // TODO: change class name
-    // TODO: add your mini game to the manager
-    class Level02 : MiniGame
+
+    class LevelLast : MiniGame
     {
         #region Fields
-        // TODO: add all objects
-        Player player;
-        InteractiveObject trashcan;
 
-        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes, trashMovementTime = 1;
+        const int numberOfDollars = 10, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10;
         int initialScores;
-        List<DrawableObject> objects = new List<DrawableObject>();
+        Player player;
         private GameTime gameTime;
-
+        List<DrawableObject> objects = new List<DrawableObject>();
         #endregion
+
+        /// <summary>
+        /// Constractor
+        /// </summary>
+        /// <param name="manager">The game state manager</param>
+        public LevelLast(Manager manager)
+            : base(manager)
+        {
+
+        }
 
         #region gameplay
 
-        private void CheckCollisionTrashToTrashcan()
+        private void CheckCollisionWithMoney()
         {
-            List<DrawableObject> trashInTrashCan = Utillities.GetColliadedObjects(trashcan, objects, "trash");
-            manager.score.addScores(trashInTrashCan.Count * scoreForTrash);
-            Utillities.RemoveNodesFromList<DrawableObject>(objects, trashInTrashCan);
+            List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
+            manager.score.addScores(scoreForDollar * takenDollars.Count);
+            Utillities.RemoveNodesFromList<DrawableObject>(objects, takenDollars);
         }
 
-        private void CheckCollisionPlayerWithTrash()
-        {
-            List<DrawableObject> trashColiddadWithPlayer = Utillities.GetColliadedObjects(player, objects, "trash");
-            foreach (DrawableObject trash in trashColiddadWithPlayer)
-            {
-                Vector2 direction = new Vector2((trash as InteractiveObject).center.X - player.center.Y, (trash as InteractiveObject).center.Y - player.center.Y);
-                (trash as InteractiveObject).MoveByVector(player.GetVelocity() * 2, trashMovementTime, gameTime);
-            }
-        }
+
         private void CheckWinning()
         {
             if (manager.score.scores == totalScores + initialScores)
@@ -53,20 +51,13 @@ namespace MonkeyBusiness.MiniGames
         #endregion
 
         #region basic functions
-        /// <summary>
-        /// Constractor
-        /// </summary>
-        /// <param name="manager">The game state manager</param>
-        public Level02(Manager manager)
-            : base(manager)
-        {
-
-        }
 
         /// <summary>
         /// Initialization code.
         /// Add whatever you want.
         /// </summary>
+        ///
+
         public override void Initialize()
         {
             manager.IsMouseVisible = true;//Or not...
@@ -92,48 +83,32 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            // TODO: Handle input
-            //Example:          player.HandleInput();
             this.gameTime = gameTime;
             player.HandleInput();
-            CheckCollisionPlayerWithTrash();
-            CheckCollisionTrashToTrashcan();
+            CheckCollisionWithMoney();
             CheckWinning();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
+
         }
 
-        /// <summary>
-        /// Load content
-        /// Here you should:
-        ///     1. Load objects' textures
-        ///     2. Add all objects to the object list
-        /// </summary>
+
         public override void LoadContent()
         {
-
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("background");
+            backgroundTexture = Content.Load<Texture2D>("mallBackground");
 
-            Texture2D TrashTexture = Content.Load<Texture2D>("trash");
             Texture2D MonkeyTexture = Content.Load<Texture2D>("monkey");
-            Texture2D CanTexture = Content.Load<Texture2D>("TrashCan");
+            Vector2 pos = new Vector2(100, 100);
 
-            Vector2 monkeyPos = CreateRandomPosition();
-            Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
+            player = new Player(MonkeyTexture, pos);
 
-            player = new Player(MonkeyTexture, monkeyPos);
-            trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash"));
-
-            //TODO: Load to objects' list
-            objects.Add(trashcan);
+            Texture2D DollarTexture = Content.Load<Texture2D>("money");
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
             objects.Add(player);
-
             initialScores = manager.score.scores;
+
         }
-
-
 
         /// <summary>
         /// Unload content (if needed)
@@ -150,13 +125,10 @@ namespace MonkeyBusiness.MiniGames
             {
 
             }
-
-
         }
         #endregion
 
         #region useful functions
-
         private Vector2 CreateRandomPosition()
         {
             Random rnd = new Random();
@@ -167,10 +139,9 @@ namespace MonkeyBusiness.MiniGames
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
-            spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+            spriteBatch.Draw(mallBackground, screenRectangle, Color.White);
 
         }
         #endregion
     }
 }
-
