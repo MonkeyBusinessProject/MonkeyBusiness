@@ -10,3 +10,4 @@ Content\note.xnb
 Content\notesCollector.xnb
 Content\Score.xnb
 Content\GameFont.xnb
+Content\standby.xnb

@@ -108,12 +108,12 @@ namespace MonkeyBusiness.MiniGames
             timeFromLastDollar += gameTime.ElapsedGameTime.Milliseconds;
             this.gameTime = gameTime;
             player.HandleInput(false);
+            player.AnimateOneDirection(gameTime);
             player.SetVelocity(player.GetVelocity().X, 0);
             CheckCollisionWithMoney();
             CheckWinning();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
             
-            player.AnimateOneDirection(gameTime);
 
             if (timeFromLastDollar > timeToNextDollar)
             {

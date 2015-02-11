@@ -16,8 +16,10 @@ namespace MonkeyBusiness.Objects
         float interval = 200f;
         int currentCol = 0;
         int currentRow = 0;
+        //const int singleWidth = 32;
+        //const int singleHeight = 33;
         const int singleWidth = 32;
-        const int singleHeight = 33;
+        const int singleHeight = 30;
         bool isAnimate = false;
         #region spritesheet
         const int uprow = 1;
@@ -206,7 +208,7 @@ namespace MonkeyBusiness.Objects
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            if (isAnimate )
+            if (isAnimate)
             {
                 Rectangle sourcerect = new Rectangle(singleWidth * currentCol, singleHeight * currentRow, singleWidth, singleHeight);
                 spriteBatch.Draw(animationTexture, this.position, sourcerect, Color.White);

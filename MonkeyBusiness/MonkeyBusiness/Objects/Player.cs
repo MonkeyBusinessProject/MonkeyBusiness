@@ -118,7 +118,7 @@ namespace MonkeyBusiness.Objects
         /// <param name="currentKeyboardState"></param>
         public void HandleKeyboard(KeyboardState currentKeyboardState, KeyboardState lastkeyboardstate)
         {
-            if(Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) != null)
+            //if(Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) != null)
                 direction = Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate);
             //creating movement
             if (Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) == "Right")
