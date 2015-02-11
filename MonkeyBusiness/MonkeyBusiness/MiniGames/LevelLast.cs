@@ -15,11 +15,22 @@ namespace MonkeyBusiness.MiniGames
     {
         #region Fields
 
-        const int numberOfDollars = 10, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10;
+        const int numberOfDollars = 30, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars;
         int initialScores;
         Player player;
         private GameTime gameTime;
         List<DrawableObject> objects = new List<DrawableObject>();
+        const int MonkeyInitialHeight = 88;
+
+        static int minimumInterval = 900, maximumInterval = 1000;
+        const int minInterval = 500;
+        int timeFromLastDollar = 0;
+        int timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);
+
+        float minimumDollarSpeed = 0.05f, maximumDollarSpeed = 0.06f;
+        const float maxSpeed = 0.2f;
+
+        const float monkeySpeed = 0.2f;
         #endregion
 
         /// <summary>
@@ -39,6 +50,17 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
             manager.score.addScores(scoreForDollar * takenDollars.Count);
             Utillities.RemoveNodesFromList<DrawableObject>(objects, takenDollars);
+            if (takenDollars.Count != 0)
+            {
+                if(maximumDollarSpeed < maxSpeed)
+                    minimumDollarSpeed += 0.01f;
+                if (minimumDollarSpeed < maxSpeed)
+                    maximumDollarSpeed += 0.01f;
+                if (minimumInterval > minInterval)
+                    minimumInterval -= 10;
+                if (maximumInterval > minInterval)
+                    maximumInterval -= 10;
+            }
         }
 
 
@@ -83,12 +105,28 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
+            timeFromLastDollar += gameTime.ElapsedGameTime.Milliseconds;
             this.gameTime = gameTime;
-            player.HandleInput();
+            player.HandleInput(false);
+            player.SetVelocity(player.GetVelocity().X, 0);
             CheckCollisionWithMoney();
             CheckWinning();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
+            
+            player.AnimateOneDirection(gameTime);
 
+            if (timeFromLastDollar > timeToNextDollar)
+            {
+                Texture2D DollarTexture = Content.Load<Texture2D>("money");
+                Vector2 position = Utillities.RandomPosition(viewport, DollarTexture.Bounds);
+                position.Y = 0;
+                InteractiveObject dollar = new InteractiveObject(DollarTexture, position, "dollar");
+                float dollarSpeed = Utillities.rnd.Next((int)(minimumDollarSpeed * 1000), (int)(maximumDollarSpeed * 1000)) / 1000.0f;
+                dollar.SetVelocity(0, dollarSpeed);
+                objects.Add(dollar);
+                timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);
+                timeFromLastDollar = 0;
+            }
         }
 
 
@@ -99,12 +137,12 @@ namespace MonkeyBusiness.MiniGames
             backgroundTexture = Content.Load<Texture2D>("mallBackground");
 
             Texture2D MonkeyTexture = Content.Load<Texture2D>("monkey");
-            Vector2 pos = new Vector2(100, 100);
+            Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);
 
             player = new Player(MonkeyTexture, pos);
-
-            Texture2D DollarTexture = Content.Load<Texture2D>("money");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
+            player.speed = monkeySpeed;
+            player.LoadAnimation(Content.Load<Texture2D>("standby"));
+            //objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
             objects.Add(player);
             initialScores = manager.score.scores;
 
@@ -129,17 +167,10 @@ namespace MonkeyBusiness.MiniGames
         #endregion
 
         #region useful functions
-        private Vector2 CreateRandomPosition()
-        {
-            Random rnd = new Random();
-
-            return new Vector2(rnd.Next(0, viewport.Width), rnd.Next(0, viewport.Height));
-        }
-
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
-            spriteBatch.Draw(mallBackground, screenRectangle, Color.White);
+            spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
 
         }
         #endregion

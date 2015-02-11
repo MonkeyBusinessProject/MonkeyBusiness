@@ -95,7 +95,7 @@ namespace MonkeyBusiness.MiniGames
             // TODO: Handle input
             //Example:          player.HandleInput();
             this.gameTime = gameTime;
-            player.HandleInput();
+            player.HandleInput(true);
             CheckCollisionPlayerWithTrash();
             CheckCollisionTrashToTrashcan();
             CheckWinning();
@@ -119,7 +119,7 @@ namespace MonkeyBusiness.MiniGames
             Texture2D MonkeyTexture = Content.Load<Texture2D>("monkey");
             Texture2D CanTexture = Content.Load<Texture2D>("TrashCan");
 
-            Vector2 monkeyPos = CreateRandomPosition();
+            Vector2 monkeyPos = Utillities.RandomPosition(viewport, MonkeyTexture.Bounds);
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
 
             player = new Player(MonkeyTexture, monkeyPos);
@@ -157,13 +157,7 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-        private Vector2 CreateRandomPosition()
-        {
-            Random rnd = new Random();
-
-            return new Vector2(rnd.Next(0, viewport.Width), rnd.Next(0, viewport.Height));
-        }
-
+       
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);

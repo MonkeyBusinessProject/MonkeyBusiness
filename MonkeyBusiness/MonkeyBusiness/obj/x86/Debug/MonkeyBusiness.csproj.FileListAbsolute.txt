@@ -55,3 +55,5 @@ C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x8
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\note.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\notesCollector.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\standby.xnb

@@ -18,6 +18,7 @@ namespace MonkeyBusiness.Objects
         int currentRow = 0;
         const int singleWidth = 32;
         const int singleHeight = 33;
+        bool isAnimate = false;
         #region spritesheet
         const int uprow = 1;
         const int leftrow = 2;
@@ -28,7 +29,8 @@ namespace MonkeyBusiness.Objects
         const int rightcol = 3;
         #endregion
         double haltingTime;
-        private string objectType="interactiveObject";
+        private string objectType = "interactiveObject";
+        Texture2D animationTexture;
         public string type
         {
             get
@@ -126,7 +128,7 @@ namespace MonkeyBusiness.Objects
             haltingTime = gameTime.TotalGameTime.TotalSeconds + movementTime;
             SetVelocity(velocity);
         }
-        
+
 
         #region Stoping
         /// <summary>
@@ -148,7 +150,7 @@ namespace MonkeyBusiness.Objects
         /// <returns></returns>
         virtual protected void IsOutsideScreen(Viewport viewport)
         {
-            
+
             if (this.position.X < 0)
             {
                 SetPosition(0, this.position.Y);
@@ -185,7 +187,7 @@ namespace MonkeyBusiness.Objects
             return false;
         }
 
-       
+
 
         #endregion
 
@@ -201,20 +203,29 @@ namespace MonkeyBusiness.Objects
             this.position += this.velocity * gameTime.ElapsedGameTime.Milliseconds;
             //TODO: animate
         }
-        public void Animate()
-        {
-            if(this.velocity.X>0)
-            {
-                //this.
-            }
 
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            if (isAnimate )
+            {
+                Rectangle sourcerect = new Rectangle(singleWidth * currentCol, singleHeight * currentRow, singleWidth, singleHeight);
+                spriteBatch.Draw(animationTexture, this.position, sourcerect, Color.White);
+            }
+            else
+                base.Draw(spriteBatch);
         }
+
+        public void LoadAnimation(Texture2D animationTexture)
+        {
+            this.animationTexture = animationTexture;
+        }
+
         public void AnimateRight(GameTime gameTime)
         {
+            isAnimate = true;
             currentRow = rightrow;
             currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
-
             if (timer > interval)
             {
                 currentCol++;
@@ -228,6 +239,7 @@ namespace MonkeyBusiness.Objects
         }
         public void AnimateLeft(GameTime gameTime)
         {
+            isAnimate = true;
             currentRow = leftrow;
             currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -245,6 +257,7 @@ namespace MonkeyBusiness.Objects
         }
         public void AnimateUp(GameTime gameTime)
         {
+            isAnimate = true;
             currentRow = uprow;
             currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
@@ -262,6 +275,7 @@ namespace MonkeyBusiness.Objects
         }
         public void AnimateDown(GameTime gameTime)
         {
+            isAnimate = true;
             currentRow = downrow;
             currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;

@@ -81,7 +81,7 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            player.HandleInput();
+            player.HandleInput(true);
             CheckCollision();
             CheckWinning();
 

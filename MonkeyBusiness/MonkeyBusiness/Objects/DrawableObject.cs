@@ -43,12 +43,9 @@ namespace MonkeyBusiness.Objects
         /// Draws the object on the screen
         /// </summary>
         /// <param name="spriteBatch"></param>
-        public void Draw(SpriteBatch spriteBatch)
+        virtual public void Draw(SpriteBatch spriteBatch)
         {
-            if (!isAnimated)
-                spriteBatch.Draw(texture, position, Color.White);
-            
-
+            spriteBatch.Draw(texture, position, Color.White);
         }
 
         /// <summary>
