@@ -16,10 +16,8 @@ namespace MonkeyBusiness.Objects
         float interval = 200f;
         int currentCol = 0;
         int currentRow = 0;
-        //const int singleWidth = 32;
-        //const int singleHeight = 33;
         const int singleWidth = 32;
-        const int singleHeight = 30;
+        const int singleHeight = 32;
         bool isAnimate = false;
         #region spritesheet
         const int uprow = 1;

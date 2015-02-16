@@ -16,6 +16,8 @@ namespace MonkeyBusiness.MiniGames
         const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10;
         int initialScores;
         Player player;
+        private SoundEffect alarmhit;
+        private SoundEffect moneycollect;
         List<DrawableObject> objects = new List<DrawableObject>();
 
         /// <summary>
@@ -33,10 +35,11 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
             manager.score.addScores(scoreForDollar * takenDollars.Count);
             Utillities.RemoveNodesFromList<DrawableObject>(objects, takenDollars);
-
+            moneycollect.Play();
             List<DrawableObject> collidedAlarms = Utillities.GetColliadedObjects(player, objects, "alarm");
             if (collidedAlarms.Count != 0)
             {
+                alarmhit.Play();
                 manager.score.scores = initialScores;
                 manager.RestartMiniGame();
             }
@@ -99,13 +102,16 @@ namespace MonkeyBusiness.MiniGames
             Texture2D SpriteTexture = Content.Load<Texture2D>("monkey");
             Vector2 pos = new Vector2(100, 100);
 
+            alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
+            moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
             player = new Player(SpriteTexture, pos);
 
-            Texture2D DollarTexture = Content.Load<Texture2D>("money");
+            Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
 
-            Texture2D AlarmTexture = Content.Load<Texture2D>("alarm");
+            Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfAlarms, AlarmTexture, viewport, "alarm"));
+
 
             //Load to objects' list
             objects.Add(player);

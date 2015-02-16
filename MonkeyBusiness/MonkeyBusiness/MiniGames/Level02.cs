@@ -23,7 +23,7 @@ namespace MonkeyBusiness.MiniGames
         int initialScores;
         List<DrawableObject> objects = new List<DrawableObject>();
         private GameTime gameTime;
-
+        private SoundEffect trashthrown;
         #endregion
 
         #region gameplay
@@ -33,6 +33,7 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> trashInTrashCan = Utillities.GetColliadedObjects(trashcan, objects, "trash");
             manager.score.addScores(trashInTrashCan.Count * scoreForTrash);
             Utillities.RemoveNodesFromList<DrawableObject>(objects, trashInTrashCan);
+            trashthrown.Play();
         }
 
         private void CheckCollisionPlayerWithTrash()
@@ -115,10 +116,10 @@ namespace MonkeyBusiness.MiniGames
             device = graphics.GraphicsDevice;
             backgroundTexture = Content.Load<Texture2D>("background");
 
-            Texture2D TrashTexture = Content.Load<Texture2D>("trash");
-            Texture2D MonkeyTexture = Content.Load<Texture2D>("monkey");
-            Texture2D CanTexture = Content.Load<Texture2D>("TrashCan");
-
+            Texture2D TrashTexture = Content.Load<Texture2D>("Sprites/trash");
+            Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
+            Texture2D CanTexture = Content.Load<Texture2D>("Sprites/TrashCan");
+            trashthrown = Content.Load<SoundEffect>("SoundFX/trashthrown");
             Vector2 monkeyPos = Utillities.RandomPosition(viewport, MonkeyTexture.Bounds);
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
 

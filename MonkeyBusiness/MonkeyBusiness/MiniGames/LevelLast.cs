@@ -21,7 +21,8 @@ namespace MonkeyBusiness.MiniGames
         private GameTime gameTime;
         List<DrawableObject> objects = new List<DrawableObject>();
         const int MonkeyInitialHeight = 88;
-
+        private SoundEffect moneycollect;
+        private SoundEffect MonkeySounds;
         static int minimumInterval = 900, maximumInterval = 1000;
         const int minInterval = 500;
         int timeFromLastDollar = 0;
@@ -117,7 +118,7 @@ namespace MonkeyBusiness.MiniGames
 
             if (timeFromLastDollar > timeToNextDollar)
             {
-                Texture2D DollarTexture = Content.Load<Texture2D>("money");
+                Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
                 Vector2 position = Utillities.RandomPosition(viewport, DollarTexture.Bounds);
                 position.Y = 0;
                 InteractiveObject dollar = new InteractiveObject(DollarTexture, position, "dollar");
@@ -136,12 +137,13 @@ namespace MonkeyBusiness.MiniGames
             device = graphics.GraphicsDevice;
             backgroundTexture = Content.Load<Texture2D>("mallBackground");
 
-            Texture2D MonkeyTexture = Content.Load<Texture2D>("monkey");
+            Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);
-
+            moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
+            MonkeySounds = Content.Load<SoundEffect>("SoundFX/MonkeySounds");
             player = new Player(MonkeyTexture, pos);
             player.speed = monkeySpeed;
-            player.LoadAnimation(Content.Load<Texture2D>("standby"));
+            player.LoadAnimation(Content.Load<Texture2D>("sheet"));
             //objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
             objects.Add(player);
             initialScores = manager.score.scores;

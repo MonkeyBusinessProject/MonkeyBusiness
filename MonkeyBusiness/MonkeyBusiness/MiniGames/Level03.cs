@@ -149,15 +149,10 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void LoadContent()
         {
-            //TODO: Load Content
-            /*Example:
-            SpriteTexture = Content.Load<Texture2D>("monkey");
-            Vector2 pos = new Vector2(100, 100);
-            player = new Player(SpriteTexture, pos);
-            */
+            
 
-            Texture2D NoteTexture = Content.Load<Texture2D>("note");
-            Texture2D NoteCollectorTexture = Content.Load<Texture2D>("notesCollector");
+            Texture2D NoteTexture = Content.Load<Texture2D>("Sprites/note");
+            Texture2D NoteCollectorTexture = Content.Load<Texture2D>("Sprites/notesCollector");
             font = Content.Load<SpriteFont>("GameFont");
 
             CreateNoteCollectors(NoteCollectorTexture);

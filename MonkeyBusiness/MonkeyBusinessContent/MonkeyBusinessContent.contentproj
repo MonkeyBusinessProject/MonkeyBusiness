@@ -42,7 +42,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="monkey.png">
+    <Compile Include="Sprites\monkey.png">
       <Name>monkey</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -56,14 +56,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="monkey2.png">
-      <Name>monkey2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="trashCan.png">
+    <Compile Include="Sprites\trashCan.png">
       <Name>trashCan</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -84,35 +77,35 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="money.jpg">
+    <Compile Include="Sprites\money.jpg">
       <Name>money</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="trash.png">
+    <Compile Include="Sprites\trash.png">
       <Name>trash</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="alarm.png">
+    <Compile Include="Sprites\alarm.png">
       <Name>alarm</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="note.png">
+    <Compile Include="Sprites\note.png">
       <Name>note</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="notesCollector.png">
+    <Compile Include="Sprites\notesCollector.png">
       <Name>notesCollector</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -126,10 +119,37 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="standby.png">
-      <Name>standby</Name>
+    <Compile Include="sheet.png">
+      <Name>sheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="SoundFX\alarmhit.mp3">
+      <Name>alarmhit</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\moneypop.mp3">
+      <Name>moneypop</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="SoundFX\trashthrown.mp3">
+      <Name>trashthrown</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\MonkeySounds.mp3">
+      <Name>MonkeySounds</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

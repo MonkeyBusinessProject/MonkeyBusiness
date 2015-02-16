@@ -2,40 +2,13 @@
 <XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
   <Asset Type="Pipeline:BuildItemCollection">
     <Item>
-      <Source>monkey.png</Source>
-      <Name>monkey</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\monkey.xnb</Output>
-      <Time>2015-02-11T16:49:31.3404464+02:00</Time>
-    </Item>
-    <Item>
-      <Source>monkey2.png</Source>
-      <Name>monkey2</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\monkey2.xnb</Output>
-      <Time>2015-02-11T16:49:31.3404464+02:00</Time>
-    </Item>
-    <Item>
-      <Source>trashCan.png</Source>
-      <Name>trashCan</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\trashCan.xnb</Output>
-      <Time>2015-02-11T16:49:31.338446+02:00</Time>
-    </Item>
-    <Item>
       <Source>background.jpg</Source>
       <Name>background</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2015-02-11T16:49:31.3394462+02:00</Time>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2015-02-10T18:02:10.410443+02:00</Time>
     </Item>
     <Item>
       <Source>mallBackground.jpg</Source>
@@ -43,53 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
-      <Time>2015-02-11T16:49:31.3404464+02:00</Time>
-    </Item>
-    <Item>
-      <Source>money.jpg</Source>
-      <Name>money</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\money.xnb</Output>
-      <Time>2015-02-11T16:49:31.3404464+02:00</Time>
-    </Item>
-    <Item>
-      <Source>trash.png</Source>
-      <Name>trash</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\trash.xnb</Output>
-      <Time>2015-02-11T16:49:31.3544492+02:00</Time>
-    </Item>
-    <Item>
-      <Source>alarm.png</Source>
-      <Name>alarm</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\alarm.xnb</Output>
-      <Time>2015-02-11T16:49:31.338446+02:00</Time>
-    </Item>
-    <Item>
-      <Source>note.png</Source>
-      <Name>note</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\note.xnb</Output>
-      <Time>2015-02-11T16:49:31.3414466+02:00</Time>
-    </Item>
-    <Item>
-      <Source>notesCollector.png</Source>
-      <Name>notesCollector</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\notesCollector.xnb</Output>
-      <Time>2015-02-11T16:49:31.3414466+02:00</Time>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
+      <Time>2015-02-10T18:02:10.411443+02:00</Time>
     </Item>
     <Item>
       <Source>Score.spritefont</Source>
@@ -97,8 +25,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-02-11T16:49:31.338446+02:00</Time>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
+      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
     </Item>
     <Item>
       <Source>GameFont.spritefont</Source>
@@ -106,17 +34,80 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-02-11T16:49:31.3374458+02:00</Time>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
+      <Time>2015-02-10T18:02:10.3784411+02:00</Time>
     </Item>
     <Item>
-      <Source>standby.png</Source>
-      <Name>standby</Name>
+      <Source>sheet.png</Source>
+      <Name>sheet</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\standby.xnb</Output>
-      <Time>2015-02-11T16:49:31.3524488+02:00</Time>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
+      <Time>2015-02-16T18:17:26.2592324+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\monkey.png</Source>
+      <Name>Sprites\monkey</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
+      <Time>2015-02-10T18:02:10.4124431+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\money.jpg</Source>
+      <Name>Sprites\money</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
+      <Time>2015-02-10T18:02:10.411443+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\alarm.png</Source>
+      <Name>Sprites\alarm</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
+      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\trashCan.png</Source>
+      <Name>Sprites\trashCan</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
+      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\trash.png</Source>
+      <Name>Sprites\trash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
+      <Time>2015-02-10T18:02:10.4694463+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\note.png</Source>
+      <Name>Sprites\note</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
+      <Time>2015-02-10T18:02:10.4124431+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Sprites\notesCollector.png</Source>
+      <Name>Sprites\notesCollector</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
+      <Time>2015-02-10T18:02:10.4134431+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -124,10 +115,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -156,7 +147,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2013-12-05T10:13:05.9898108+02:00</Value>
+        <Value>2014-11-05T23:35:42.7946232+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>
