@@ -47,6 +47,7 @@ namespace MonkeyBusiness.MiniGames
                 manager.SetNextMiniGameAsCurrent();
         }
 
+
         private void CreateNoteCollectors(Texture2D texture)
         {
             widthOfAColumn = viewport.Width / (numberOfCollectors + 1);

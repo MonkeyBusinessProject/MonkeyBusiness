@@ -8,6 +8,7 @@ using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonkeyBusiness;
+using Microsoft.Xna.Framework.Audio;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -18,6 +19,8 @@ namespace MonkeyBusiness.MiniGames
         Player player;
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
+
+        //private SoundEffect backgroundMusic;
         List<DrawableObject> objects = new List<DrawableObject>();
 
         /// <summary>
@@ -34,8 +37,11 @@ namespace MonkeyBusiness.MiniGames
         {
             List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
             manager.score.addScores(scoreForDollar * takenDollars.Count);
+            if (takenDollars.Count != 0)
+            {
+                moneycollect.Play();
+            }
             Utillities.RemoveNodesFromList<DrawableObject>(objects, takenDollars);
-            moneycollect.Play();
             List<DrawableObject> collidedAlarms = Utillities.GetColliadedObjects(player, objects, "alarm");
             if (collidedAlarms.Count != 0)
             {
@@ -99,7 +105,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void LoadContent()
         {
-            Texture2D SpriteTexture = Content.Load<Texture2D>("monkey");
+            Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(100, 100);
 
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
@@ -112,7 +118,8 @@ namespace MonkeyBusiness.MiniGames
             Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfAlarms, AlarmTexture, viewport, "alarm"));
 
-
+            //backgroundMusic = Content.Load<SoundEffect>("BGM/firstLevel");
+           // backgroundMusic.Play();
             //Load to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;

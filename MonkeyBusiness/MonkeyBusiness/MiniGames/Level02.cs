@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Audio;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -23,7 +24,8 @@ namespace MonkeyBusiness.MiniGames
         int initialScores;
         List<DrawableObject> objects = new List<DrawableObject>();
         private GameTime gameTime;
-        private SoundEffect trashthrown;
+        private SoundEffect trashInCan;
+        private SoundEffect trashKick;
         #endregion
 
         #region gameplay
@@ -32,8 +34,11 @@ namespace MonkeyBusiness.MiniGames
         {
             List<DrawableObject> trashInTrashCan = Utillities.GetColliadedObjects(trashcan, objects, "trash");
             manager.score.addScores(trashInTrashCan.Count * scoreForTrash);
+            if (trashInTrashCan.Count != 0)
+            {
+                trashInCan.Play();
+            }
             Utillities.RemoveNodesFromList<DrawableObject>(objects, trashInTrashCan);
-            trashthrown.Play();
         }
 
         private void CheckCollisionPlayerWithTrash()
@@ -43,6 +48,7 @@ namespace MonkeyBusiness.MiniGames
             {
                 Vector2 direction = new Vector2((trash as InteractiveObject).center.X - player.center.Y, (trash as InteractiveObject).center.Y - player.center.Y);
                 (trash as InteractiveObject).MoveByVector(player.GetVelocity() * 2, trashMovementTime, gameTime);
+                trashKick.Play();
             }
         }
         private void CheckWinning()
@@ -119,7 +125,9 @@ namespace MonkeyBusiness.MiniGames
             Texture2D TrashTexture = Content.Load<Texture2D>("Sprites/trash");
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Texture2D CanTexture = Content.Load<Texture2D>("Sprites/TrashCan");
-            trashthrown = Content.Load<SoundEffect>("SoundFX/trashthrown");
+            trashInCan = Content.Load<SoundEffect>("SoundFX/TrashInCan");
+            trashKick = Content.Load<SoundEffect>("SoundFX/TrashKick");
+
             Vector2 monkeyPos = Utillities.RandomPosition(viewport, MonkeyTexture.Bounds);
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
 

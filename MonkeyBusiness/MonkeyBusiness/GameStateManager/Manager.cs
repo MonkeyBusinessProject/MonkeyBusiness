@@ -77,7 +77,7 @@ namespace GameStateManager
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             //System.Diagnostics.Debug.WriteLine("stuff");
-            if(isRunning)
+            if (isRunning)
                 miniGame.LoadContent();
 
             // TODO: use this.Content to load your game content here
@@ -108,7 +108,7 @@ namespace GameStateManager
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            if(isRunning)
+            if (isRunning)
                 miniGame.Update(gameTime);
             //// TODO: Remove
             /*
@@ -136,7 +136,7 @@ namespace GameStateManager
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            if(isRunning)
+            if (isRunning)
                 miniGame.Draw();
 
             base.Draw(gameTime);
@@ -150,9 +150,9 @@ namespace GameStateManager
         {
             // TODO: Add all mini-games
             //Add in reversed order
-            miniGames.Push(new LevelLast(this));
+           // miniGames.Push(new LevelLast(this));
             //miniGames.Push(new Level03(this));
-            //miniGames.Push(new Level02(this));
+            miniGames.Push(new Level02(this));
             //miniGames.Push(new Level01(this));
         }
 
@@ -164,7 +164,8 @@ namespace GameStateManager
                 miniGame.Initialize();
                 isRunning = true;
             }
-            else{
+            else
+            {
                 isRunning = false;
                 //TODO: stop running alert
             }
@@ -184,7 +185,9 @@ namespace GameStateManager
                 miniGamesDone.Push(miniGames.Pop());
                 SetFirstMiniGameAsCurrent();
                 miniGame.LoadContent();
-            }else{
+            }
+            else
+            {
                 isRunning = false;
             }
         }
@@ -197,7 +200,9 @@ namespace GameStateManager
                 miniGames.Push(miniGamesDone.Pop());
                 SetFirstMiniGameAsCurrent();
                 miniGame.LoadContent();
-            }else{
+            }
+            else
+            {
                 isRunning = false;
             }
         }

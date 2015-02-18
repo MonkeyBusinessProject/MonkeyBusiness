@@ -211,7 +211,7 @@ namespace MonkeyBusiness
             }
             return -1;
         }
-        public static string KeyboardArrowPress(KeyboardState keyboardstate, KeyboardState lastkeyboardstate)
+        public static string KeyboardArrowPressed(KeyboardState keyboardstate, KeyboardState lastkeyboardstate)
         {
             if (keyboardstate.IsKeyDown(Keys.Right) && !lastkeyboardstate.IsKeyDown(Keys.Right) && !keyboardstate.IsKeyDown(Keys.Left))
                 return "Right";
@@ -233,6 +233,19 @@ namespace MonkeyBusiness
             if (!keyboardstate.IsKeyDown(Keys.Down) && lastkeyboardstate.IsKeyDown(Keys.Down))
                 return "Down";
             if (!keyboardstate.IsKeyDown(Keys.Up) && lastkeyboardstate.IsKeyDown(Keys.Up))
+                return "Up";
+            return null;
+        }
+
+        public static string KeyboardArrowDown(KeyboardState keyboardstate)
+        {
+            if (keyboardstate.IsKeyDown(Keys.Right))
+                return "Right";
+            if (keyboardstate.IsKeyDown(Keys.Left))
+                return "Left";
+            if (keyboardstate.IsKeyDown(Keys.Down))
+                return "Down";
+            if (keyboardstate.IsKeyDown(Keys.Up))
                 return "Up";
             return null;
         }

@@ -119,48 +119,64 @@ namespace MonkeyBusiness.Objects
         public void HandleKeyboard(KeyboardState currentKeyboardState, KeyboardState lastkeyboardstate)
         {
             //if(Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) != null)
-                direction = Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate);
+                direction = Utillities.KeyboardArrowDown(currentKeyboardState);
             //creating movement
-            if (Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) == "Right")
+            if (Utillities.KeyboardArrowPressed(currentKeyboardState, lastkeyboardstate) == "Right")
             {
                 SetVelocity(speed, this.GetVelocity().Y);
             }
-            if (Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) == "Left")
+            if (Utillities.KeyboardArrowPressed(currentKeyboardState, lastkeyboardstate) == "Left")
             {
                 SetVelocity(-speed, this.GetVelocity().Y);
             }
-            if (Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) == "Up")
+            if (Utillities.KeyboardArrowPressed(currentKeyboardState, lastkeyboardstate) == "Up")
             {
                 SetVelocity(this.GetVelocity().X, -speed);
             }
-            if (Utillities.KeyboardArrowPress(currentKeyboardState, lastkeyboardstate) == "Down")
+            if (Utillities.KeyboardArrowPressed(currentKeyboardState, lastkeyboardstate) == "Down")
             {
                 SetVelocity(this.GetVelocity().X, speed);
             }
             //stopping movement
-            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Right")
+            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Right" && !currentKeyboardState.IsKeyDown(Keys.Left))
             {
                 direction = null;
                 SetVelocity(0, this.GetVelocity().Y);
             }
-            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Left")
+            else if(currentKeyboardState.IsKeyDown(Keys.Left))
+            {
+                SetVelocity(-speed, this.GetVelocity().Y);
+            }
+            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Left" && !currentKeyboardState.IsKeyDown(Keys.Right))
             {
                 direction = null;
                 SetVelocity(-0, this.GetVelocity().Y);
             }
-            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Up")
+            else if (currentKeyboardState.IsKeyDown(Keys.Right))
+            {
+                SetVelocity(speed, this.GetVelocity().Y);
+            }
+            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Up" && !currentKeyboardState.IsKeyDown(Keys.Down))
             {
                 direction = null;
                 SetVelocity(this.GetVelocity().X, -0);
             }
-            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Down")
+            else if (currentKeyboardState.IsKeyDown(Keys.Down))
+            {
+                SetVelocity(this.GetVelocity().X, speed);
+            }
+            if (Utillities.KeyboardArrowReleased(currentKeyboardState, lastkeyboardstate) == "Down" && !currentKeyboardState.IsKeyDown(Keys.Up))
             {
                 direction = null;
                 SetVelocity(this.GetVelocity().X, 0);
             }
+            else if (currentKeyboardState.IsKeyDown(Keys.Up))
+            {
+                SetVelocity(this.GetVelocity().X, -speed);
+            }
         }
 
-        public void AnimateOneDirection(GameTime gameTime)
+        public void AnimateOneDirectionFromFourDirctions(GameTime gameTime)
         {
             if (direction == "Right")
             {
@@ -177,6 +193,26 @@ namespace MonkeyBusiness.Objects
             if (direction == "Up")
             {
                 this.AnimateUp(gameTime);
+            }
+            if (direction == null)
+            {
+                this.StopAnimation(gameTime);
+            }
+        }
+
+        public void AnimateOneDirectionOnlyLeftAndRight(GameTime gameTime)
+        {
+            if (direction == "Right")
+            {
+                this.AnimateRight(gameTime);
+            }
+            if (direction == "Left")
+            {
+                this.AnimateLeft(gameTime);
+            }
+            if (direction == null)
+            {
+                this.StopAnimation(gameTime);
             }
         }
 

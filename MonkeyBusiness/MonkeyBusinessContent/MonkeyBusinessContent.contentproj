@@ -125,7 +125,13 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Compile Include="Sprites\banana.png">
+      <Name>banana</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="SoundFX\alarmhit.mp3">
       <Name>alarmhit</Name>
@@ -139,15 +145,53 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
-    <Compile Include="SoundFX\trashthrown.mp3">
-      <Name>trashthrown</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\MonkeySounds.mp3">
+      <Name>MonkeySounds</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SoundFX\MonkeySounds.mp3">
-      <Name>MonkeySounds</Name>
+    <Compile Include="Sprites\poisonbanana.png">
+      <Name>poisonbanana</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\FirstLevelMusic.mp3">
+      <Name>firstLevel</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\Level2Music.mp3">
+      <Name>Level2Music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\BrownBananaCollect.mp3">
+      <Name>BrownBananaCollect</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="SoundFX\TrashInCan.mp3">
+      <Name>TrashInCan</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="SoundFX\TrashKick.mp3">
+      <Name>TrashKick</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\LevelLastMusic.mp3">
+      <Name>LevelLastMusic</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>

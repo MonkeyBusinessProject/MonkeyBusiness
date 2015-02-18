@@ -20,13 +20,13 @@ namespace MonkeyBusiness.Objects
         const int singleHeight = 32;
         bool isAnimate = false;
         #region spritesheet
-        const int uprow = 1;
-        const int leftrow = 2;
-        const int rightrow = 3;
-        const int downrow = 4;
-        const int leftcol = 1;
-        const int midcol = 2;
-        const int rightcol = 3;
+        const int uprow = 3;
+        const int leftrow = 1;
+        const int rightrow = 2;
+        const int downrow = 0;
+        const int leftcol = 0;
+        const int midcol = 1;
+        const int rightcol = 2;
         #endregion
         double haltingTime;
         private string objectType = "interactiveObject";
@@ -214,7 +214,10 @@ namespace MonkeyBusiness.Objects
             else
                 base.Draw(spriteBatch);
         }
+        #endregion
 
+
+        #region Animation
         public void LoadAnimation(Texture2D animationTexture)
         {
             this.animationTexture = animationTexture;
@@ -224,7 +227,7 @@ namespace MonkeyBusiness.Objects
         {
             isAnimate = true;
             currentRow = rightrow;
-            currentCol = midcol;
+            //currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
             if (timer > interval)
             {
@@ -241,7 +244,7 @@ namespace MonkeyBusiness.Objects
         {
             isAnimate = true;
             currentRow = leftrow;
-            currentCol = midcol;
+            //currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             if (timer > interval)
@@ -259,7 +262,7 @@ namespace MonkeyBusiness.Objects
         {
             isAnimate = true;
             currentRow = uprow;
-            currentCol = midcol;
+            //currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             if (timer > interval)
@@ -277,7 +280,7 @@ namespace MonkeyBusiness.Objects
         {
             isAnimate = true;
             currentRow = downrow;
-            currentCol = midcol;
+            //currentCol = midcol;
             timer += (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             if (timer > interval)
@@ -290,6 +293,11 @@ namespace MonkeyBusiness.Objects
                 }
                 timer = 0f;
             }
+        }
+
+        public void StopAnimation(GameTime gameTime)
+        {
+            isAnimate = false;
         }
         #endregion
     }
