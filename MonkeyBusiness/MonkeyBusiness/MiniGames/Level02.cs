@@ -8,6 +8,7 @@ using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -26,6 +27,8 @@ namespace MonkeyBusiness.MiniGames
         private GameTime gameTime;
         private SoundEffect trashInCan;
         private SoundEffect trashKick;
+
+        private Song backgroundMusic;
         #endregion
 
         #region gameplay
@@ -132,6 +135,7 @@ namespace MonkeyBusiness.MiniGames
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
 
             player = new Player(MonkeyTexture, monkeyPos);
+            player.speed = 0.25f;
             trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash"));
 
@@ -140,6 +144,9 @@ namespace MonkeyBusiness.MiniGames
             objects.Add(player);
 
             initialScores = manager.score.scores;
+
+            backgroundMusic = Content.Load<Song>("BGM/Level2Music");
+            MediaPlayer.Play(backgroundMusic);
         }
 
 

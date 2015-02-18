@@ -161,18 +161,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BGM\FirstLevelMusic.mp3">
-      <Name>firstLevel</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-    <Compile Include="BGM\Level2Music.mp3">
-      <Name>Level2Music</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="SoundFX\BrownBananaCollect.mp3">
       <Name>BrownBananaCollect</Name>
       <Importer>Mp3Importer</Importer>
@@ -190,10 +178,24 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BGM\Level2Music.mp3">
+      <Name>Level2Music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\FirstLevelMusic.mp3">
+      <Name>Level1Music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="BGM\LevelLastMusic.mp3">
       <Name>LevelLastMusic</Name>
       <Importer>Mp3Importer</Importer>
-      <Processor>SoundEffectProcessor</Processor>
+      <Processor>SongProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

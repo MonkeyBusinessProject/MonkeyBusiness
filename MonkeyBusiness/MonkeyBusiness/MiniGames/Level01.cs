@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using MonkeyBusiness;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -20,7 +21,7 @@ namespace MonkeyBusiness.MiniGames
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
 
-        //private SoundEffect backgroundMusic;
+        private Song backgroundMusic;
         List<DrawableObject> objects = new List<DrawableObject>();
 
         /// <summary>
@@ -118,8 +119,8 @@ namespace MonkeyBusiness.MiniGames
             Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfAlarms, AlarmTexture, viewport, "alarm"));
 
-            //backgroundMusic = Content.Load<SoundEffect>("BGM/firstLevel");
-           // backgroundMusic.Play();
+            backgroundMusic = Content.Load<Song>("BGM/Level1Music");
+            MediaPlayer.Play(backgroundMusic);
             //Load to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;

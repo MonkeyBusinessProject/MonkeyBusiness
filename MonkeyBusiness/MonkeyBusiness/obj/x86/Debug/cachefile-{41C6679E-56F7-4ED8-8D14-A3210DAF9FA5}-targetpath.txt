@@ -15,10 +15,12 @@ Content\SoundFX\moneypop.xnb
 Content\SoundFX\MonkeySounds.xnb
 Content\Sprites\banana.xnb
 Content\Sprites\poisonbanana.xnb
-Content\BGM\Level2Music.xnb
-Content\BGM\Level2Music.wma
 Content\SoundFX\BrownBananaCollect.xnb
 Content\SoundFX\TrashInCan.xnb
 Content\SoundFX\TrashKick.xnb
-Content\BGM\firstLevel.xnb
-Content\BGM\firstLevel.wma
+Content\BGM\Level2Music.xnb
+Content\BGM\Level2Music.wma
+Content\BGM\LevelLastMusic.xnb
+Content\BGM\LevelLastMusic.wma
+Content\BGM\Level1Music.xnb
+Content\BGM\Level1Music.wma

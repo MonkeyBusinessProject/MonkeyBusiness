@@ -8,6 +8,7 @@ using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -39,6 +40,8 @@ namespace MonkeyBusiness.MiniGames
 
 
         private SoundEffect SEFBrownBananaCollect;
+
+        private Song backgroundMusic;
         #endregion
 
         /// <summary>
@@ -97,6 +100,7 @@ namespace MonkeyBusiness.MiniGames
             if (takenPoison.Count != 0)
             {
                 manager.score.scores = initialScores;
+                SEFBrownBananaCollect.Play();
                 manager.RestartMiniGame();
             }
         }
@@ -118,7 +122,6 @@ namespace MonkeyBusiness.MiniGames
                 {
                     texture = Content.Load<Texture2D>("Sprites/poisonbanana");
                     objectType = "poison";
-                    SEFBrownBananaCollect.Play();
                 }
                 else
                 {
@@ -212,6 +215,8 @@ namespace MonkeyBusiness.MiniGames
             objects.Add(player);
             initialScores = manager.score.scores;
 
+            backgroundMusic = Content.Load<Song>("BGM/LevelLastMusic");
+            MediaPlayer.Play(backgroundMusic);
         }
 
         /// <summary>

@@ -155,16 +155,6 @@
       <Time>2015-02-18T17:49:36.1727887+02:00</Time>
     </Item>
     <Item>
-      <Source>BGM\Level2Music.mp3</Source>
-      <Name>BGM\Level2Music</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-02-18T18:14:04.7946362+02:00</Time>
-    </Item>
-    <Item>
       <Source>SoundFX\BrownBananaCollect.mp3</Source>
       <Name>SoundFX\BrownBananaCollect</Name>
       <Importer>Mp3Importer</Importer>
@@ -192,14 +182,34 @@
       <Time>2015-02-18T18:14:10.6562223+02:00</Time>
     </Item>
     <Item>
-      <Source>BGM\FirstLevelMusic.mp3</Source>
-      <Name>BGM\firstLevel</Name>
+      <Source>BGM\Level2Music.mp3</Source>
+      <Name>BGM\Level2Music</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\firstLevel.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\firstLevel.wma</Extra>
-      <Time>2015-02-18T18:14:04.5646132+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
+      <Time>2015-02-18T18:40:10.7992304+02:00</Time>
+    </Item>
+    <Item>
+      <Source>BGM\LevelLastMusic.mp3</Source>
+      <Name>BGM\LevelLastMusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
+      <Time>2015-02-18T18:40:28.1379641+02:00</Time>
+    </Item>
+    <Item>
+      <Source>BGM\FirstLevelMusic.mp3</Source>
+      <Name>BGM\Level1Music</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
+      <Time>2015-02-18T18:41:08.3839883+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
