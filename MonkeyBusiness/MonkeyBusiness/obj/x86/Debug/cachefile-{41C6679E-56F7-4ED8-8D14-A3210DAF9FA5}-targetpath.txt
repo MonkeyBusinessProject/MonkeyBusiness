@@ -24,3 +24,5 @@ Content\BGM\Level1Music.xnb
 Content\BGM\Level1Music.wma
 Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
+Content\arrowsPrescreen.xnb
+Content\mousePrescreen.xnb

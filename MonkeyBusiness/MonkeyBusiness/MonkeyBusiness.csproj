@@ -114,6 +114,9 @@
     <Compile Include="MiniGames\Level01.cs" />
     <Compile Include="MiniGames\LevelLast.cs" />
     <Compile Include="MiniGames\LevelSample.cs" />
+    <Compile Include="MiniGames\Pre1.cs" />
+    <Compile Include="MiniGames\Pre2.cs" />
+    <Compile Include="MiniGames\Pre4.cs" />
     <Compile Include="Objects\InteractiveObject.cs" />
     <Compile Include="Objects\DrawableObject.cs" />
     <Compile Include="Objects\Player.cs" />

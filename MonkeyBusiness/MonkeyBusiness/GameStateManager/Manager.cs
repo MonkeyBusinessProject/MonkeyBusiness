@@ -151,9 +151,12 @@ namespace GameStateManager
             // TODO: Add all mini-games
             //Add in reversed order
             miniGames.Push(new LevelLast(this));
+            miniGames.Push(new Pre4(this));
             //miniGames.Push(new Level03(this));
             miniGames.Push(new Level02(this));
+            miniGames.Push(new Pre2(this));
             miniGames.Push(new Level01(this));
+            miniGames.Push(new Pre1(this));
         }
 
         private void SetFirstMiniGameAsCurrent()

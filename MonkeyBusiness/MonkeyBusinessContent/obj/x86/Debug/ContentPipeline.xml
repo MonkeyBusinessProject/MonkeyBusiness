@@ -211,6 +211,24 @@
       <Extra>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
       <Time>2015-02-22T17:43:35.194558+02:00</Time>
     </Item>
+    <Item>
+      <Source>arrowsPrescreen.png</Source>
+      <Name>arrowsPrescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb</Output>
+      <Time>2015-02-22T18:44:02.2860158+02:00</Time>
+    </Item>
+    <Item>
+      <Source>mousePrescreen.png</Source>
+      <Name>mousePrescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb</Output>
+      <Time>2015-02-22T18:44:02.2850157+02:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <TargetPlatform>Windows</TargetPlatform>
