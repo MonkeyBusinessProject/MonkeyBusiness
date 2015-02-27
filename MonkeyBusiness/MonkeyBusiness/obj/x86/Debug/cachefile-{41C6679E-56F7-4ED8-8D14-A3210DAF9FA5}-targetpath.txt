@@ -10,6 +10,8 @@ Content\Sprites\notesCollector.xnb
 Content\sheet.xnb
 Content\Sprites\banana.xnb
 Content\Sprites\poisonbanana.xnb
+Content\arrowsPrescreen.xnb
+Content\mousePrescreen.xnb
 Content\Score.xnb
 Content\GameFont.xnb
 Content\SoundFX\alarmhit.xnb
@@ -24,5 +26,4 @@ Content\BGM\Level1Music.xnb
 Content\BGM\Level1Music.wma
 Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
-Content\arrowsPrescreen.xnb
-Content\mousePrescreen.xnb
+Content\StarWarsFont.xnb

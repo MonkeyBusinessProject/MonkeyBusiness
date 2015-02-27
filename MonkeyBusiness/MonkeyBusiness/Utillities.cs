@@ -136,6 +136,26 @@ namespace MonkeyBusiness
         }
 
         /// <summary>
+        /// Creates a list of a specific number of interactive objects with certian texture and set them as elastic if passed "true"
+        /// </summary>
+        /// <param name="numberOfObjects"></param>
+        /// <param name="texture"></param>
+        /// <param name="viewport"></param>
+        /// <returns></returns>
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositions(int numberOfObjects, Texture2D texture, Viewport viewport, string type, bool isElastic)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                InteractiveObject obj = new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds), type);
+                obj.SetElastic(isElastic);
+                list.Add(obj);
+            }
+            return list;
+        }
+
+        /// <summary>
         /// This function removes a list of nodes from the source list
         /// </summary>
         /// <typeparam name="T"></typeparam>

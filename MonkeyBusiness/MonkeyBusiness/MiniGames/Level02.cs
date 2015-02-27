@@ -135,9 +135,9 @@ namespace MonkeyBusiness.MiniGames
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
 
             player = new Player(MonkeyTexture, monkeyPos);
-            player.speed = 0.25f;
+            player.speed = 0.13f;
             trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash"));
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash", true));
 
             //TODO: Load to objects' list
             objects.Add(trashcan);

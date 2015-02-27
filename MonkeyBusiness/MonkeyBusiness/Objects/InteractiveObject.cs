@@ -65,6 +65,7 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        private bool isElastic = false;
         #endregion
 
         public InteractiveObject(Texture2D texture, Vector2 position)
@@ -130,6 +131,11 @@ namespace MonkeyBusiness.Objects
         }
 
 
+        public void SetElastic(bool isElastic)
+        {
+            this.isElastic = isElastic;
+        }
+
         #region Stoping
         /// <summary>
         /// Stop the object's movement if needed
@@ -150,26 +156,49 @@ namespace MonkeyBusiness.Objects
         /// <returns></returns>
         virtual protected void IsOutsideScreen(Viewport viewport)
         {
-
-            if (this.position.X < 0)
+            if (isElastic)
             {
-                SetPosition(0, this.position.Y);
-                SetVelocity(0, this.velocity.Y);
-            }
-            if (this.position.Y < 0)
-            {
-                SetPosition(this.position.X, 0);
-                SetVelocity(this.velocity.X, 0);
-            }
-            if (this.position.X > viewport.Width - this.width)
-            {
-                SetPosition(viewport.Width - this.width, this.position.Y);
-                SetVelocity(0, this.velocity.Y);
-            }
-            if (this.position.Y > viewport.Height - this.height)
-            {
-                SetPosition(this.position.X, viewport.Height - this.height);
-                SetVelocity(this.velocity.X, 0);
+                if (this.position.X < 0)
+                {
+                    SetPosition(0, this.position.Y);
+                    SetVelocity(-this.velocity.X, this.velocity.Y);
+                }
+                if (this.position.Y < 0)
+                {
+                    SetPosition(this.position.X, 0);
+                    SetVelocity(this.velocity.X, -this.velocity.Y);
+                }
+                if (this.position.X > viewport.Width - this.width)
+                {
+                    SetPosition(viewport.Width - this.width, this.position.Y);
+                    SetVelocity(-this.velocity.X, this.velocity.Y);
+                }
+                if (this.position.Y > viewport.Height - this.height)
+                {
+                    SetPosition(this.position.X, viewport.Height - this.height);
+                    SetVelocity(this.velocity.X, -this.velocity.Y);
+                }
+            }else{
+                if (this.position.X < 0)
+                {
+                    SetPosition(0, this.position.Y);
+                    SetVelocity(0, this.velocity.Y);
+                }
+                if (this.position.Y < 0)
+                {
+                    SetPosition(this.position.X, 0);
+                    SetVelocity(this.velocity.X, 0);
+                }
+                if (this.position.X > viewport.Width - this.width)
+                {
+                    SetPosition(viewport.Width - this.width, this.position.Y);
+                    SetVelocity(0, this.velocity.Y);
+                }
+                if (this.position.Y > viewport.Height - this.height)
+                {
+                    SetPosition(this.position.X, viewport.Height - this.height);
+                    SetVelocity(this.velocity.X, 0);
+                }
             }
         }
 
