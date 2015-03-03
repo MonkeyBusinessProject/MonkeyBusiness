@@ -14,6 +14,7 @@ Content\arrowsPrescreen.xnb
 Content\mousePrescreen.xnb
 Content\Score.xnb
 Content\GameFont.xnb
+Content\StarWarsFont.xnb
 Content\SoundFX\alarmhit.xnb
 Content\SoundFX\moneypop.xnb
 Content\SoundFX\MonkeySounds.xnb
@@ -23,7 +24,8 @@ Content\SoundFX\TrashKick.xnb
 Content\BGM\Level2Music.xnb
 Content\BGM\Level1Music.xnb
 Content\BGM\LevelLastMusic.xnb
-Content\StarWarsFont.xnb
+Content\BGM\starwars.xnb
 Content\BGM\Level2Music.wma
 Content\BGM\Level1Music.wma
 Content\BGM\LevelLastMusic.wma
+Content\BGM\starwars.wma
