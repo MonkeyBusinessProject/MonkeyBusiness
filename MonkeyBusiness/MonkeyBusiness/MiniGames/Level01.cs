@@ -20,6 +20,7 @@ namespace MonkeyBusiness.MiniGames
         Player player;
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
+        KeyboardState keyboard = Keyboard.GetState();
 
         private Song backgroundMusic;
         List<DrawableObject> objects = new List<DrawableObject>();
@@ -47,8 +48,16 @@ namespace MonkeyBusiness.MiniGames
             if (collidedAlarms.Count != 0)
             {
                 alarmhit.Play();
+                objects.Clear();
+                spriteBatch.Begin();
+                GameOver();
+                spriteBatch.End();
+                if(keyboard.IsKeyDown(Keys.Space))
+                {
                 manager.score.scores = initialScores;
                 manager.RestartMiniGame();
+                }
+                
             }
         }
 
@@ -108,6 +117,8 @@ namespace MonkeyBusiness.MiniGames
         {
             Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(100, 100);
+            gameOverTexture = Content.Load<Texture2D>("Backgrounds/GameOverScreen");
+
 
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
@@ -131,10 +142,18 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void UnloadContent()
         {
-            
+            UpdateGraphicDevices();
+            graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+            objects.Clear();
           
         }
 
         #endregion
+        private void GameOver()
+        {
+            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Draw(gameOverTexture, screenRectangle, Color.White);
+
+        }
     }
 }

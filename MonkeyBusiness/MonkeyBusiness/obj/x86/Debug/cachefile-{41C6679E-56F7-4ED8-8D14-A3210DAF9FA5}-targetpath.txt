@@ -1,7 +1,5 @@
 Content\Sprites\monkey.xnb
 Content\Sprites\trashCan.xnb
-Content\background.xnb
-Content\mallBackground.xnb
 Content\Sprites\money.xnb
 Content\Sprites\trash.xnb
 Content\Sprites\alarm.xnb
@@ -10,8 +8,6 @@ Content\Sprites\notesCollector.xnb
 Content\sheet.xnb
 Content\Sprites\banana.xnb
 Content\Sprites\poisonbanana.xnb
-Content\arrowsPrescreen.xnb
-Content\mousePrescreen.xnb
 Content\Score.xnb
 Content\GameFont.xnb
 Content\StarWarsFont.xnb
@@ -29,3 +25,9 @@ Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
 Content\BGM\starwars.xnb
 Content\BGM\starwars.wma
+Content\Backgrounds\background.xnb
+Content\Backgrounds\mallBackground.xnb
+Content\Backgrounds\arrowsPrescreen.xnb
+Content\Backgrounds\mousePrescreen.xnb
+Content\Backgrounds\GameOverScreen.xnb
+Content\Timer.xnb

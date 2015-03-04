@@ -66,7 +66,7 @@ namespace MonkeyBusiness.MiniGames
         public override void LoadContent()
         {
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("arrowsPrescreen");
+            backgroundTexture = Content.Load<Texture2D>("Backgrounds/arrowsPrescreen");
         }
 
         /// <summary>

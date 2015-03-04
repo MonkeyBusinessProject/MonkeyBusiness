@@ -20,7 +20,6 @@ C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
@@ -32,7 +31,6 @@ C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusine
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
@@ -110,3 +108,12 @@ C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x8
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\background.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mallBackground.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\arrowsPrescreen.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mousePrescreen.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\GameOverScreen.xnb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Timer.xnb

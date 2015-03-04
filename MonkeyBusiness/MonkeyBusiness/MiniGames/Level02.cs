@@ -27,7 +27,8 @@ namespace MonkeyBusiness.MiniGames
         private GameTime gameTime;
         private SoundEffect trashInCan;
         private SoundEffect trashKick;
-
+        float seconds;
+        KeyboardState keyboard = Keyboard.GetState();
         private Song backgroundMusic;
         #endregion
 
@@ -58,6 +59,24 @@ namespace MonkeyBusiness.MiniGames
         {
             if (manager.score.scores == totalScores + initialScores)
                 manager.SetNextMiniGameAsCurrent();
+        }
+        private void GameTimer()
+        {
+            seconds -= (float)gameTime.ElapsedGameTime.TotalSeconds; //Add the elapsed seconds so far
+            if (seconds <= 0)
+            { //Check if 120s have elapsed
+                seconds = 120; //Restart the seconds counter
+                //End or restart the game
+                objects.Clear();
+                spriteBatch.Begin();
+                GameOver();
+                spriteBatch.End();
+                if (keyboard.IsKeyDown(Keys.Space))
+                {
+                    manager.score.scores = initialScores;
+                    manager.RestartMiniGame();
+                }
+            }
         }
 
         #endregion
@@ -91,7 +110,7 @@ namespace MonkeyBusiness.MiniGames
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
             DrawScenery();
-            Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
+            Utillities.DrawAllObjectsWithTimer(objects, manager.score, manager.timer, spriteBatch);
 
             spriteBatch.End();
         }
@@ -106,6 +125,7 @@ namespace MonkeyBusiness.MiniGames
             //Example:          player.HandleInput();
             this.gameTime = gameTime;
             player.HandleInput(true);
+            GameTimer();
             CheckCollisionPlayerWithTrash();
             CheckCollisionTrashToTrashcan();
             CheckWinning();
@@ -123,7 +143,7 @@ namespace MonkeyBusiness.MiniGames
 
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("background");
+            backgroundTexture = Content.Load<Texture2D>("Backgrounds/background");
 
             Texture2D TrashTexture = Content.Load<Texture2D>("Sprites/trash");
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
@@ -144,7 +164,7 @@ namespace MonkeyBusiness.MiniGames
             objects.Add(player);
 
             initialScores = manager.score.scores;
-
+            seconds = manager.timer.seconds;
             backgroundMusic = Content.Load<Song>("BGM/Level2Music");
             MediaPlayer.Play(backgroundMusic);
         }
@@ -156,7 +176,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void UnloadContent()
         {
-        
+
 
 
         }
@@ -164,11 +184,17 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-       
+
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+
+        }
+        private void GameOver()
+        {
+            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Draw(gameOverTexture, screenRectangle, Color.White);
 
         }
         #endregion

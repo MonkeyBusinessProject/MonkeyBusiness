@@ -27,6 +27,7 @@ namespace GameStateManager
         public int count = 0;// TODO: remove, just for debugging
         bool isRunning = false;
         public Score score;
+        public Timer timer;
 
         #region get and set
         public GraphicsDeviceManager GetGraphicDevice()
@@ -72,6 +73,7 @@ namespace GameStateManager
         protected override void LoadContent()
         {
             score = new Score(Content.Load<SpriteFont>("Score"));
+            timer = new Timer(Content.Load<SpriteFont>("Timer"));
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -110,20 +112,7 @@ namespace GameStateManager
 
             if (isRunning)
                 miniGame.Update(gameTime);
-            //// TODO: Remove
-            /*
-            if (count == 100)
-            {
-                NextMiniGame();
-            }
-            if (count == 200)
-            {
-                LastMiniGame();
-                count = 0;
-            }
-            count++;
-             */
-            ////
+           
 
             base.Update(gameTime);
         }
@@ -154,10 +143,10 @@ namespace GameStateManager
             miniGames.Push(new PreUsingKeys(this));
             //miniGames.Push(new Level03(this));
             miniGames.Push(new Level02(this));
-            miniGames.Push(new PreUsingMouse(this));
-            miniGames.Push(new Level01(this));
-            miniGames.Push(new PreUsingMouse(this));
-            miniGames.Push(new StarWars(this));
+            //miniGames.Push(new PreUsingMouse(this));
+            //miniGames.Push(new Level01(this));
+            //miniGames.Push(new PreUsingMouse(this));
+            //miniGames.Push(new StarWars(this));
         }
 
         private void SetFirstMiniGameAsCurrent()

@@ -63,14 +63,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="background.jpg">
+    <Compile Include="Backgrounds\background.jpg">
       <Name>background</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mallBackground.jpg">
+    <Compile Include="Backgrounds\mallBackground.jpg">
       <Name>mallBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -199,12 +199,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="arrowsPrescreen.png">
+    <Compile Include="Backgrounds\arrowsPrescreen.png">
       <Name>arrowsPrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="mousePrescreen.png">
+    <Compile Include="Backgrounds\mousePrescreen.png">
       <Name>mousePrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -222,6 +222,20 @@
       <Name>starwars</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Backgrounds\GameOverScreen.png">
+      <Name>GameOverScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Timer.spritefont">
+      <Name>Timer</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

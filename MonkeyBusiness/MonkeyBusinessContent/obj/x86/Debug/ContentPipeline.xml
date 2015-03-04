@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
-      <Time>2015-02-10T18:02:10.4124431+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
+      <Time>2015-03-04T13:13:36.6097017+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trashCan.png</Source>
@@ -16,26 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
-      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
-    </Item>
-    <Item>
-      <Source>background.jpg</Source>
-      <Name>background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2015-02-10T18:02:10.410443+02:00</Time>
-    </Item>
-    <Item>
-      <Source>mallBackground.jpg</Source>
-      <Name>mallBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
-      <Time>2015-02-10T18:02:10.411443+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
+      <Time>2015-03-04T13:13:36.6077043+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\money.jpg</Source>
@@ -43,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
-      <Time>2015-02-10T18:02:10.411443+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
+      <Time>2015-03-04T13:13:36.608703+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trash.png</Source>
@@ -52,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
-      <Time>2015-02-10T18:02:10.4694463+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
+      <Time>2015-03-04T13:13:36.6376653+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\alarm.png</Source>
@@ -61,8 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
-      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
+      <Time>2015-03-04T13:13:36.608703+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\note.png</Source>
@@ -70,8 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
-      <Time>2015-02-10T18:02:10.4124431+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
+      <Time>2015-03-04T13:13:36.6097017+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\notesCollector.png</Source>
@@ -79,8 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
-      <Time>2015-02-10T18:02:10.4134431+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
+      <Time>2015-03-04T13:13:36.6366666+02:00</Time>
     </Item>
     <Item>
       <Source>sheet.png</Source>
@@ -88,8 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2015-02-16T18:17:26.2592324+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
+      <Time>2015-03-04T13:13:36.6696237+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\banana.png</Source>
@@ -97,8 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
-      <Time>2015-02-22T17:43:35.1985583+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
+      <Time>2015-03-04T13:13:36.608703+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\poisonbanana.png</Source>
@@ -106,26 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
-      <Time>2015-02-22T17:43:35.1985583+02:00</Time>
-    </Item>
-    <Item>
-      <Source>arrowsPrescreen.png</Source>
-      <Name>arrowsPrescreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb</Output>
-      <Time>2015-02-22T18:44:02.2860158+02:00</Time>
-    </Item>
-    <Item>
-      <Source>mousePrescreen.png</Source>
-      <Name>mousePrescreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb</Output>
-      <Time>2015-02-22T18:44:02.2850157+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
+      <Time>2015-03-04T13:13:36.6366666+02:00</Time>
     </Item>
     <Item>
       <Source>Score.spritefont</Source>
@@ -133,8 +97,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-02-10T18:02:10.4094429+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
+      <Time>2015-03-04T13:13:36.5807394+02:00</Time>
     </Item>
     <Item>
       <Source>GameFont.spritefont</Source>
@@ -142,8 +106,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-02-10T18:02:10.3784411+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
+      <Time>2015-03-04T13:13:36.5248122+02:00</Time>
     </Item>
     <Item>
       <Source>StarWarsFont.spritefont</Source>
@@ -151,8 +115,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
-      <Time>2015-03-03T18:00:32.0152327+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
+      <Time>2015-03-04T13:13:36.6376653+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\alarmhit.mp3</Source>
@@ -160,8 +124,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
-      <Time>2015-02-16T19:12:21.7267223+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
+      <Time>2015-03-04T13:13:36.6067056+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\moneypop.mp3</Source>
@@ -169,8 +133,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
-      <Time>2015-02-16T19:12:32.420334+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
+      <Time>2015-03-04T13:13:36.6077043+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\MonkeySounds.mp3</Source>
@@ -178,8 +142,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
-      <Time>2015-02-16T19:14:37.952514+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
+      <Time>2015-03-04T13:13:36.5827368+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\BrownBananaCollect.mp3</Source>
@@ -187,8 +151,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
-      <Time>2015-02-22T17:43:35.1965581+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
+      <Time>2015-03-04T13:13:36.5817381+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashInCan.mp3</Source>
@@ -196,8 +160,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
-      <Time>2015-02-22T17:43:35.1975582+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
+      <Time>2015-03-04T13:13:36.6047082+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashKick.mp3</Source>
@@ -205,8 +169,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
-      <Time>2015-02-22T17:43:35.1975582+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
+      <Time>2015-03-04T13:13:36.6057069+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\Level2Music.mp3</Source>
@@ -214,9 +178,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
-      <Extra>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-02-22T17:43:35.1365547+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
+      <Time>2015-03-04T13:13:36.4249422+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\FirstLevelMusic.mp3</Source>
@@ -224,9 +188,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
-      <Extra>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
-      <Time>2015-02-22T17:43:35.1115533+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
+      <Time>2015-03-04T13:13:36.4039695+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\LevelLastMusic.mp3</Source>
@@ -234,9 +198,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
-      <Extra>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
-      <Time>2015-02-22T17:43:35.194558+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
+      <Time>2015-03-04T13:13:36.4768746+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\starwars.mp3</Source>
@@ -244,9 +208,63 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb</Output>
-      <Extra>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma</Extra>
-      <Time>2015-03-03T18:25:09.1307188+02:00</Time>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb</Output>
+      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma</Extra>
+      <Time>2015-03-04T13:13:36.5248122+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\background.jpg</Source>
+      <Name>Backgrounds\background</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\background.xnb</Output>
+      <Time>2015-03-04T13:13:36.6416601+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\mallBackground.jpg</Source>
+      <Name>Backgrounds\mallBackground</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mallBackground.xnb</Output>
+      <Time>2015-03-04T13:13:36.6426588+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\arrowsPrescreen.png</Source>
+      <Name>Backgrounds\arrowsPrescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\arrowsPrescreen.xnb</Output>
+      <Time>2015-03-04T13:13:36.6396627+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\mousePrescreen.png</Source>
+      <Name>Backgrounds\mousePrescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mousePrescreen.xnb</Output>
+      <Time>2015-03-04T13:13:36.6446562+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Backgrounds\GameOverScreen.png</Source>
+      <Name>Backgrounds\GameOverScreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\GameOverScreen.xnb</Output>
+      <Time>2015-03-04T13:40:33.8508462+02:00</Time>
+    </Item>
+    <Item>
+      <Source>Timer.spritefont</Source>
+      <Name>Timer</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Timer.xnb</Output>
+      <Time>2015-03-04T14:42:25.1639498+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -254,10 +272,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -286,7 +304,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-11-05T23:35:42.7946232+02:00</Value>
+        <Value>2013-12-05T10:13:05.9898108+02:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

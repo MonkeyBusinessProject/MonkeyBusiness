@@ -30,7 +30,7 @@ namespace MonkeyBusiness.MiniGames
         const int minInterval = 500;
         int timeFromLastDollar = 0;
         int timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);
-
+        KeyboardState keyboard = Keyboard.GetState();
         float minimumDollarSpeed = 0.05f, maximumDollarSpeed = 0.06f, initialMinimumDollarSpeed = 0.05f, initialMaximumDollarSpeed = 0.06f;
         const float maxSpeed = 0.2f;
 
@@ -71,7 +71,7 @@ namespace MonkeyBusiness.MiniGames
             if (takenDollars.Count != 0)
             {
                 moneycollect.Play();
-                if(maximumDollarSpeed < maxSpeed)
+                if (maximumDollarSpeed < maxSpeed)
                     minimumDollarSpeed += 0.01f;
                 if (minimumDollarSpeed < maxSpeed)
                     maximumDollarSpeed += 0.01f;
@@ -101,7 +101,13 @@ namespace MonkeyBusiness.MiniGames
             {
                 manager.score.scores = initialScores;
                 SEFBrownBananaCollect.Play();
-                manager.RestartMiniGame();
+                spriteBatch.Begin();
+                GameOver();
+                if (keyboard.IsKeyDown(Keys.Space))
+                {
+                    manager.RestartMiniGame();
+                }
+                spriteBatch.End();
             }
         }
 
@@ -201,7 +207,7 @@ namespace MonkeyBusiness.MiniGames
         {
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("mallBackground");
+            backgroundTexture = Content.Load<Texture2D>("Backgrounds/mallBackground");
 
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);
@@ -242,6 +248,12 @@ namespace MonkeyBusiness.MiniGames
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+
+        }
+        private void GameOver()
+        {
+            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Draw(gameOverTexture, screenRectangle, Color.White);
 
         }
         #endregion
