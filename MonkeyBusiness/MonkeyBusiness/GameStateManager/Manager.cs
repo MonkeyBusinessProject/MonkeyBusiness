@@ -139,14 +139,22 @@ namespace GameStateManager
         {
             // TODO: Add all mini-games
             //Add in reversed order
-            miniGames.Push(new LevelLast(this));
-            miniGames.Push(new PreUsingKeys(this));
+            //miniGames.Push(new LevelLast(this));
+            //miniGames.Push(new PreUsingKeys(this));
             //miniGames.Push(new Level03(this));
+<<<<<<< HEAD
             miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new Level01(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars(this));
+=======
+            //miniGames.Push(new Level02(this));
+            //miniGames.Push(new PreUsingMouse(this));
+            //miniGames.Push(new Level01(this));
+            miniGames.Push(new PreUsingMouse(this));
+            miniGames.Push(new StarWars(this));
+>>>>>>> parent of 3b276cf... Version 8.1
         }
 
         private void SetFirstMiniGameAsCurrent()
