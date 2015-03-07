@@ -218,6 +218,7 @@
     </Compile>
   </ItemGroup>
 <<<<<<< HEAD
+<<<<<<< HEAD
   <ItemGroup>
     <Compile Include="BGM\starwars.mp3">
       <Name>starwars</Name>
@@ -239,6 +240,8 @@
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
+=======
+>>>>>>> parent of 3b276cf... Version 8.1
 =======
 >>>>>>> parent of 3b276cf... Version 8.1
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

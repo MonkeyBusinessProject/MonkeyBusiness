@@ -143,12 +143,15 @@ namespace GameStateManager
             //miniGames.Push(new PreUsingKeys(this));
             //miniGames.Push(new Level03(this));
 <<<<<<< HEAD
+<<<<<<< HEAD
             miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new Level01(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars(this));
 =======
+=======
+>>>>>>> parent of 3b276cf... Version 8.1
             //miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new Level01(this));

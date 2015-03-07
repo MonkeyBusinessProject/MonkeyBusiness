@@ -20,6 +20,7 @@ Content\BGM\Level2Music.xnb
 Content\BGM\Level1Music.xnb
 Content\BGM\LevelLastMusic.xnb
 <<<<<<< HEAD
+<<<<<<< HEAD
 Content\BGM\starwars.xnb
 Content\Backgrounds\background.xnb
 Content\Backgrounds\mallBackground.xnb
@@ -27,6 +28,9 @@ Content\Backgrounds\arrowsPrescreen.xnb
 Content\Backgrounds\mousePrescreen.xnb
 Content\Backgrounds\GameOverScreen.xnb
 Content\Timer.xnb
+=======
+Content\StarWarsFont.xnb
+>>>>>>> parent of 3b276cf... Version 8.1
 =======
 Content\StarWarsFont.xnb
 >>>>>>> parent of 3b276cf... Version 8.1
