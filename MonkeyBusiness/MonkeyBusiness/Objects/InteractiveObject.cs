@@ -65,7 +65,7 @@ namespace MonkeyBusiness.Objects
             }
         }
 
-        private bool isElastic = false;
+        private bool isElastic = false, isOutsideScreenEnabled = false;
         #endregion
 
         public InteractiveObject(Texture2D texture, Vector2 position)
@@ -136,6 +136,11 @@ namespace MonkeyBusiness.Objects
             this.isElastic = isElastic;
         }
 
+        public void SetOutsideScreen(bool isOutsideScreenEnabled)
+        {
+            this.isOutsideScreenEnabled = isOutsideScreenEnabled;
+        }
+
         #region Stoping
         /// <summary>
         /// Stop the object's movement if needed
@@ -178,7 +183,7 @@ namespace MonkeyBusiness.Objects
                     SetPosition(this.position.X, viewport.Height - this.height);
                     SetVelocity(this.velocity.X, -this.velocity.Y);
                 }
-            }else{
+            }else if(!isOutsideScreenEnabled){
                 if (this.position.X < 0)
                 {
                     SetPosition(0, this.position.Y);

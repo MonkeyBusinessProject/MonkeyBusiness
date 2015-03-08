@@ -7,19 +7,28 @@ using Microsoft.Xna.Framework;
 using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
     class StarWars : MiniGame
     {
+        private Song bgm;
+        KeyboardState keyboard;
         public StarWarsText starWarsText;
-        string introductionText = "Once Upon a Time\nIn the far Monkey Planet\nLived a young monkey\nnamed Chimp\nChimp was a cuerl criminal\nthat rubbed malls everyday\n\nOne day, he tried to brek\nto the most secure mall\nin the country\nBut things didn't go well\nto our poor Chimp\n\n\n\nYour Mission is to help Chimp\nto break the mall\nand steal all the money,\nbut without touching\nthe bombs and alarms\nGood Luck!!!!";
+        string introductionText = "Once Upon a Time\nIn the far away Planet Monkey\nLived a young monkey\nnamed Chimp.\nChimp was a criminal\nwho robbed malls everyday.\n\nOne day, when he tried to break\ninto the most secure mall\nin the country,\nthings got out of control\nfor our poor Chimp.\n\n\n\nYour Mission is to help Chimp\n break into the mall\nand steal all the money,\nwithout touching \nthe bombs and alarms.\nGood Luck!";
 
 
         public StarWars(Manager manager)
             : base(manager)
         {
 
+        }
+        private void CheckWinning()
+        {
+            keyboard = Keyboard.GetState();
+            if (keyboard.IsKeyDown(Keys.Space))
+                manager.SetNextMiniGameAsCurrent();
         }
 
         /// <summary>
@@ -50,6 +59,7 @@ namespace MonkeyBusiness.MiniGames
         public override void Update(GameTime gameTime)
         {
             starWarsText.Update(gameTime);
+            CheckWinning();
         }
 
         /// <summary>
@@ -62,6 +72,8 @@ namespace MonkeyBusiness.MiniGames
         {
             starWarsText = new StarWarsText(viewport, introductionText);
             starWarsText.LoadContent(Content);
+            bgm = Content.Load<Song>("BGM/starwars");
+            MediaPlayer.Play(bgm);
         }
 
         /// <summary>

@@ -20,10 +20,13 @@ namespace MonkeyBusiness.MiniGames
         Player player;
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
-        KeyboardState keyboard = Keyboard.GetState();
-
+        
         private Song backgroundMusic;
         List<DrawableObject> objects = new List<DrawableObject>();
+
+        //Timer
+        Timer timer = new Timer();
+        private int timeLimit = 25;
 
         /// <summary>
         /// Constractor
@@ -47,20 +50,23 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> collidedAlarms = Utillities.GetColliadedObjects(player, objects, "alarm");
             if (collidedAlarms.Count != 0)
             {
-                alarmhit.Play();
-                objects.Clear();
-                spriteBatch.Begin();
-                GameOver();
-                spriteBatch.End();
-                if(keyboard.IsKeyDown(Keys.Space))
-                {
-                manager.score.scores = initialScores;
-                manager.RestartMiniGame();
-                }
-                
+                RestartLevel();
             }
         }
 
+        private void CheckIfTimePassed()
+        {
+            if (timer.seconds <= 0)
+                RestartLevel();
+        }
+
+        private void RestartLevel()
+        {
+            alarmhit.Play();
+            manager.score.scores = initialScores;
+            timer = new Timer();
+            manager.RestartMiniGame();
+        }
 
         private void CheckWinning()
         {
@@ -90,6 +96,7 @@ namespace MonkeyBusiness.MiniGames
             spriteBatch.Begin();
 
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
+            timer.Draw(spriteBatch);
 
             spriteBatch.End();
         }
@@ -100,7 +107,14 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
+            if (!timer.isWorking)
+                timer = new Timer(manager.score.font, gameTime, timeLimit);
+            else
+                timer.Update(gameTime);
+
+
             player.HandleInput(true);
+            CheckIfTimePassed();
             CheckCollision();
             CheckWinning();
 
@@ -117,8 +131,6 @@ namespace MonkeyBusiness.MiniGames
         {
             Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(100, 100);
-            gameOverTexture = Content.Load<Texture2D>("Backgrounds/GameOverScreen");
-
 
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
@@ -132,6 +144,7 @@ namespace MonkeyBusiness.MiniGames
 
             backgroundMusic = Content.Load<Song>("BGM/Level1Music");
             MediaPlayer.Play(backgroundMusic);
+
             //Load to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;
@@ -142,18 +155,9 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void UnloadContent()
         {
-            UpdateGraphicDevices();
-            graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             objects.Clear();
-          
         }
 
         #endregion
-        private void GameOver()
-        {
-            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
-            spriteBatch.Draw(gameOverTexture, screenRectangle, Color.White);
-
-        }
     }
 }

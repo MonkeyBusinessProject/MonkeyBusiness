@@ -117,13 +117,13 @@
     <Compile Include="MiniGames\PreUsingMouse.cs" />
     <Compile Include="MiniGames\PreUsingKeys.cs" />
     <Compile Include="MiniGames\StarWars.cs" />
+    <Compile Include="Objects\Timer.cs" />
     <Compile Include="Objects\InteractiveObject.cs" />
     <Compile Include="Objects\DrawableObject.cs" />
     <Compile Include="Objects\Player.cs" />
     <Compile Include="Objects\Score.cs" />
     <Compile Include="Objects\StarWarsLine.cs" />
     <Compile Include="Objects\StarWarsText.cs" />
-    <Compile Include="Objects\Timer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Utillities.cs" />

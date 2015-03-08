@@ -63,14 +63,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backgrounds\background.jpg">
+    <Compile Include="background.jpg">
       <Name>background</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backgrounds\mallBackground.jpg">
+    <Compile Include="mallBackground.jpg">
       <Name>mallBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -199,12 +199,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Backgrounds\arrowsPrescreen.png">
+    <Compile Include="arrowsPrescreen.png">
       <Name>arrowsPrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Backgrounds\mousePrescreen.png">
+    <Compile Include="mousePrescreen.png">
       <Name>mousePrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -217,8 +217,6 @@
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
-<<<<<<< HEAD
-<<<<<<< HEAD
   <ItemGroup>
     <Compile Include="BGM\starwars.mp3">
       <Name>starwars</Name>
@@ -226,24 +224,6 @@
       <Processor>SongProcessor</Processor>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Backgrounds\GameOverScreen.png">
-      <Name>GameOverScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Timer.spritefont">
-      <Name>Timer</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-=======
->>>>>>> parent of 3b276cf... Version 8.1
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

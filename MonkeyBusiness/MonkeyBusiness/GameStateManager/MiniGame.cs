@@ -17,7 +17,6 @@ namespace GameStateManager
         protected ContentManager Content;
         protected Viewport viewport;
         protected Texture2D backgroundTexture;
-        protected Texture2D gameOverTexture;
         protected Texture2D foregroundTexture;
        
  

@@ -7,18 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
-      <Time>2015-03-04T13:13:36.6097017+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
-      <Time>2015-02-27T10:49:43.2046349+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
-      <Time>2015-02-27T10:49:43.2046349+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
+      <Time>2015-03-08T16:58:43.9652223+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trashCan.png</Source>
@@ -26,15 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
-      <Time>2015-03-04T13:13:36.6077043+02:00</Time>
-=======
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
-      <Time>2015-02-27T10:49:43.0076236+02:00</Time>
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
+      <Time>2015-03-08T16:58:43.9202198+02:00</Time>
     </Item>
     <Item>
       <Source>background.jpg</Source>
@@ -42,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb</Output>
-      <Time>2015-01-31T19:16:56.5007348+02:00</Time>
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb</Output>
+      <Time>2015-03-08T16:58:43.0401694+02:00</Time>
     </Item>
     <Item>
       <Source>mallBackground.jpg</Source>
@@ -51,12 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
-      <Time>2015-01-31T19:16:56.5017348+02:00</Time>
-<<<<<<< HEAD
->>>>>>> parent of 3b276cf... Version 8.1
-=======
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb</Output>
+      <Time>2015-03-08T16:58:43.1011729+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\money.jpg</Source>
@@ -64,18 +43,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
-      <Time>2015-03-04T13:13:36.608703+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
-      <Time>2015-02-27T10:49:43.0096237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
-      <Time>2015-02-27T10:49:43.0096237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
+      <Time>2015-03-08T16:58:43.9552218+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trash.png</Source>
@@ -83,18 +52,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
-      <Time>2015-03-04T13:13:36.6376653+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
-      <Time>2015-02-27T10:49:43.2966402+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
-      <Time>2015-02-27T10:49:43.2966402+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
+      <Time>2015-03-08T16:58:44.133232+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\alarm.png</Source>
@@ -102,18 +61,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
-      <Time>2015-03-04T13:13:36.608703+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
-      <Time>2015-02-27T10:49:43.0086237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
-      <Time>2015-02-27T10:49:43.0086237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
+      <Time>2015-03-08T16:58:43.9332205+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\note.png</Source>
@@ -121,18 +70,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
-      <Time>2015-03-04T13:13:36.6097017+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
-      <Time>2015-02-27T10:49:43.2056349+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
-      <Time>2015-02-27T10:49:43.2056349+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
+      <Time>2015-03-08T16:58:44.0162253+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\notesCollector.png</Source>
@@ -140,18 +79,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
-      <Time>2015-03-04T13:13:36.6366666+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
-      <Time>2015-02-27T10:49:43.2496375+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
-      <Time>2015-02-27T10:49:43.2496375+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
+      <Time>2015-03-08T16:58:44.0312261+02:00</Time>
     </Item>
     <Item>
       <Source>sheet.png</Source>
@@ -159,18 +88,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2015-03-04T13:13:36.6696237+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2015-02-27T10:49:43.3266419+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
-      <Time>2015-02-27T10:49:43.3266419+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb</Output>
+      <Time>2015-03-08T16:58:43.1491757+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\banana.png</Source>
@@ -178,18 +97,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
-      <Time>2015-03-04T13:13:36.608703+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
-      <Time>2015-02-27T10:49:43.0096237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
-      <Time>2015-02-27T10:49:43.0096237+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
+      <Time>2015-03-08T16:58:43.9442211+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\poisonbanana.png</Source>
@@ -197,15 +106,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
-      <Time>2015-03-04T13:13:36.6366666+02:00</Time>
-=======
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
-      <Time>2015-02-27T10:49:43.2516376+02:00</Time>
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
+      <Time>2015-03-08T16:58:44.0742286+02:00</Time>
     </Item>
     <Item>
       <Source>arrowsPrescreen.png</Source>
@@ -213,8 +115,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb</Output>
-      <Time>2015-02-27T10:49:43.3006404+02:00</Time>
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb</Output>
+      <Time>2015-03-08T16:58:42.962165+02:00</Time>
     </Item>
     <Item>
       <Source>mousePrescreen.png</Source>
@@ -222,12 +124,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb</Output>
-      <Time>2015-02-27T10:49:43.3136411+02:00</Time>
-<<<<<<< HEAD
->>>>>>> parent of 3b276cf... Version 8.1
-=======
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb</Output>
+      <Time>2015-03-08T16:58:43.120174+02:00</Time>
     </Item>
     <Item>
       <Source>Score.spritefont</Source>
@@ -235,18 +133,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-03-04T13:13:36.5807394+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-01-11T23:12:22.2837715+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-01-11T23:12:22.2837715+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
+      <Time>2015-03-08T16:58:42.9261629+02:00</Time>
     </Item>
     <Item>
       <Source>GameFont.spritefont</Source>
@@ -254,10 +142,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-03-04T13:13:36.5248122+02:00</Time>
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
+      <Time>2015-03-08T16:58:42.8881607+02:00</Time>
     </Item>
     <Item>
       <Source>StarWarsFont.spritefont</Source>
@@ -265,16 +151,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
-      <Time>2015-03-04T13:13:36.6376653+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-02-09T20:40:21.5984487+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-02-09T20:40:21.5984487+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
+      <Time>2015-03-08T16:58:42.945164+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\alarmhit.mp3</Source>
@@ -282,18 +160,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
-      <Time>2015-03-04T13:13:36.6067056+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
-      <Time>2015-02-27T10:49:42.856615+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
-      <Time>2015-02-27T10:49:42.856615+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
+      <Time>2015-03-08T16:58:43.8902181+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\moneypop.mp3</Source>
@@ -301,18 +169,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
-      <Time>2015-03-04T13:13:36.6077043+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
-      <Time>2015-02-27T10:49:42.909618+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
-      <Time>2015-02-27T10:49:42.909618+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
+      <Time>2015-03-08T16:58:43.9042189+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\MonkeySounds.mp3</Source>
@@ -320,18 +178,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
-      <Time>2015-03-04T13:13:36.5827368+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
-      <Time>2015-02-27T10:49:42.8286134+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
-      <Time>2015-02-27T10:49:42.8286134+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
+      <Time>2015-03-08T16:58:43.7482099+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\BrownBananaCollect.mp3</Source>
@@ -339,18 +187,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
-      <Time>2015-03-04T13:13:36.5817381+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
-      <Time>2015-02-27T10:49:42.6986059+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
-      <Time>2015-02-27T10:49:42.6986059+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
+      <Time>2015-03-08T16:58:43.7102078+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashInCan.mp3</Source>
@@ -358,18 +196,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
-      <Time>2015-03-04T13:13:36.6047082+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
-      <Time>2015-02-27T10:49:42.8486145+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
-      <Time>2015-02-27T10:49:42.8486145+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
+      <Time>2015-03-08T16:58:43.8262144+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashKick.mp3</Source>
@@ -377,18 +205,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
-      <Time>2015-03-04T13:13:36.6057069+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
-      <Time>2015-02-27T10:49:42.8496146+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
-      <Time>2015-02-27T10:49:42.8496146+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
+      <Time>2015-03-08T16:58:43.872217+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\Level2Music.mp3</Source>
@@ -396,21 +214,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-03-04T13:13:36.4249422+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-02-27T10:49:42.6236017+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-02-27T10:49:42.6236017+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
+      <Extra>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
+      <Time>2015-03-08T16:58:43.4951955+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\FirstLevelMusic.mp3</Source>
@@ -418,21 +224,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
-      <Time>2015-03-04T13:13:36.4039695+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
-      <Time>2015-02-27T10:49:42.5956001+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
-      <Time>2015-02-27T10:49:42.5956001+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
+      <Extra>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
+      <Time>2015-03-08T16:58:43.4151909+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\LevelLastMusic.mp3</Source>
@@ -440,96 +234,19 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
-      <Time>2015-03-04T13:13:36.4768746+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
-      <Time>2015-02-27T10:49:42.6946057+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
-      <Extra>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
-      <Time>2015-02-27T10:49:42.6946057+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
+      <Extra>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
+      <Time>2015-03-08T16:58:43.6552046+02:00</Time>
     </Item>
     <Item>
-      <Source>StarWarsFont.spritefont</Source>
-      <Name>StarWarsFont</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-<<<<<<< HEAD
+      <Source>BGM\starwars.mp3</Source>
+      <Name>BGM\starwars</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
       <Options>None</Options>
-<<<<<<< HEAD
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb</Output>
-      <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma</Extra>
-      <Time>2015-03-04T13:13:36.5248122+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\background.jpg</Source>
-      <Name>Backgrounds\background</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\background.xnb</Output>
-      <Time>2015-03-04T13:13:36.6416601+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\mallBackground.jpg</Source>
-      <Name>Backgrounds\mallBackground</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mallBackground.xnb</Output>
-      <Time>2015-03-04T13:13:36.6426588+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\arrowsPrescreen.png</Source>
-      <Name>Backgrounds\arrowsPrescreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\arrowsPrescreen.xnb</Output>
-      <Time>2015-03-04T13:13:36.6396627+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\mousePrescreen.png</Source>
-      <Name>Backgrounds\mousePrescreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mousePrescreen.xnb</Output>
-      <Time>2015-03-04T13:13:36.6446562+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Backgrounds\GameOverScreen.png</Source>
-      <Name>Backgrounds\GameOverScreen</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\GameOverScreen.xnb</Output>
-      <Time>2015-03-04T13:40:33.8508462+02:00</Time>
-    </Item>
-    <Item>
-      <Source>Timer.spritefont</Source>
-      <Name>Timer</Name>
-      <Importer>FontDescriptionImporter</Importer>
-      <Processor>FontDescriptionProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Timer.xnb</Output>
-      <Time>2015-03-04T14:42:25.1639498+02:00</Time>
-=======
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
-      <Time>2015-02-27T11:43:37.1246045+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-      <Options>None</Options>
-      <Output>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
-      <Time>2015-02-27T11:43:37.1246045+02:00</Time>
->>>>>>> parent of 3b276cf... Version 8.1
+      <Output>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb</Output>
+      <Extra>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma</Extra>
+      <Time>2015-03-08T16:58:43.696207+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -537,23 +254,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <RootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
-=======
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-      <RootDirectory>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
-<<<<<<< HEAD
->>>>>>> parent of 3b276cf... Version 8.1
-=======
->>>>>>> parent of 3b276cf... Version 8.1
+      <RootDirectory>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusinessContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusinessContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -582,15 +286,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <Value>2013-12-05T10:13:05.9898108+02:00</Value>
-=======
         <Value>2014-11-09T19:45:28.2195434+02:00</Value>
->>>>>>> parent of 3b276cf... Version 8.1
-=======
-        <Value>2014-11-09T19:45:28.2195434+02:00</Value>
->>>>>>> parent of 3b276cf... Version 8.1
       </Assembly>
     </Assemblies>
   </Asset>

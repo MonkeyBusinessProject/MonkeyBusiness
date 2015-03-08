@@ -20,6 +20,7 @@ C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
@@ -31,6 +32,7 @@ C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusine
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb
+C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
@@ -105,21 +107,43 @@ C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x8
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
-<<<<<<< HEAD
-<<<<<<< HEAD
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\background.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mallBackground.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\arrowsPrescreen.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\mousePrescreen.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Backgrounds\GameOverScreen.xnb
-C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Timer.xnb
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-=======
->>>>>>> parent of 3b276cf... Version 8.1
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\sheet.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.exe
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.pdb
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.csprojResolveAssemblyReference.cache
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.exe
+C:\Users\ALLFAMILY\Desktop\MonkeyBusiness-laststablecommit\MonkeyBusiness-3b276cfb0ca5406f5b08db7614e0d63117156348\MonkeyBusiness\MonkeyBusiness\obj\x86\Debug\MonkeyBusiness.pdb

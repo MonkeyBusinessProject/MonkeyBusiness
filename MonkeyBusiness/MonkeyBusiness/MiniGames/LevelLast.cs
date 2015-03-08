@@ -17,6 +17,11 @@ namespace MonkeyBusiness.MiniGames
     {
         #region Fields
 
+        //Timer
+        Timer timer = new Timer();
+        private int timeLimit = 25;
+
+
         const int numberOfDollars = 30, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars;
         int initialScores;
         Player player;
@@ -30,7 +35,7 @@ namespace MonkeyBusiness.MiniGames
         const int minInterval = 500;
         int timeFromLastDollar = 0;
         int timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);
-        KeyboardState keyboard = Keyboard.GetState();
+
         float minimumDollarSpeed = 0.05f, maximumDollarSpeed = 0.06f, initialMinimumDollarSpeed = 0.05f, initialMaximumDollarSpeed = 0.06f;
         const float maxSpeed = 0.2f;
 
@@ -71,7 +76,7 @@ namespace MonkeyBusiness.MiniGames
             if (takenDollars.Count != 0)
             {
                 moneycollect.Play();
-                if (maximumDollarSpeed < maxSpeed)
+                if(maximumDollarSpeed < maxSpeed)
                     minimumDollarSpeed += 0.01f;
                 if (minimumDollarSpeed < maxSpeed)
                     maximumDollarSpeed += 0.01f;
@@ -99,15 +104,8 @@ namespace MonkeyBusiness.MiniGames
             Utillities.RemoveNodesFromList<DrawableObject>(objects, takenPoison);
             if (takenPoison.Count != 0)
             {
-                manager.score.scores = initialScores;
                 SEFBrownBananaCollect.Play();
-                spriteBatch.Begin();
-                GameOver();
-                if (keyboard.IsKeyDown(Keys.Space))
-                {
-                    manager.RestartMiniGame();
-                }
-                spriteBatch.End();
+                RestartLevel();
             }
         }
 
@@ -151,6 +149,19 @@ namespace MonkeyBusiness.MiniGames
                 manager.SetNextMiniGameAsCurrent();
         }
 
+        private void CheckIfTimePassed()
+        {
+            if (timer.seconds <= 0)
+                RestartLevel();
+        }
+
+        private void RestartLevel()
+        {
+            manager.score.scores = initialScores;
+            timer = new Timer();
+            manager.RestartMiniGame();
+        }
+
         #endregion
 
         #region basic functions
@@ -181,6 +192,8 @@ namespace MonkeyBusiness.MiniGames
             DrawScenery();
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
 
+            timer.Draw(spriteBatch);
+
             spriteBatch.End();
         }
 
@@ -197,9 +210,17 @@ namespace MonkeyBusiness.MiniGames
             player.SetVelocity(player.GetVelocity().X, 0);
             CheckColission();
             CheckWinning();
+            CheckIfTimePassed();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
 
             DollarsDrawer();
+
+
+            if (!timer.isWorking)
+                timer = new Timer(manager.score.font, gameTime, timeLimit);
+            else
+                timer.Update(gameTime);
+
         }
 
 
@@ -207,7 +228,7 @@ namespace MonkeyBusiness.MiniGames
         {
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("Backgrounds/mallBackground");
+            backgroundTexture = Content.Load<Texture2D>("mallBackground");
 
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);
@@ -230,16 +251,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void UnloadContent()
         {
-            try
-            {
-                UpdateGraphicDevices();
-                graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
-                objects.Clear();
-            }
-            catch (Exception ex)
-            {
-
-            }
+            objects.Clear();
         }
         #endregion
 
@@ -248,12 +260,6 @@ namespace MonkeyBusiness.MiniGames
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
-
-        }
-        private void GameOver()
-        {
-            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
-            spriteBatch.Draw(gameOverTexture, screenRectangle, Color.White);
 
         }
         #endregion

@@ -27,7 +27,6 @@ namespace GameStateManager
         public int count = 0;// TODO: remove, just for debugging
         bool isRunning = false;
         public Score score;
-        public Timer timer;
 
         #region get and set
         public GraphicsDeviceManager GetGraphicDevice()
@@ -73,7 +72,6 @@ namespace GameStateManager
         protected override void LoadContent()
         {
             score = new Score(Content.Load<SpriteFont>("Score"));
-            timer = new Timer(Content.Load<SpriteFont>("Timer"));
 
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
@@ -112,7 +110,20 @@ namespace GameStateManager
 
             if (isRunning)
                 miniGame.Update(gameTime);
-           
+            //// TODO: Remove
+            /*
+            if (count == 100)
+            {
+                NextMiniGame();
+            }
+            if (count == 200)
+            {
+                LastMiniGame();
+                count = 0;
+            }
+            count++;
+             */
+            ////
 
             base.Update(gameTime);
         }
@@ -139,25 +150,14 @@ namespace GameStateManager
         {
             // TODO: Add all mini-games
             //Add in reversed order
-            //miniGames.Push(new LevelLast(this));
+            miniGames.Push(new LevelLast(this));
             //miniGames.Push(new PreUsingKeys(this));
             //miniGames.Push(new Level03(this));
-<<<<<<< HEAD
-<<<<<<< HEAD
-            miniGames.Push(new Level02(this));
+            //miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new Level01(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars(this));
-=======
-=======
->>>>>>> parent of 3b276cf... Version 8.1
-            //miniGames.Push(new Level02(this));
-            //miniGames.Push(new PreUsingMouse(this));
-            //miniGames.Push(new Level01(this));
-            miniGames.Push(new PreUsingMouse(this));
-            miniGames.Push(new StarWars(this));
->>>>>>> parent of 3b276cf... Version 8.1
         }
 
         private void SetFirstMiniGameAsCurrent()
@@ -178,6 +178,7 @@ namespace GameStateManager
         public void RestartMiniGame()
         {
             miniGame.UnloadContent();
+            miniGame.Initialize();
             miniGame.LoadContent();
         }
 
@@ -188,6 +189,7 @@ namespace GameStateManager
                 miniGame.UnloadContent();
                 miniGamesDone.Push(miniGames.Pop());
                 SetFirstMiniGameAsCurrent();
+                miniGame.Initialize();
                 miniGame.LoadContent();
             }
             else
@@ -203,6 +205,7 @@ namespace GameStateManager
                 miniGame.UnloadContent();
                 miniGames.Push(miniGamesDone.Pop());
                 SetFirstMiniGameAsCurrent();
+                miniGame.Initialize();
                 miniGame.LoadContent();
             }
             else

@@ -23,9 +23,13 @@ namespace MonkeyBusiness.MiniGames
 
         #region gameplay fields
         float gravity = 0.1f;
+        int distanceBetweenNotes;
         private int initialHeight = 10;
+        int currentHeight;
         InteractiveObject[] collectors = new InteractiveObject[numberOfCollectors];
-        const int scoresForNote = 100, numberOfNotes = 10, totalScores = scoresForNote * numberOfNotes;
+        const int scoresForNote = 100;
+            int numberOfNotes = 10, totalScores;
+        List<int> notes = new List<int>();
         #endregion
 
         /// <summary>
@@ -60,12 +64,26 @@ namespace MonkeyBusiness.MiniGames
             }
         }
 
-        private void CreateNote(Texture2D texture, int column)
+        private void CreateNote(Texture2D texture, int column, int height)
         {
-            Vector2 position = new Vector2(widthOfAColumn * (column + 1), initialHeight);
-            InteractiveObject note = new InteractiveObject(texture, position, "note");
-            note.SetVelocity(0, gravity);
-            objects.Add(note);
+            if (column != 0)
+            {
+                Vector2 position = new Vector2(widthOfAColumn * column, height);
+                InteractiveObject note = new InteractiveObject(texture, position, "note");
+                note.SetOutsideScreen(true);
+                note.SetVelocity(0, gravity);
+                objects.Add(note);
+            }
+        }
+
+        private void CreateAllNotes(Texture2D texture)
+        {
+            distanceBetweenNotes = 2 * texture.Bounds.Height;
+            foreach (int column in notes)
+            {
+                CreateNote(texture, column, currentHeight);
+                currentHeight -= distanceBetweenNotes;
+            }
         }
 
         private void HandleInput()
@@ -104,6 +122,22 @@ namespace MonkeyBusiness.MiniGames
         public override void Initialize()
         {
             manager.IsMouseVisible = true;//Or not...
+            currentHeight = initialHeight;
+
+            ////////
+
+            notes.Add(1);
+            notes.Add(2);
+            notes.Add(1);
+            notes.Add(4);
+            notes.Add(0);
+            notes.Add(3);
+            notes.Add(2);
+            notes.Add(1);
+            numberOfNotes = notes.Count;
+            totalScores = scoresForNote * numberOfNotes;
+
+            ///////
         }
 
         /// <summary>
@@ -150,14 +184,12 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void LoadContent()
         {
-            
-
             Texture2D NoteTexture = Content.Load<Texture2D>("Sprites/note");
             Texture2D NoteCollectorTexture = Content.Load<Texture2D>("Sprites/notesCollector");
             font = Content.Load<SpriteFont>("GameFont");
 
             CreateNoteCollectors(NoteCollectorTexture);
-            CreateNote(NoteTexture, 0);
+            CreateAllNotes(NoteTexture);
 
             initialScores = manager.score.scores;
         }
@@ -167,16 +199,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void UnloadContent()
         {
-            try
-            {
-                UpdateGraphicDevices();
-                graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
-                objects.Clear();
-            }
-            catch (Exception ex)
-            {
-
-            }
+            objects.Clear();
         }
         #endregion
     }

@@ -10,7 +10,8 @@ namespace MonkeyBusiness.Objects
     public class Score
     {
         public int scores;
-        private SpriteFont font;
+        public SpriteFont font;
+        private Vector2 position = new Vector2(10, 10);
 
         /// <summary>
         /// Constractor
@@ -27,7 +28,7 @@ namespace MonkeyBusiness.Objects
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, scores.ToString(), new Vector2(10, 10), Color.White);
+            spriteBatch.DrawString(font, scores.ToString(), position, Color.White);
         }
 
         /// <summary>

@@ -2,38 +2,47 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace MonkeyBusiness.Objects
 {
-    public class Timer
+    class Timer
     {
-        public int seconds;
+        public int seconds = 0;
         private SpriteFont font;
+        private Vector2 position = new Vector2(10, 30);
+        private int finalGameTime;
+        public bool isWorking = false;
 
-        /// <summary>
-        /// Constractor
-        /// </summary>
-        /// <param name="font"></param>
-        public Timer(SpriteFont font)
+        public Timer(SpriteFont font, GameTime gameTime, int timeLimit)
         {
             this.font = font;
+            this.seconds = timeLimit;
+            finalGameTime = gameTime.TotalGameTime.Seconds + timeLimit;
+            isWorking = true;
         }
 
+        public Timer()
+        {
+            isWorking = false;
+        }
+
+
         /// <summary>
-        /// Draw the score on the screen
+        /// Draw the time on the screen
         /// </summary>
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, seconds.ToString(), new Vector2(10, 30), Color.White);
+            if(isWorking)
+                spriteBatch.DrawString(font, seconds.ToString(), position, Color.White);
         }
 
-        /// <summary>
-        /// Add X points to the score
-        /// </summary>
-        /// <param name="toAdd">Number of points to add</param>
-        
+        public void Update(GameTime gameTime)
+        {
+            if(isWorking)
+                this.seconds = finalGameTime - gameTime.TotalGameTime.Seconds;
+        }
     }
 }

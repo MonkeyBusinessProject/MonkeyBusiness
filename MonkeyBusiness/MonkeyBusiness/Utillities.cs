@@ -62,12 +62,6 @@ namespace MonkeyBusiness
                 drawableObject.Draw(spriteBatch);
             score.Draw(spriteBatch);
         }
-        public static void DrawAllObjectsWithTimer(List<DrawableObject> objects, Score score,Timer timer, SpriteBatch spriteBatch)
-        {
-            foreach (DrawableObject drawableObject in objects)
-                drawableObject.Draw(spriteBatch);
-            score.Draw(spriteBatch);
-        }
 
         /// <summary>
         /// Draw all objects in an objects' list
