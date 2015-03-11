@@ -142,7 +142,7 @@ namespace MonkeyBusiness
             return list;
         }
 
-        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZone(int numberOfObjects, Texture2D texture, Viewport viewport, string type, float minimumVelocity, float maximumVelocity, Rectangle safeZone)
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZoneAndSomeOtherUnimportantWordsThatTheirPurposeIsToCreateTheLongesterFunctionNameEver111111111111(int numberOfObjects, Texture2D texture, Viewport viewport, string type, float minimumVelocity, float maximumVelocity, Rectangle safeZone)
         {
             List<InteractiveObject> list = new List<InteractiveObject>();
             Random rnd = new Random((int)DateTime.Now.Ticks);
@@ -174,6 +174,20 @@ namespace MonkeyBusiness
             for (int i = 0; i < numberOfObjects; i++)
             {
                 list.Add(new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds), type));
+            }
+            return list;
+        }
+
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositionsOutsideSafeZone(int numberOfObjects, Texture2D texture, Viewport viewport, string type, Rectangle safeZone)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                Vector2 position = RandomPosition(viewport, texture.Bounds);
+                while (safeZone.Contains(Utillities.Vector2ToPoint(position)))
+                    position = RandomPosition(viewport, texture.Bounds);
+                list.Add(new InteractiveObject(texture, position, type));
             }
             return list;
         }

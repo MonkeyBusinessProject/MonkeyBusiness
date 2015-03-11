@@ -100,7 +100,6 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void Initialize() {
             manager.IsMouseVisible = true;
-            player.Set
         }
 
         /// <summary>
@@ -133,7 +132,8 @@ namespace MonkeyBusiness.MiniGames
                 timer.Update(gameTime);
             if (!isDead)
             {
-                player.HandleInput(true);
+                if(timer.seconds != timeLimit)
+                    player.HandleInput(true);
                 CheckIfTimePassed();
                 CheckCollision();
                 CheckWinning();
@@ -173,11 +173,11 @@ namespace MonkeyBusiness.MiniGames
             player.speed = playerSpeed;
 
             Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositionsOutsideSafeZone(numberOfDollars, DollarTexture, viewport, "dollar", safeZone));
 
             Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
 
-            List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZone(numberOfAlarms, AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
+            List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZoneAndSomeOtherUnimportantWordsThatTheirPurposeIsToCreateTheLongesterFunctionNameEver111111111111(numberOfAlarms, AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
             foreach (InteractiveObject alarm in alarms)
             {
                 alarm.SetSafeZone(safeZone);
