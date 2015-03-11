@@ -18,7 +18,6 @@ namespace MonkeyBusiness.MiniGames
         public StarWarsText starWarsText;
         string introductionText = "Once Upon a Time\nIn the far away Planet Monkey\nLived a young monkey\nnamed Chimp.\nChimp was a criminal\nwho robbed malls everyday.\n\nOne day, when he tried to break\ninto the most secure mall\nin the country,\nthings got out of control\nfor our poor Chimp.\n\n\n\nYour Mission is to help Chimp\n break into the mall\nand steal all the money,\nwithout touching \nthe bombs and alarms.\nGood Luck!";
 
-
         public StarWars(Manager manager)
             : base(manager)
         {
