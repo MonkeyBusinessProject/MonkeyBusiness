@@ -53,6 +53,8 @@ namespace MonkeyBusiness.Objects
                     this.height);
             }
         }
+
+        private Rectangle safeZone;
         public Vector2 center
         {
             get
@@ -183,6 +185,14 @@ namespace MonkeyBusiness.Objects
                     SetPosition(this.position.X, viewport.Height - this.height);
                     SetVelocity(this.velocity.X, -this.velocity.Y);
                 }
+
+                if (safeZone != null)
+                {
+                    if (safeZone.Contains(Utillities.Vector2ToPoint(this.position)))
+                    {
+                        SetVelocity(-this.velocity.X, -this.velocity.Y);
+                    }
+                }
             }else if(!isOutsideScreenEnabled){
                 if (this.position.X < 0)
                 {
@@ -205,6 +215,11 @@ namespace MonkeyBusiness.Objects
                     SetVelocity(this.velocity.X, 0);
                 }
             }
+        }
+
+        public void SetSafeZone(Rectangle safeZone)
+        {
+            this.safeZone = safeZone;
         }
 
         /// <summary>

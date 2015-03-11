@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<guitar>
+  <note>1</note>
+  <note>2</note>
+  <note>4</note>
+  <delay></delay>
+  <delay></delay>
+  <note>1</note>
+</guitar>

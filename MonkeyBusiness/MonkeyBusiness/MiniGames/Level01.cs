@@ -15,7 +15,11 @@ namespace MonkeyBusiness.MiniGames
 {
     class Level01 : MiniGame
     {
+        Texture2D diedMonkey;
+        Texture2D safeZoneTexture;
+
         const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10;
+        float alarmspeed = 0.5f, playerSpeed = 0.2f;
         int initialScores;
         Player player;
         private SoundEffect alarmhit;
@@ -23,6 +27,11 @@ namespace MonkeyBusiness.MiniGames
         
         private Song backgroundMusic;
         List<DrawableObject> objects = new List<DrawableObject>();
+        bool isDead = false;
+
+        Vector2 playerInitial = new Vector2(75, 75);
+        static Rectangle initialSafeZone = new Rectangle(0, 0, 150, 150);
+        Rectangle safeZone = initialSafeZone;
 
         //Timer
         Timer timer = new Timer();
@@ -50,14 +59,21 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> collidedAlarms = Utillities.GetColliadedObjects(player, objects, "alarm");
             if (collidedAlarms.Count != 0)
             {
-                RestartLevel();
+                Die();
             }
         }
 
         private void CheckIfTimePassed()
         {
-            if (timer.seconds <= 0)
-                RestartLevel();
+            if (timer.seconds <= 0 && !isDead)
+                Die();
+        }
+
+        private void Die()
+        {
+            isDead = true;
+            timer.ChangeTimerFinalTime(2);
+            player.LoadTexture(diedMonkey);
         }
 
         private void RestartLevel()
@@ -84,6 +100,7 @@ namespace MonkeyBusiness.MiniGames
         /// </summary>
         public override void Initialize() {
             manager.IsMouseVisible = true;
+            player.Set
         }
 
         /// <summary>
@@ -95,8 +112,11 @@ namespace MonkeyBusiness.MiniGames
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
+            spriteBatch.Draw(safeZoneTexture, safeZone, Color.White);
+
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
             timer.Draw(spriteBatch);
+
 
             spriteBatch.End();
         }
@@ -111,14 +131,29 @@ namespace MonkeyBusiness.MiniGames
                 timer = new Timer(manager.score.font, gameTime, timeLimit);
             else
                 timer.Update(gameTime);
+            if (!isDead)
+            {
+                player.HandleInput(true);
+                CheckIfTimePassed();
+                CheckCollision();
+                CheckWinning();
 
+                if(!safeZone.Contains(Utillities.Vector2ToPoint(player.center))){
+                    foreach (InteractiveObject alarm in Utillities.GetObjectsFromType(objects, "alarm"))
+                    {
+                        safeZone = Rectangle.Empty;
+                        alarm.SetSafeZone(safeZone);
+                    }
+                }
 
-            player.HandleInput(true);
-            CheckIfTimePassed();
-            CheckCollision();
-            CheckWinning();
-
-            Utillities.UpdateAllObjects(objects, gameTime, viewport);
+                Utillities.UpdateAllObjects(objects, gameTime, viewport);
+            }
+            else
+            {
+                while (Mouse.GetState().LeftButton == ButtonState.Pressed);
+                while (Mouse.GetState().LeftButton == ButtonState.Released);
+                RestartLevel();
+            }
         }
 
         /// <summary>
@@ -130,17 +165,25 @@ namespace MonkeyBusiness.MiniGames
         public override void LoadContent()
         {
             Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
-            Vector2 pos = new Vector2(100, 100);
+            Vector2 pos = playerInitial;
 
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
             player = new Player(SpriteTexture, pos);
+            player.speed = playerSpeed;
 
             Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
 
             Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfAlarms, AlarmTexture, viewport, "alarm"));
+
+            List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZone(numberOfAlarms, AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
+            foreach (InteractiveObject alarm in alarms)
+            {
+                alarm.SetSafeZone(safeZone);
+                alarm.SetElastic(true);
+            }
+            objects.AddRange(alarms);
 
             backgroundMusic = Content.Load<Song>("BGM/Level1Music");
             MediaPlayer.Play(backgroundMusic);
@@ -148,6 +191,9 @@ namespace MonkeyBusiness.MiniGames
             //Load to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;
+            diedMonkey = Content.Load<Texture2D>("Sprites/alfredo");
+            safeZoneTexture = Content.Load<Texture2D>("Sprites/safeZone");
+
         }
 
         /// <summary>
@@ -156,6 +202,8 @@ namespace MonkeyBusiness.MiniGames
         public override void UnloadContent()
         {
             objects.Clear();
+            isDead = false;
+            safeZone = initialSafeZone;
         }
 
         #endregion

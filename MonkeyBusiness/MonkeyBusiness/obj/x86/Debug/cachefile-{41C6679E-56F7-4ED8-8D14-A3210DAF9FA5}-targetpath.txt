@@ -29,3 +29,5 @@ Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
 Content\BGM\starwars.xnb
 Content\BGM\starwars.wma
+Content\Sprites\alfredo.xnb
+Content\Sprites\safeZone.xnb

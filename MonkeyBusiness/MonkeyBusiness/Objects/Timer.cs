@@ -14,6 +14,8 @@ namespace MonkeyBusiness.Objects
         private Vector2 position = new Vector2(10, 30);
         private int finalGameTime;
         public bool isWorking = false;
+        bool timeChanged = false;
+        int timeToEnd;
 
         public Timer(SpriteFont font, GameTime gameTime, int timeLimit)
         {
@@ -41,8 +43,19 @@ namespace MonkeyBusiness.Objects
 
         public void Update(GameTime gameTime)
         {
+            if (timeChanged)
+            {
+                timeChanged = false;
+                finalGameTime = gameTime.TotalGameTime.Seconds + timeToEnd;
+            }
             if(isWorking)
                 this.seconds = finalGameTime - gameTime.TotalGameTime.Seconds;
+        }
+
+        public void ChangeTimerFinalTime(int timeLimit)
+        {
+            timeToEnd = timeLimit;
+            timeChanged = true;
         }
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.IO;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -15,13 +16,14 @@ namespace MonkeyBusiness.MiniGames
     {
         #region Fields
         List<DrawableObject> objects = new List<DrawableObject>();
-        const int numberOfCollectors = 4, collectorsHeight = 50;// TODO: change
+        const int numberOfCollectors = 5, collectorsHeight = 50;// TODO: change
         int initialScores, widthOfAColumn = 100;
         KeyboardState lastKeyboardState = Keyboard.GetState();
         private SpriteFont font;
         #endregion
 
         #region gameplay fields
+        string xmlDirectory;
         float gravity = 0.1f;
         int distanceBetweenNotes;
         private int initialHeight = 10;
@@ -47,7 +49,7 @@ namespace MonkeyBusiness.MiniGames
 
         private void CheckWinning()
         {
-            if (manager.score.scores == totalScores + initialScores)
+            if (Utillities.GetObjectsFromType(objects, "note").Count == 0)
                 manager.SetNextMiniGameAsCurrent();
         }
 
@@ -82,7 +84,10 @@ namespace MonkeyBusiness.MiniGames
             foreach (int column in notes)
             {
                 CreateNote(texture, column, currentHeight);
-                currentHeight -= distanceBetweenNotes;
+                if (column != 0)
+                    currentHeight -= distanceBetweenNotes;
+                else
+                    currentHeight -= distanceBetweenNotes / 2;
             }
         }
 
@@ -126,14 +131,23 @@ namespace MonkeyBusiness.MiniGames
 
             ////////
 
-            notes.Add(1);
-            notes.Add(2);
-            notes.Add(1);
+            //notes.Add(1);
+            //notes.Add(2);
+            /*notes.Add(1);
             notes.Add(4);
             notes.Add(0);
             notes.Add(3);
             notes.Add(2);
-            notes.Add(1);
+            notes.Add(1);*/
+            try
+            {
+                xmlDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Guitar.xml";
+            }
+            catch (Exception)
+            {
+            xmlDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()))) + "\\Guitar.xml";
+            }
+            notes = Utillities.XMLFileToIntList(xmlDirectory);
             numberOfNotes = notes.Count;
             totalScores = scoresForNote * numberOfNotes;
 
@@ -174,6 +188,7 @@ namespace MonkeyBusiness.MiniGames
             HandleInput();
 
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
+            CheckWinning();
         }
 
         /// <summary>
@@ -200,6 +215,7 @@ namespace MonkeyBusiness.MiniGames
         public override void UnloadContent()
         {
             objects.Clear();
+            notes.Clear();
         }
         #endregion
     }

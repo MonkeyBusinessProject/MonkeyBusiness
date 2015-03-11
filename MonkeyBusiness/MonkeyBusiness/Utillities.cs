@@ -7,6 +7,7 @@ using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using GameStateManager;
 using Microsoft.Xna.Framework.Input;
+using System.Xml;
 
 namespace MonkeyBusiness
 {
@@ -116,6 +117,48 @@ namespace MonkeyBusiness
             }
             return list;
         }
+        
+        
+        
+        /// <summary>
+        /// Creates a list of a specific number of interactive objects with certian texture
+        /// </summary>
+        /// <param name="numberOfObjects"></param>
+        /// <param name="texture"></param>
+        /// <param name="viewport"></param>
+        /// <returns></returns>
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositionsWithVelocity(int numberOfObjects, Texture2D texture, Viewport viewport, string type, float minimumVelocity, float maximumVelocity)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                InteractiveObject obj = new InteractiveObject(texture, RandomPosition(viewport, texture.Bounds), type);
+                int intMinVelocity = (int)(minimumVelocity * 1000);
+                int intMaxVelocity = (int)(maximumVelocity * 1000);
+                obj.SetVelocity(new Vector2(rnd.Next(intMinVelocity, intMaxVelocity) / 1000f, rnd.Next(intMinVelocity, intMaxVelocity) / 1000f));
+                list.Add(obj);
+            }
+            return list;
+        }
+
+        public static List<InteractiveObject> CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZone(int numberOfObjects, Texture2D texture, Viewport viewport, string type, float minimumVelocity, float maximumVelocity, Rectangle safeZone)
+        {
+            List<InteractiveObject> list = new List<InteractiveObject>();
+            Random rnd = new Random((int)DateTime.Now.Ticks);
+            for (int i = 0; i < numberOfObjects; i++)
+            {
+                Vector2 position = RandomPosition(viewport, texture.Bounds);
+                while(safeZone.Contains(Utillities.Vector2ToPoint(position)))
+                    position = RandomPosition(viewport, texture.Bounds);
+                InteractiveObject obj = new InteractiveObject(texture,position , type);
+                int intMinVelocity = (int)(minimumVelocity * 1000);
+                int intMaxVelocity = (int)(maximumVelocity * 1000);
+                obj.SetVelocity(new Vector2(rnd.Next(intMinVelocity, intMaxVelocity) / 1000f, rnd.Next(intMinVelocity, intMaxVelocity) / 1000f));
+                list.Add(obj);
+            }
+            return list;
+        }
 
         /// <summary>
         /// Creates a list of a specific number of interactive objects with certian texture
@@ -185,6 +228,22 @@ namespace MonkeyBusiness
                 }
             }
             return collidadObjects;
+        }
+
+        public static List<DrawableObject> GetObjectsFromType(List<DrawableObject> objects, string type)
+        {
+            List<DrawableObject> objectFromType = new List<DrawableObject>();
+            foreach (DrawableObject interactiveObject in objects)
+            {
+                if (interactiveObject is InteractiveObject)
+                {
+                    if ((interactiveObject as InteractiveObject).type == type)
+                    {
+                        objectFromType.Add(interactiveObject);
+                    }
+                }
+            }
+            return objectFromType;
         }
 
         public static int KeyboardNumberPressed(KeyboardState keyboardState, KeyboardState lastKeyboardState)
@@ -268,6 +327,34 @@ namespace MonkeyBusiness
             if (keyboardstate.IsKeyDown(Keys.Up))
                 return "Up";
             return null;
+        }
+
+        public static List<int> XMLFileToIntList(string xmlPath)
+        {
+            List<int> list = new List<int>();
+            using (XmlReader reader = XmlReader.Create(xmlPath))
+            {
+                while (reader.Read())
+                {
+                    // Only detect start elements.
+                    if (reader.IsStartElement())
+                    {
+                        // Get element name and switch on it.
+                        switch (reader.Name)
+                        {
+                            case "note":
+                                // Detect this element.
+                                reader.Read();
+                                list.Add(int.Parse(reader.Value.Trim().ToString()));
+                                break;
+                            case "delay":
+                                list.Add(0);
+                                break;
+                        }
+                    }
+                }
+            }
+            return list;
         }
     }
 }
