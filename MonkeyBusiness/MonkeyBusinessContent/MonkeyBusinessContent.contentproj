@@ -63,14 +63,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="background.jpg">
-      <Name>background</Name>
+    <Compile Include="backgrounds\officebackground.jpg">
+      <Name>officebackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="mallBackground.jpg">
+    <Compile Include="backgrounds\mallBackground.jpg">
       <Name>mallBackground</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -199,12 +199,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="arrowsPrescreen.png">
+    <Compile Include="backgrounds\arrowsPrescreen.png">
       <Name>arrowsPrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="mousePrescreen.png">
+    <Compile Include="backgrounds\mousePrescreen.png">
       <Name>mousePrescreen</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
@@ -234,6 +234,30 @@
   <ItemGroup>
     <Compile Include="Sprites\safeZone.png">
       <Name>safeZone</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backgrounds\guitarPrescreen.png">
+      <Name>guitarPrescreen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="backgrounds\firstlevelbg.jpg">
+      <Name>firstlevelbg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="backgrounds\stage.png">
+      <Name>stage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="backgrounds\starwarsbg.jpg">
+      <Name>starwarsbg</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

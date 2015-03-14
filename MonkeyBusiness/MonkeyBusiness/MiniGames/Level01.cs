@@ -15,6 +15,7 @@ namespace MonkeyBusiness.MiniGames
 {
     class Level01 : MiniGame
     {
+        #region fields
         Texture2D diedMonkey;
         Texture2D safeZoneTexture;
 
@@ -36,7 +37,7 @@ namespace MonkeyBusiness.MiniGames
         //Timer
         Timer timer = new Timer();
         private int timeLimit = 25;
-
+        
         /// <summary>
         /// Constractor
         /// </summary>
@@ -44,6 +45,7 @@ namespace MonkeyBusiness.MiniGames
         public Level01(Manager manager) : base(manager)
         {
         }
+        #endregion
 
         #region gameplay
 
@@ -116,7 +118,7 @@ namespace MonkeyBusiness.MiniGames
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
             timer.Draw(spriteBatch);
 
-
+            DrawScenery();
             spriteBatch.End();
         }
 
@@ -166,6 +168,7 @@ namespace MonkeyBusiness.MiniGames
         {
             Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = playerInitial;
+            backgroundTexture = Content.Load<Texture2D>("backgrounds/firstlevelbg");
 
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
@@ -206,6 +209,17 @@ namespace MonkeyBusiness.MiniGames
             safeZone = initialSafeZone;
         }
 
+        #endregion
+
+        #region useful functions
+
+
+        private void DrawScenery()
+        {
+            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+
+        }
         #endregion
     }
 }

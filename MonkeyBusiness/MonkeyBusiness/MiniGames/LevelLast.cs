@@ -228,7 +228,7 @@ namespace MonkeyBusiness.MiniGames
         {
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            backgroundTexture = Content.Load<Texture2D>("mallBackground");
+            backgroundTexture = Content.Load<Texture2D>("backgrounds/mallBackground");
 
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);

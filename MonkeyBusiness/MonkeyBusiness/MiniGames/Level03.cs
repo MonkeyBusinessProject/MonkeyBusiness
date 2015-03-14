@@ -201,6 +201,7 @@ namespace MonkeyBusiness.MiniGames
         {
             Texture2D NoteTexture = Content.Load<Texture2D>("Sprites/note");
             Texture2D NoteCollectorTexture = Content.Load<Texture2D>("Sprites/notesCollector");
+            backgroundTexture = Content.Load<Texture2D>("backgrounds/stage");
             font = Content.Load<SpriteFont>("GameFont");
 
             CreateNoteCollectors(NoteCollectorTexture);
@@ -216,6 +217,17 @@ namespace MonkeyBusiness.MiniGames
         {
             objects.Clear();
             notes.Clear();
+        }
+        #endregion
+
+        #region useful functions
+
+
+        private void DrawScenery()
+        {
+            Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+
         }
         #endregion
     }

@@ -1,7 +1,7 @@
 Content\Sprites\monkey.xnb
 Content\Sprites\trashCan.xnb
-Content\background.xnb
-Content\mallBackground.xnb
+Content\backgrounds\officebackground.xnb
+Content\backgrounds\mallBackground.xnb
 Content\Sprites\money.xnb
 Content\Sprites\trash.xnb
 Content\Sprites\alarm.xnb
@@ -10,8 +10,14 @@ Content\Sprites\notesCollector.xnb
 Content\sheet.xnb
 Content\Sprites\banana.xnb
 Content\Sprites\poisonbanana.xnb
-Content\arrowsPrescreen.xnb
-Content\mousePrescreen.xnb
+Content\backgrounds\arrowsPrescreen.xnb
+Content\backgrounds\mousePrescreen.xnb
+Content\Sprites\alfredo.xnb
+Content\Sprites\safeZone.xnb
+Content\backgrounds\guitarPrescreen.xnb
+Content\backgrounds\firstlevelbg.xnb
+Content\backgrounds\stage.xnb
+Content\backgrounds\starwarsbg.xnb
 Content\Score.xnb
 Content\GameFont.xnb
 Content\StarWarsFont.xnb
@@ -25,8 +31,6 @@ Content\BGM\Level2Music.xnb
 Content\BGM\Level1Music.xnb
 Content\BGM\LevelLastMusic.xnb
 Content\BGM\starwars.xnb
-Content\Sprites\alfredo.xnb
-Content\Sprites\safeZone.xnb
 Content\BGM\Level2Music.wma
 Content\BGM\Level1Music.wma
 Content\BGM\LevelLastMusic.wma

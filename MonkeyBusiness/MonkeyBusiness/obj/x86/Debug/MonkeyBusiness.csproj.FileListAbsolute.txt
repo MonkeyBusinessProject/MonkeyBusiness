@@ -23,8 +23,6 @@ C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\obj
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
-C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\background.xnb
-C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mallBackground.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.exe
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\MonkeyBusiness.pdb
@@ -80,8 +78,6 @@ C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusine
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma
 C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma
-C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\arrowsPrescreen.xnb
-C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\mousePrescreen.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb
 C:\Users\ALLFAMILY\Documents\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb
@@ -154,3 +150,13 @@ C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alfredo.xnb
 C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\safeZone.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\officebackground.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\mallBackground.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\arrowsPrescreen.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\mousePrescreen.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alfredo.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\safeZone.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\guitarPrescreen.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\firstlevelbg.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\stage.xnb
+C:\Users\PyroShifter\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\starwarsbg.xnb
