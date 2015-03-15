@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,7 @@ namespace MonkeyBusiness.MiniGames
         KeyboardState keyboard;
         public StarWarsText starWarsText;
         string introductionText = "Unfortunately, the office didn't \n need Chimp any more. \n Chimp used the money he earned \n to buy a guitar. \n He decided the best thing \n to do was to perform in the street. \n\n You must help him \n earn tips by striking \n the correct notes \n at the right time. \n\n Good luck!";
-
+        
         public StarWars3(Manager manager)
             : base(manager)
         {
@@ -56,7 +57,8 @@ namespace MonkeyBusiness.MiniGames
             UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            DrawScenery(spriteBatch);
+            DrawScenery();
+            DrawText(spriteBatch);
             spriteBatch.End();
         }
 
@@ -82,6 +84,7 @@ namespace MonkeyBusiness.MiniGames
             starWarsText.LoadContent(Content);
             bgm = Content.Load<Song>("BGM/starwars");
             MediaPlayer.Play(bgm);
+            backgroundTexture = Content.Load<Texture2D>("backgrounds/starwarsbg");
         }
 
         /// <summary>
@@ -97,15 +100,21 @@ namespace MonkeyBusiness.MiniGames
         #region useful functions
 
 
-        private void DrawScenery(SpriteBatch spriteBatch)
+        private void DrawText(SpriteBatch spriteBatch)
         {
             if (starWarsText.Draw(spriteBatch))
                 manager.SetNextMiniGameAsCurrent();
+            
+        }
+
+        private void DrawScenery()
+        {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
         }
 
 
+    
         #endregion
     }
 }

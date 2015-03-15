@@ -8,6 +8,9 @@ using MonkeyBusiness.Objects;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.IO;
+using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
+using System.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
@@ -20,18 +23,22 @@ namespace MonkeyBusiness.MiniGames
         int initialScores, widthOfAColumn = 100;
         KeyboardState lastKeyboardState = Keyboard.GetState();
         private SpriteFont font;
+
+        private Song backingTrack;
+        private SoundEffect[] notesSounds;
         #endregion
 
         #region gameplay fields
         string xmlDirectory;
-        float gravity = 0.1f;
+        float gravity = 0.15f;
         int distanceBetweenNotes;
         private int initialHeight = 10;
         int currentHeight;
         InteractiveObject[] collectors = new InteractiveObject[numberOfCollectors];
-        const int scoresForNote = 100;
-            int numberOfNotes = 10, totalScores;
+        const int scoresForNote = 100, scoreForMissedNote = -100;
+        int numberOfNotes = 10, totalScores;
         List<int> notes = new List<int>();
+        int length = 100, freqOfPauses = 10, restLength = 4;
         #endregion
 
         /// <summary>
@@ -41,7 +48,7 @@ namespace MonkeyBusiness.MiniGames
         public Level03(Manager manager)
             : base(manager)
         {
-            
+
         }
 
         #region gameplay
@@ -50,7 +57,21 @@ namespace MonkeyBusiness.MiniGames
         private void CheckWinning()
         {
             if (Utillities.GetObjectsFromType(objects, "note").Count == 0)
-                manager.SetNextMiniGameAsCurrent();
+                if (manager.score.scores > 0)
+                    manager.SetNextMiniGameAsCurrent();
+                else
+                    manager.RestartMiniGame();
+        }
+
+        private void CheckOutsideScreenNotes()
+        {
+            List<DrawableObject> notes = Utillities.GetObjectsFromType(objects, "note");
+            if (notes.Count != 0)
+                if ((notes.First<DrawableObject>() as InteractiveObject).center.Y >= viewport.Height)
+                {
+                    objects.Remove(notes.First<DrawableObject>());
+                    manager.score.addScores(scoreForMissedNote);
+                }
         }
 
 
@@ -101,20 +122,44 @@ namespace MonkeyBusiness.MiniGames
                 List<DrawableObject> collidadNotes = Utillities.GetColliadedObjects(collectors[numberPressed], objects, "note");
                 if (collidadNotes.Count == 0)
                 {
-                    manager.score.scores = initialScores;
-                    manager.RestartMiniGame();
-                    //TODO : RESTART
+                    manager.score.addScores(scoreForMissedNote);
+                    playNote(0);
                 }
                 else
                 {
                     foreach (DrawableObject note in collidadNotes)
                     {
+                        playNote(numberPressed + 1);
                         objects.Remove(note);
                         manager.score.addScores(scoresForNote);
                     }
                 }
             }
             lastKeyboardState = keyboardState;
+        }
+
+        private void playNote(int note)
+        {
+            notesSounds[note].Play();
+        }
+
+        private List<int> RandomNotesList(int length, int freqOfPauses)
+        {
+            Random rnd = Utillities.rnd;
+            List<int> notesTemp = new List<int>();
+            for (int i = 0; i < length; i++)
+            {
+                if (rnd.Next(0, freqOfPauses) != 0)
+                    notesTemp.Add(rnd.Next(1, numberOfCollectors + 1));
+                else if (rnd.Next(0, (int)(freqOfPauses / 2)) != 0)
+                    notesTemp.Add(0);
+                else
+                    for (int j = 0; j < restLength; j++)
+                    {
+                        notesTemp.Add(0);
+                    }
+            }
+            return notesTemp;
         }
 
         #endregion
@@ -142,12 +187,12 @@ namespace MonkeyBusiness.MiniGames
             try
             {
                 xmlDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Guitar.xml";
+                notes = Utillities.XMLFileToIntList(xmlDirectory);
             }
             catch (Exception)
             {
-            xmlDirectory = Path.GetDirectoryName(Path.GetDirectoryName(Path.GetDirectoryName(System.IO.Directory.GetCurrentDirectory()))) + "\\Guitar.xml";
+                notes = RandomNotesList(length, freqOfPauses);
             }
-            notes = Utillities.XMLFileToIntList(xmlDirectory);
             numberOfNotes = notes.Count;
             totalScores = scoresForNote * numberOfNotes;
 
@@ -188,6 +233,7 @@ namespace MonkeyBusiness.MiniGames
             HandleInput();
 
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
+            CheckOutsideScreenNotes();
             CheckWinning();
         }
 
@@ -208,6 +254,26 @@ namespace MonkeyBusiness.MiniGames
             CreateAllNotes(NoteTexture);
 
             initialScores = manager.score.scores;
+
+            //Load Music
+            backingTrack = Content.Load<Song>("BGM/backingTrack");
+            MediaPlayer.Play(backingTrack);
+            MediaPlayer.Volume = 0.5f;
+
+            //TODO
+            notesSounds = new SoundEffect[numberOfCollectors + 1];
+            for (int i = 0; i < numberOfCollectors + 1; i++)
+            {
+                try
+                {
+                    notesSounds[i] = Content.Load<SoundEffect>("BGM/notes/" + i);
+                }
+                catch (Exception)
+                {
+                    notesSounds[i] = Content.Load<SoundEffect>("BGM/notes/0");
+                }
+            }
+            //TODO
         }
 
         /// <summary>
@@ -217,6 +283,7 @@ namespace MonkeyBusiness.MiniGames
         {
             objects.Clear();
             notes.Clear();
+            manager.score.scores = initialScores;
         }
         #endregion
 

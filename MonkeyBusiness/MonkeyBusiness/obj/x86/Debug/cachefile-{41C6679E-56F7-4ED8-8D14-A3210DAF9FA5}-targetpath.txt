@@ -35,3 +35,11 @@ Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
 Content\BGM\starwars.xnb
 Content\BGM\starwars.wma
+Content\BGM\backingTrack.xnb
+Content\BGM\backingTrack.wma
+Content\BGM\notes\0.xnb
+Content\BGM\notes\1.xnb
+Content\BGM\notes\2.xnb
+Content\BGM\notes\3.xnb
+Content\BGM\notes\4.xnb
+Content\BGM\notes\5.xnb

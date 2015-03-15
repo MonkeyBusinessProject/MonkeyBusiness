@@ -262,6 +262,45 @@
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\notes\0.mp3">
+      <Name>0</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\notes\1.mp3">
+      <Name>1</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\notes\2.mp3">
+      <Name>2</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\notes\3.mp3">
+      <Name>3</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\notes\4.mp3">
+      <Name>4</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\notes\5.mp3">
+      <Name>5</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\backingTrack.mp3">
+      <Name>backingTrack</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

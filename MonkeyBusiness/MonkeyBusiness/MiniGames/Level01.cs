@@ -113,12 +113,12 @@ namespace MonkeyBusiness.MiniGames
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
+            DrawScenery();
+
             spriteBatch.Draw(safeZoneTexture, safeZone, Color.White);
 
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
             timer.Draw(spriteBatch);
-
-            DrawScenery();
             spriteBatch.End();
         }
 

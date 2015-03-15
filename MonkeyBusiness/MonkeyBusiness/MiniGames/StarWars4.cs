@@ -56,7 +56,8 @@ namespace MonkeyBusiness.MiniGames
             UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            DrawScenery(spriteBatch);
+            DrawScenery();
+            DrawText(spriteBatch);
             spriteBatch.End();
         }
 
@@ -82,6 +83,7 @@ namespace MonkeyBusiness.MiniGames
             starWarsText.LoadContent(Content);
             bgm = Content.Load<Song>("BGM/starwars");
             MediaPlayer.Play(bgm);
+            backgroundTexture = Content.Load<Texture2D>("backgrounds/starwarsbg");
         }
 
         /// <summary>
@@ -97,15 +99,21 @@ namespace MonkeyBusiness.MiniGames
         #region useful functions
 
 
-        private void DrawScenery(SpriteBatch spriteBatch)
+        private void DrawText(SpriteBatch spriteBatch)
         {
             if (starWarsText.Draw(spriteBatch))
                 manager.SetNextMiniGameAsCurrent();
+            
+        }
+
+        private void DrawScenery()
+        {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
         }
 
 
+    
         #endregion
     }
 }
