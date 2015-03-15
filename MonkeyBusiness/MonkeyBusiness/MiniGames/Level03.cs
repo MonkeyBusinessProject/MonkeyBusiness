@@ -18,26 +18,28 @@ namespace MonkeyBusiness.MiniGames
     class Level03 : MiniGame
     {
         #region Fields
-        List<DrawableObject> objects = new List<DrawableObject>();
-        const int numberOfCollectors = 5, collectorsHeight = 50;// TODO: change
-        int initialScores, widthOfAColumn = 100;
-        KeyboardState lastKeyboardState = Keyboard.GetState();
+        
+        List<DrawableObject> objects = new List<DrawableObject>(); //creates a list for all spawned objects
+        const int numberOfCollectors = 5, collectorsHeight = 50; //sets the number of note collectors and their height on screen
+        int initialScores, widthOfAColumn = 100; //defines the initial scores and the width of each note column
+        KeyboardState lastKeyboardState = Keyboard.GetState(); //sets the game to recieve keyboard state
         private SpriteFont font;
 
-        private Song backingTrack;
-        private SoundEffect[] notesSounds;
+        private Song backingTrack; //sets the background music
+        private SoundEffect[] notesSounds; //set an array for the sound each note makes
         #endregion
 
         #region gameplay fields
+        
         string xmlDirectory;
-        float gravity = 0.15f;
-        int distanceBetweenNotes;
-        private int initialHeight = 10;
-        int currentHeight;
-        InteractiveObject[] collectors = new InteractiveObject[numberOfCollectors];
-        const int scoresForNote = 100, scoreForMissedNote = -100;
-        int numberOfNotes = 10, totalScores;
-        List<int> notes = new List<int>();
+        float gravity = 0.15f; //sets the speed of falling notes
+        int distanceBetweenNotes; //sets the distance between each falling note
+        private int initialHeight = 10; //sets the initial height for each note
+        int currentHeight; //defines the current height for each note
+        InteractiveObject[] collectors = new InteractiveObject[numberOfCollectors]; //defines an array for the note collectors
+        const int scoresForNote = 100, scoreForMissedNote = -100; //sets the score gained on hitting a note and score lost for missing a note
+        int numberOfNotes = 10, totalScores; 
+        List<int> notes = new List<int>(); //defines a list for all the notes
         int length = 100, freqOfPauses = 10, restLength = 4;
         #endregion
 
@@ -53,7 +55,7 @@ namespace MonkeyBusiness.MiniGames
 
         #region gameplay
 
-
+        //checks to see if the player has hit enough of the notes to win based on accumulated score, otherwise restars the level
         private void CheckWinning()
         {
             if (Utillities.GetObjectsFromType(objects, "note").Count == 0)
@@ -62,7 +64,7 @@ namespace MonkeyBusiness.MiniGames
                 else
                     manager.RestartMiniGame();
         }
-
+        //checks to see if a note was missed and has passed the collectors
         private void CheckOutsideScreenNotes()
         {
             List<DrawableObject> notes = Utillities.GetObjectsFromType(objects, "note");
@@ -74,7 +76,7 @@ namespace MonkeyBusiness.MiniGames
                 }
         }
 
-
+        //creates the note collectors
         private void CreateNoteCollectors(Texture2D texture)
         {
             widthOfAColumn = viewport.Width / (numberOfCollectors + 1);
@@ -86,7 +88,7 @@ namespace MonkeyBusiness.MiniGames
                 collectors[i] = collector;
             }
         }
-
+        //creates the notes
         private void CreateNote(Texture2D texture, int column, int height)
         {
             if (column != 0)
@@ -98,7 +100,7 @@ namespace MonkeyBusiness.MiniGames
                 objects.Add(note);
             }
         }
-
+        //creates all the notes based on the XML file that handles the level
         private void CreateAllNotes(Texture2D texture)
         {
             distanceBetweenNotes = 2 * texture.Bounds.Height;
@@ -111,7 +113,7 @@ namespace MonkeyBusiness.MiniGames
                     currentHeight -= distanceBetweenNotes / 2;
             }
         }
-
+        //handles the input from the player, and checks to see if the player has hit the correct notes at the right time, if so the note isp played, removed and score is given, otherwise score is deducted.
         private void HandleInput()
         {
             KeyboardState keyboardState = Keyboard.GetState();
@@ -137,12 +139,12 @@ namespace MonkeyBusiness.MiniGames
             }
             lastKeyboardState = keyboardState;
         }
-
+        //plays the sound for each note hit
         private void playNote(int note)
         {
             notesSounds[note].Play();
         }
-
+        //a list of random notes
         private List<int> RandomNotesList(int length, int freqOfPauses)
         {
             Random rnd = Utillities.rnd;
@@ -289,7 +291,7 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-
+        //draws the background
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);

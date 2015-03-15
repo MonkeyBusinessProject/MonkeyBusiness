@@ -17,16 +17,16 @@ namespace MonkeyBusiness.MiniGames
     class Level02 : MiniGame
     {
         #region Fields
-        // TODO: add all objects
+
         Player player;
         InteractiveObject trashcan;
 
-        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes, trashMovementTime = 1;
+        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes, trashMovementTime = 1; //sets the number of trashes to spawn, how much score is given for each trash that is cleaned and how much score is needed to win, and how long a trash moves after collision
         int initialScores;
-        List<DrawableObject> objects = new List<DrawableObject>();
+        List<DrawableObject> objects = new List<DrawableObject>(); //list of all spawned objects
         private GameTime gameTime;
-        private SoundEffect trashInCan;
-        private SoundEffect trashKick;
+        private SoundEffect trashInCan; //sound for collision between trash and trashcan
+        private SoundEffect trashKick; //sound for collision between player and trash
 
         private Song backgroundMusic;
 
@@ -38,7 +38,7 @@ namespace MonkeyBusiness.MiniGames
         #endregion
 
         #region gameplay
-
+        //checks to see if a trash hits the trashcan, if so score is given to the player, the trash is removed and a soundbyte is played
         private void CheckCollisionTrashToTrashcan()
         {
             List<DrawableObject> trashInTrashCan = Utillities.GetColliadedObjects(trashcan, objects, "trash");
@@ -49,7 +49,7 @@ namespace MonkeyBusiness.MiniGames
             }
             Utillities.RemoveNodesFromList<DrawableObject>(objects, trashInTrashCan);
         }
-
+        //checks to see if the player hits a trash, if so the trash then gets momentum in the player's movement direction at the moment of collision, for a set period of time, and a soundbyte is played
         private void CheckCollisionPlayerWithTrash()
         {
             List<DrawableObject> trashColiddadWithPlayer = Utillities.GetColliadedObjects(player, objects, "trash");
@@ -60,20 +60,20 @@ namespace MonkeyBusiness.MiniGames
                 trashKick.Play();
             }
         }
-
+        //checks to see if all trash has been removed based on the total score achieved
         private void CheckWinning()
         {
             if (manager.score.scores == totalScores + initialScores)
                 manager.SetNextMiniGameAsCurrent();
         }
 
-
+        //checks to see if time has run out before winning
         private void CheckIfTimePassed()
         {
             if (timer.seconds <= 0)
                 RestartLevel();
         }
-
+        // restarts the level and resets the score and timer
         private void RestartLevel()
         {
             manager.score.scores = initialScores;
@@ -94,13 +94,10 @@ namespace MonkeyBusiness.MiniGames
 
         }
 
-        /// <summary>
-        /// Initialization code.
-        /// Add whatever you want.
-        /// </summary>
+
         public override void Initialize()
         {
-            manager.IsMouseVisible = true;//Or not...
+            manager.IsMouseVisible = true;
         }
 
         /// <summary>
@@ -125,8 +122,7 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            // TODO: Handle input
-            //Example:          player.HandleInput();
+            //handls input from the player, and collision between player and trash, trash and trashcan, checks of the time has run out and if the player won by cleaning the entire level from trash
             this.gameTime = gameTime;
             player.HandleInput(true);
             CheckCollisionPlayerWithTrash();
@@ -135,7 +131,7 @@ namespace MonkeyBusiness.MiniGames
             CheckWinning();
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
 
-
+            //if the timer is not working, a new timer is created, otherwise it is updated based on the elapsed game time
             if (!timer.isWorking)
                 timer = new Timer(manager.score.font, gameTime, timeLimit);
             else
@@ -144,37 +140,37 @@ namespace MonkeyBusiness.MiniGames
 
         /// <summary>
         /// Load content
-        /// Here you should:
-        ///     1. Load objects' textures
-        ///     2. Add all objects to the object list
+        /// loads all the content
         /// </summary>
         public override void LoadContent()
         {
 
             //TODO: Load Content
             device = graphics.GraphicsDevice;
+            //loads all the textures for the level
             backgroundTexture = Content.Load<Texture2D>("backgrounds/officebackground");
-
             Texture2D TrashTexture = Content.Load<Texture2D>("Sprites/trash");
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
             Texture2D CanTexture = Content.Load<Texture2D>("Sprites/TrashCan");
+
+            //loads the sound effects for collisions
             trashInCan = Content.Load<SoundEffect>("SoundFX/TrashInCan");
             trashKick = Content.Load<SoundEffect>("SoundFX/TrashKick");
-
+            //creates the spawn point for the player and the trash can
             Vector2 monkeyPos = Utillities.RandomPosition(viewport, MonkeyTexture.Bounds);
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);
-
+            //creats the player and trash can in the previously defined spawn points
             player = new Player(MonkeyTexture, monkeyPos);
-            player.speed = 0.13f;
+            player.speed = 0.13f; //the player's movement speed
             trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash", true));
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash", true)); 
 
             //TODO: Load to objects' list
             objects.Add(trashcan);
             objects.Add(player);
 
-            initialScores = manager.score.scores;
-
+            initialScores = manager.score.scores;//loads the starting score, depending on the score in the previous level
+            //loads the background music and plays it
             backgroundMusic = Content.Load<Song>("BGM/Level2Music");
             MediaPlayer.Play(backgroundMusic);
         }
@@ -192,7 +188,7 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-       
+        //creats the background for the level
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);

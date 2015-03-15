@@ -19,19 +19,20 @@ namespace MonkeyBusiness.MiniGames
         Texture2D diedMonkey;
         Texture2D safeZoneTexture;
 
-        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10;
-        float alarmspeed = 0.5f, playerSpeed = 0.2f;
+        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10; //sets the number of dollars to spawn, score for each dollar, how much score is needed to win, and number of alarms to spawn
+        float alarmspeed = 0.5f, playerSpeed = 0.2f; //the movement speed of the player and alarms
         int initialScores;
         Player player;
+        //declaring variables for sounds
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
-        
         private Song backgroundMusic;
-        List<DrawableObject> objects = new List<DrawableObject>();
+
+        List<DrawableObject> objects = new List<DrawableObject>(); //a list that will contain all the spawned objects
         bool isDead = false;
 
-        Vector2 playerInitial = new Vector2(75, 75);
-        static Rectangle initialSafeZone = new Rectangle(0, 0, 150, 150);
+        Vector2 playerInitial = new Vector2(75, 75); //spawn point for the player
+        static Rectangle initialSafeZone = new Rectangle(0, 0, 150, 150); //the place and dimensions of the safe zone
         Rectangle safeZone = initialSafeZone;
 
         //Timer
@@ -48,7 +49,11 @@ namespace MonkeyBusiness.MiniGames
         #endregion
 
         #region gameplay
-
+         /// <summary>
+         /// A function that checks of there has been a collision between the player and any other objects
+         /// if the player hits a dollar object, a soundbyte plays indicating collection and said dollar is removed from the screen, increasing score
+         /// if the player hits an alarm object, the player loses
+         /// </summary>
         private void CheckCollision()
         {
             List<DrawableObject> takenDollars = Utillities.GetColliadedObjects(player, objects, "dollar");
@@ -64,21 +69,21 @@ namespace MonkeyBusiness.MiniGames
                 Die();
             }
         }
-
-        private void CheckIfTimePassed()
+        
+        private void CheckIfTimePassed() //a function that checks of a predetermined amount of time has passed before the player won. If so, the player loses
         {
             if (timer.seconds <= 0 && !isDead)
                 Die();
         }
 
-        private void Die()
+        private void Die() //a function that handles loses.
         {
             isDead = true;
             timer.ChangeTimerFinalTime(2);
             player.LoadTexture(diedMonkey);
         }
 
-        private void RestartLevel()
+        private void RestartLevel() //a function that restarts the level upon losing, including the score and the timer
         {
             alarmhit.Play();
             manager.score.scores = initialScores;
@@ -86,7 +91,7 @@ namespace MonkeyBusiness.MiniGames
             manager.RestartMiniGame();
         }
 
-        private void CheckWinning()
+        private void CheckWinning() //the function checks if a certain score (the score for collecting all the dollar objects) has been reached. If so, the level ends and the player is then transferred to the next level
         {
             if (manager.score.scores == totalScores + initialScores)
                 manager.SetNextMiniGameAsCurrent();
@@ -96,12 +101,9 @@ namespace MonkeyBusiness.MiniGames
         
         #region basic functions
 
-        /// <summary>
-        /// Initialization code.
-        /// Add whatever you want.
-        /// </summary>
+        
         public override void Initialize() {
-            manager.IsMouseVisible = true;
+            manager.IsMouseVisible = true; //makes the mouse visible
         }
 
         /// <summary>
@@ -113,12 +115,12 @@ namespace MonkeyBusiness.MiniGames
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
 
-            DrawScenery();
+            DrawScenery(); //draws the background for the level
 
-            spriteBatch.Draw(safeZoneTexture, safeZone, Color.White);
+            spriteBatch.Draw(safeZoneTexture, safeZone, Color.White); //draws the safezone
 
-            Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
-            timer.Draw(spriteBatch);
+            Utillities.DrawAllObjects(objects, manager.score, spriteBatch); //draws all the objects (player, dollars, alarms, and any other object that needs to be drawn, also draws score
+            timer.Draw(spriteBatch); //draws the timer
             spriteBatch.End();
         }
 
@@ -128,11 +130,11 @@ namespace MonkeyBusiness.MiniGames
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
         {
-            if (!timer.isWorking)
+            if (!timer.isWorking) //if the timer is not working, a new timer is created, otherwise it is updated based on the elapsed game time
                 timer = new Timer(manager.score.font, gameTime, timeLimit);
             else
                 timer.Update(gameTime);
-            if (!isDead)
+            if (!isDead) //if the player hasn't lost due to hitting an alarm or the timer running out, they are able to play, and the game continues to check for colliding with objects, winning, and/or the timer running out
             {
                 if(timer.seconds != timeLimit)
                     player.HandleInput(true);
@@ -140,7 +142,7 @@ namespace MonkeyBusiness.MiniGames
                 CheckCollision();
                 CheckWinning();
 
-                if(!safeZone.Contains(Utillities.Vector2ToPoint(player.center))){
+                if(!safeZone.Contains(Utillities.Vector2ToPoint(player.center))){ //if the player exits the safe zone, the safe zone is removed from the level
                     foreach (InteractiveObject alarm in Utillities.GetObjectsFromType(objects, "alarm"))
                     {
                         safeZone = Rectangle.Empty;
@@ -148,9 +150,9 @@ namespace MonkeyBusiness.MiniGames
                     }
                 }
 
-                Utillities.UpdateAllObjects(objects, gameTime, viewport);
+                Utillities.UpdateAllObjects(objects, gameTime, viewport); //updates all the objects on the screen
             }
-            else
+            else //if the player lost, a left button click restarts the level
             {
                 while (Mouse.GetState().LeftButton == ButtonState.Pressed);
                 while (Mouse.GetState().LeftButton == ButtonState.Released);
@@ -160,38 +162,38 @@ namespace MonkeyBusiness.MiniGames
 
         /// <summary>
         /// Load content
-        /// Here you should:
-        ///     1. Load objects' textures
-        ///     2. Add all objects to the object' list
+        /// loads all the content
         /// </summary>
         public override void LoadContent()
         {
+            //loads all the textures for the level, and sets the spawn point for the player
             Texture2D SpriteTexture = Content.Load<Texture2D>("Sprites/monkey");
             Vector2 pos = playerInitial;
+            Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
+            Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
             backgroundTexture = Content.Load<Texture2D>("backgrounds/firstlevelbg");
-
+            //loads the sounds for collision with alarms and money
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
+            //creats the player character and sets its speed
             player = new Player(SpriteTexture, pos);
             player.speed = playerSpeed;
 
-            Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
+            //spawns the dollar and alarm objects in random positions on the screen outside the safe zone
             objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositionsOutsideSafeZone(numberOfDollars, DollarTexture, viewport, "dollar", safeZone));
-
-            Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
-
             List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZoneAndSomeOtherUnimportantWordsThatTheirPurposeIsToCreateTheLongesterFunctionNameEver111111111111(numberOfAlarms, AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
+           
             foreach (InteractiveObject alarm in alarms)
             {
                 alarm.SetSafeZone(safeZone);
                 alarm.SetElastic(true);
             }
             objects.AddRange(alarms);
-
+            //loads the background music and plays it
             backgroundMusic = Content.Load<Song>("BGM/Level1Music");
             MediaPlayer.Play(backgroundMusic);
 
-            //Load to objects' list
+            //Load objects to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;
             diedMonkey = Content.Load<Texture2D>("Sprites/alfredo");
@@ -213,7 +215,7 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-
+        //function that draws the background
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
