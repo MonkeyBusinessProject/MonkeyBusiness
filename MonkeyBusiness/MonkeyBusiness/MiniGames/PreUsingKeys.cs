@@ -10,17 +10,17 @@ using Microsoft.Xna.Framework.Input;
 
 namespace MonkeyBusiness.MiniGames
 {
-    // TODO: change class name
-    // TODO: add your mini game to the manager
+    
     class PreUsingKeys : MiniGame
     {
+        //variable for keyboard input and constructor
         KeyboardState keyboard;
         public PreUsingKeys(Manager manager)
             : base(manager)
         {
 
         }
-
+        //variable for keyboard input and constructor
         private void CheckWinning()
         {
             keyboard = Keyboard.GetState();
@@ -37,7 +37,7 @@ namespace MonkeyBusiness.MiniGames
         }
 
         /// <summary>
-        /// Draw all objects on screen.
+        ///  Draw the background
         /// </summary>
         public override void Draw()
         {
@@ -50,6 +50,7 @@ namespace MonkeyBusiness.MiniGames
 
         /// <summary>
         /// Update all objects' state
+        /// continually checks if the spacebar has been pressed
         /// </summary>
         /// <param name="gameTime"></param>
         public override void Update(GameTime gameTime)
@@ -64,7 +65,7 @@ namespace MonkeyBusiness.MiniGames
         ///     2. Add all objects to the object' list
         /// </summary>
         public override void LoadContent()
-        {
+        { //loads the background texture
             device = graphics.GraphicsDevice;
             backgroundTexture = Content.Load<Texture2D>("backgrounds/arrowsPrescreen");
         }
@@ -76,6 +77,7 @@ namespace MonkeyBusiness.MiniGames
         {
 
         }
+        //creates the background
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);

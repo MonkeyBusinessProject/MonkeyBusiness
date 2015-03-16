@@ -16,6 +16,7 @@ namespace MonkeyBusiness.MiniGames
     class StarWars2 : MiniGame
     {
         #region fields
+        //variable for the background music and keyboard state, and the text for the on-screen scrolling story
         private Song bgm;
         KeyboardState keyboard;
         public StarWarsText starWarsText;
@@ -29,7 +30,7 @@ namespace MonkeyBusiness.MiniGames
         #endregion
 
         #region gameplay functions
-
+        //checks if the player has pressed the spacebar, and if so skips the story and continues to the next minigame
         private void CheckWinning()
         {
             keyboard = Keyboard.GetState();
@@ -52,6 +53,7 @@ namespace MonkeyBusiness.MiniGames
 
         /// <summary>
         /// Draw all objects on screen.
+        /// draws the background and the scrolling text on-screen
         /// </summary>
         public override void Draw()
         {
@@ -65,8 +67,10 @@ namespace MonkeyBusiness.MiniGames
 
         /// <summary>
         /// Update all objects' state
+        /// updates the scrolling text
         /// </summary>
         /// <param name="gameTime"></param>
+        /// 
         public override void Update(GameTime gameTime)
         {
             starWarsText.Update(gameTime);
@@ -74,10 +78,7 @@ namespace MonkeyBusiness.MiniGames
         }
 
         /// <summary>
-        /// Load content
-        /// Here you should:
-        ///     1. Load objects' textures
-        ///     2. Add all objects to the object' list
+        ///loads the text for the scrolling story, the background music and the background
         /// </summary>
         public override void LoadContent()
         {
@@ -100,14 +101,14 @@ namespace MonkeyBusiness.MiniGames
 
         #region useful functions
 
-
+        //if the whole text has scrolled, continues on to the next minigame
         private void DrawText(SpriteBatch spriteBatch)
         {
             if (starWarsText.Draw(spriteBatch))
                 manager.SetNextMiniGameAsCurrent();
-            
-        }
 
+        }
+        //draws the next minigame
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
@@ -115,7 +116,7 @@ namespace MonkeyBusiness.MiniGames
         }
 
 
-    
+
         #endregion
     }
 }
