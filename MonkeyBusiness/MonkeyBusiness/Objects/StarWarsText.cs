@@ -11,10 +11,22 @@ namespace MonkeyBusiness.Objects
     class StarWarsText
     {
         #region Fields
+        /// <summary>
+        /// The text
+        /// </summary>
         public string text;
+        /// <summary>
+        /// The text, seperated to lines
+        /// </summary>
         public string[] linesText;
+        /// <summary>
+        /// Array of line objects
+        /// </summary>
         public StarWarsLine[] lines;
 
+        /// <summary>
+        /// The velocity of the text, and the changing speed of trans and size.
+        /// </summary>
         private Vector2 velocity;
         private float fadingVelocity;
         private float resizingVelocity;
@@ -25,22 +37,20 @@ namespace MonkeyBusiness.Objects
 
         #region Utillities
 
+        /// <summary>
+        /// Split the text to lines
+        /// </summary>
         private void SplitString()
         {
             this.linesText = text.Split('\n');
         }
-
-        private void DrawLine(int index)
-        {
-            if (index < linesText.Length)
-            {
-                
-            }
-        }
-
         #endregion
 
-
+        /// <summary>
+        /// Constructor, and split the text to lines
+        /// </summary>
+        /// <param name="viewport"></param>
+        /// <param name="text"></param>
         public StarWarsText(Viewport viewport, string text)
         {
             this.viewport = viewport;
@@ -48,6 +58,11 @@ namespace MonkeyBusiness.Objects
             SplitString();
         }
 
+        /// <summary>
+        /// Draw all the lines
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <returns>Does all the lines arrive the target position</returns>
         public bool Draw(SpriteBatch spriteBatch)
         {
             bool isFinished = true;
@@ -61,6 +76,10 @@ namespace MonkeyBusiness.Objects
                 return false;
         }
 
+        /// <summary>
+        /// Update every line
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void Update(GameTime gameTime)
         {
             for (int i = 0; i < lines.Length; i++)
@@ -69,6 +88,10 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// Load font and all the lines
+        /// </summary>
+        /// <param name="Content"></param>
         public void LoadContent(ContentManager Content)
         {
             Font = Content.Load<SpriteFont>("StarWarsFont");

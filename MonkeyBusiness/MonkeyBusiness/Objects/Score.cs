@@ -9,8 +9,17 @@ namespace MonkeyBusiness.Objects
 {
     public class Score
     {
+        /// <summary>
+        /// Scores
+        /// </summary>
         public int scores;
+        /// <summary>
+        /// Store the font
+        /// </summary>
         public SpriteFont font;
+        /// <summary>
+        /// Score's position on screen
+        /// </summary>
         private Vector2 position = new Vector2(10, 10);
 
         /// <summary>
@@ -28,7 +37,7 @@ namespace MonkeyBusiness.Objects
         /// <param name="spriteBatch"></param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            spriteBatch.DrawString(font, scores.ToString(), position, Color.White);
+            spriteBatch.DrawString(font, "Scores: " + scores.ToString(), position, Color.White);
         }
 
         /// <summary>

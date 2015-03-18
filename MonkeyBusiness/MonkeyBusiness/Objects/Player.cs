@@ -11,10 +11,16 @@ namespace MonkeyBusiness.Objects
 {
     class Player : InteractiveObject
     {
+        /// <summary>
+        /// Movement fields
+        /// </summary>
         public float speed = 0.1f;
         Vector2 target = new Vector2(-1, -1);
-        KeyboardState lastkeyboardstate = Keyboard.GetState();
         private string direction;
+        /// <summary>
+        /// Input fields
+        /// </summary>
+        KeyboardState lastkeyboardstate = Keyboard.GetState();
 
         public Player(Texture2D texture, Vector2 position)
             : base(texture, position)
@@ -176,6 +182,10 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// This function finds the direction of the player and animate it in this direction.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateOneDirectionFromFourDirctions(GameTime gameTime)
         {
             if (direction == "Right")
@@ -200,6 +210,10 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// This function finds the direction of the player and animate it in this direction. Only right and left animation allowed.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateOneDirectionOnlyLeftAndRight(GameTime gameTime)
         {
             if (direction == "Right")

@@ -11,9 +11,16 @@ namespace MonkeyBusiness.Objects
     {
 
         #region Fields
+        /// <summary>
+        /// Movement
+        /// </summary>
         Vector2 velocity = Vector2.Zero;
         float timer = 0f;
         float interval = 200f;
+        /// <summary>
+        /// Animation
+        /// </summary>
+        Texture2D animationTexture;
         int currentCol = 0;
         int currentRow = 0;
         const int singleWidth = 32;
@@ -29,8 +36,10 @@ namespace MonkeyBusiness.Objects
         const int rightcol = 2;
         #endregion
         double haltingTime;
+        /// <summary>
+        /// Store the object type
+        /// </summary>
         private string objectType = "interactiveObject";
-        Texture2D animationTexture;
         public string type
         {
             get
@@ -42,6 +51,10 @@ namespace MonkeyBusiness.Objects
                 objectType = value;
             }
         }
+
+        /// <summary>
+        /// Store the bounding box of the object
+        /// </summary>
         public Rectangle BoundingBox
         {
             get
@@ -54,7 +67,6 @@ namespace MonkeyBusiness.Objects
             }
         }
 
-        private Rectangle safeZone;
         public Vector2 center
         {
             get
@@ -66,7 +78,14 @@ namespace MonkeyBusiness.Objects
                 SetPosition(value.X - 0.5f * this.width, value.Y - 0.5f * this.height);
             }
         }
+        /// <summary>
+        /// Store a safezone, if exist, the object can't go inside the safezone.
+        /// </summary>
+        private Rectangle safeZone;
 
+        /// <summary>
+        /// Booleans about movement
+        /// </summary>
         private bool isElastic = false, isOutsideScreenEnabled = false;
         #endregion
 
@@ -76,12 +95,22 @@ namespace MonkeyBusiness.Objects
 
         }
 
+        /// <summary>
+        /// This constractor sets the type of the object
+        /// </summary>
+        /// <param name="texture"></param>
+        /// <param name="position"></param>
+        /// <param name="objectType"></param>
         public InteractiveObject(Texture2D texture, Vector2 position, string objectType)
             : base(texture, position)
         {
             type = objectType;
         }
 
+        /// <summary>
+        /// Those functions sets the velocity and position of the object.
+        /// </summary>
+        /// <param name="position"></param>
         #region Set Position and Velocity, get Velocity
         public void SetPosition(Vector2 position)
         {
@@ -132,12 +161,19 @@ namespace MonkeyBusiness.Objects
             SetVelocity(velocity);
         }
 
-
+        /// <summary>
+        /// This function sets the object as elastic or not elastic, according to a bool variable.
+        /// </summary>
+        /// <param name="isElastic"></param>
         public void SetElastic(bool isElastic)
         {
             this.isElastic = isElastic;
         }
 
+        /// <summary>
+        /// This function sets if a object is allowed to be outside screen, or not, according to a bool variable.
+        /// </summary>
+        /// <param name="isOutsideScreenEnabled"></param>
         public void SetOutsideScreen(bool isOutsideScreenEnabled)
         {
             this.isOutsideScreenEnabled = isOutsideScreenEnabled;
@@ -217,6 +253,10 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// This function sets the safezone.
+        /// </summary>
+        /// <param name="safeZone"></param>
         public void SetSafeZone(Rectangle safeZone)
         {
             this.safeZone = safeZone;
@@ -253,6 +293,10 @@ namespace MonkeyBusiness.Objects
             //TODO: animate
         }
 
+        /// <summary>
+        /// This function draws the object on screen. If the object has animation it draws the animation, else it just draws the texture.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             if (isAnimate)
@@ -267,11 +311,19 @@ namespace MonkeyBusiness.Objects
 
 
         #region Animation
+        /// <summary>
+        /// This function loads the animation texture
+        /// </summary>
+        /// <param name="animationTexture"></param>
         public void LoadAnimation(Texture2D animationTexture)
         {
             this.animationTexture = animationTexture;
         }
 
+        /// <summary>
+        /// This animation animate the object in right direction
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateRight(GameTime gameTime)
         {
             isAnimate = true;
@@ -289,6 +341,11 @@ namespace MonkeyBusiness.Objects
                 timer = 0f;
             }
         }
+
+        /// <summary>
+        /// This animation animate the object in right direction
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateLeft(GameTime gameTime)
         {
             isAnimate = true;
@@ -307,6 +364,11 @@ namespace MonkeyBusiness.Objects
                 timer = 0f;
             }
         }
+
+        /// <summary>
+        /// This animation animate the object in right direction
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateUp(GameTime gameTime)
         {
             isAnimate = true;
@@ -325,6 +387,11 @@ namespace MonkeyBusiness.Objects
                 timer = 0f;
             }
         }
+
+        /// <summary>
+        /// This animation animate the object in right direction
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void AnimateDown(GameTime gameTime)
         {
             isAnimate = true;
@@ -344,6 +411,10 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// This function stop the animation.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public void StopAnimation(GameTime gameTime)
         {
             isAnimate = false;

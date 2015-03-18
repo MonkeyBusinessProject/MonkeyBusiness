@@ -11,7 +11,14 @@ namespace MonkeyBusiness.Objects
     class DrawableObject
     {
         #region Fields
+        /// <summary>
+        /// Object's texture
+        /// </summary>
         private Texture2D texture;
+
+        /// <summary>
+        /// Position, height and width
+        /// </summary>
         protected Vector2 position;
         
         protected int height
@@ -29,6 +36,9 @@ namespace MonkeyBusiness.Objects
             }
         }
 
+        /// <summary>
+        /// Animation fields
+        /// </summary>
         private bool isAnimated = false;
         private double animationInterval;
         #endregion
@@ -56,8 +66,5 @@ namespace MonkeyBusiness.Objects
         {
             this.texture = texture;
         }
-
-        
-        
     }
 }

@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkey.xnb</Output>
-      <Time>2015-03-18T16:52:27.6044072+02:00</Time>
+      <Time>2015-03-18T16:42:02.7641324+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trashCan.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trashCan.xnb</Output>
-      <Time>2015-03-18T16:52:27.6034078+02:00</Time>
+      <Time>2015-03-18T16:42:02.7621316+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\officebackground.jpg</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\officebackground.xnb</Output>
-      <Time>2015-03-18T16:52:27.6393862+02:00</Time>
+      <Time>2015-03-18T16:42:02.988222+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\mallBackground.jpg</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\mallBackground.xnb</Output>
-      <Time>2015-03-18T16:52:27.6373874+02:00</Time>
+      <Time>2015-03-18T16:42:02.9842204+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\money.jpg</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\money.xnb</Output>
-      <Time>2015-03-18T16:52:27.6044072+02:00</Time>
+      <Time>2015-03-18T16:42:02.763132+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\trash.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\trash.xnb</Output>
-      <Time>2015-03-18T16:52:27.6144012+02:00</Time>
+      <Time>2015-03-18T16:42:02.85817+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\alarm.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alarm.xnb</Output>
-      <Time>2015-03-18T16:52:27.6034078+02:00</Time>
+      <Time>2015-03-18T16:42:02.7621316+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\note.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\note.xnb</Output>
-      <Time>2015-03-18T16:52:27.6134018+02:00</Time>
+      <Time>2015-03-18T16:42:02.8561692+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\notesCollector.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\notesCollector.xnb</Output>
-      <Time>2015-03-18T16:52:27.6134018+02:00</Time>
+      <Time>2015-03-18T16:42:02.8561692+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\banana.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\banana.xnb</Output>
-      <Time>2015-03-18T16:52:27.6044072+02:00</Time>
+      <Time>2015-03-18T16:42:02.763132+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\poisonbanana.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\poisonbanana.xnb</Output>
-      <Time>2015-03-18T16:52:27.6134018+02:00</Time>
+      <Time>2015-03-18T16:42:02.8571696+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\arrowsPrescreen.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\arrowsPrescreen.xnb</Output>
-      <Time>2015-03-18T16:52:27.6154006+02:00</Time>
+      <Time>2015-03-18T16:42:02.8601708+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\mousePrescreen.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\mousePrescreen.xnb</Output>
-      <Time>2015-03-18T16:52:27.6383868+02:00</Time>
+      <Time>2015-03-18T16:42:02.9872216+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\alfredo.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\alfredo.xnb</Output>
-      <Time>2015-03-18T16:52:27.6044072+02:00</Time>
+      <Time>2015-03-18T16:42:02.763132+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\safeZone.png</Source>
@@ -134,7 +134,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\safeZone.xnb</Output>
-      <Time>2015-03-18T16:52:27.6144012+02:00</Time>
+      <Time>2015-03-18T16:42:02.85817+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\guitarPrescreen.png</Source>
@@ -143,7 +143,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\guitarPrescreen.xnb</Output>
-      <Time>2015-03-18T16:52:27.636388+02:00</Time>
+      <Time>2015-03-18T16:42:02.98322+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\firstlevelbg.jpg</Source>
@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\firstlevelbg.xnb</Output>
-      <Time>2015-03-18T16:52:27.6173994+02:00</Time>
+      <Time>2015-03-18T16:42:02.863172+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\stage.png</Source>
@@ -161,7 +161,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\stage.xnb</Output>
-      <Time>2015-03-18T16:52:27.641385+02:00</Time>
+      <Time>2015-03-18T16:42:02.9912232+02:00</Time>
     </Item>
     <Item>
       <Source>backgrounds\starwarsbg.jpg</Source>
@@ -170,7 +170,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\backgrounds\starwarsbg.xnb</Output>
-      <Time>2015-03-18T16:52:27.641385+02:00</Time>
+      <Time>2015-03-18T16:42:02.9922236+02:00</Time>
     </Item>
     <Item>
       <Source>Score.spritefont</Source>
@@ -179,7 +179,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Score.xnb</Output>
-      <Time>2015-03-18T16:52:27.5874174+02:00</Time>
+      <Time>2015-03-18T16:42:02.688102+02:00</Time>
     </Item>
     <Item>
       <Source>GameFont.spritefont</Source>
@@ -188,7 +188,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\GameFont.xnb</Output>
-      <Time>2015-03-18T16:52:27.586418+02:00</Time>
+      <Time>2015-03-18T16:42:02.6851008+02:00</Time>
     </Item>
     <Item>
       <Source>StarWarsFont.spritefont</Source>
@@ -197,7 +197,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\StarWarsFont.xnb</Output>
-      <Time>2015-03-18T16:52:27.6144012+02:00</Time>
+      <Time>2015-03-18T16:42:02.85817+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\alarmhit.mp3</Source>
@@ -206,7 +206,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\alarmhit.xnb</Output>
-      <Time>2015-03-18T16:52:27.6034078+02:00</Time>
+      <Time>2015-03-18T16:42:02.7611312+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\moneypop.mp3</Source>
@@ -215,7 +215,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\moneypop.xnb</Output>
-      <Time>2015-03-18T16:52:27.6034078+02:00</Time>
+      <Time>2015-03-18T16:42:02.7611312+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\MonkeySounds.mp3</Source>
@@ -224,7 +224,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\MonkeySounds.xnb</Output>
-      <Time>2015-03-18T16:52:27.5884168+02:00</Time>
+      <Time>2015-03-18T16:42:02.6891024+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\BrownBananaCollect.mp3</Source>
@@ -233,7 +233,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\BrownBananaCollect.xnb</Output>
-      <Time>2015-03-18T16:52:27.5884168+02:00</Time>
+      <Time>2015-03-18T16:42:02.6891024+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashInCan.mp3</Source>
@@ -242,7 +242,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashInCan.xnb</Output>
-      <Time>2015-03-18T16:52:27.6024084+02:00</Time>
+      <Time>2015-03-18T16:42:02.7591304+02:00</Time>
     </Item>
     <Item>
       <Source>SoundFX\TrashKick.mp3</Source>
@@ -251,7 +251,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\SoundFX\TrashKick.xnb</Output>
-      <Time>2015-03-18T16:52:27.6024084+02:00</Time>
+      <Time>2015-03-18T16:42:02.7601308+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\Level2Music.mp3</Source>
@@ -261,7 +261,7 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.xnb</Output>
       <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level2Music.wma</Extra>
-      <Time>2015-03-18T16:52:27.4784828+02:00</Time>
+      <Time>2015-03-18T16:42:02.578058+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\FirstLevelMusic.mp3</Source>
@@ -271,7 +271,7 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.xnb</Output>
       <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\Level1Music.wma</Extra>
-      <Time>2015-03-18T16:52:27.456496+02:00</Time>
+      <Time>2015-03-18T16:42:02.5540484+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\LevelLastMusic.mp3</Source>
@@ -281,7 +281,7 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.xnb</Output>
       <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\LevelLastMusic.wma</Extra>
-      <Time>2015-03-18T16:52:27.5334498+02:00</Time>
+      <Time>2015-03-18T16:42:02.63308+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\starwars.mp3</Source>
@@ -291,7 +291,7 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.xnb</Output>
       <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\starwars.wma</Extra>
-      <Time>2015-03-18T16:52:27.586418+02:00</Time>
+      <Time>2015-03-18T16:42:02.6841004+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\0.mp3</Source>
@@ -300,7 +300,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\0.xnb</Output>
-      <Time>2015-03-18T16:52:27.5674294+02:00</Time>
+      <Time>2015-03-18T16:42:02.6650928+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\1.mp3</Source>
@@ -309,7 +309,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\1.xnb</Output>
-      <Time>2015-03-18T16:52:27.5684288+02:00</Time>
+      <Time>2015-03-18T16:42:02.6660932+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\2.mp3</Source>
@@ -318,7 +318,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\2.xnb</Output>
-      <Time>2015-03-18T16:52:27.5704276+02:00</Time>
+      <Time>2015-03-18T16:42:02.668094+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\3.mp3</Source>
@@ -327,7 +327,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\3.xnb</Output>
-      <Time>2015-03-18T16:52:27.571427+02:00</Time>
+      <Time>2015-03-18T16:42:02.6690944+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\4.mp3</Source>
@@ -336,7 +336,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\4.xnb</Output>
-      <Time>2015-03-18T16:52:27.5724264+02:00</Time>
+      <Time>2015-03-18T16:42:02.6700948+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\notes\5.mp3</Source>
@@ -345,7 +345,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\notes\5.xnb</Output>
-      <Time>2015-03-18T16:52:27.5734258+02:00</Time>
+      <Time>2015-03-18T16:42:02.6710952+02:00</Time>
     </Item>
     <Item>
       <Source>BGM\backingTrack.mp3</Source>
@@ -355,7 +355,7 @@
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\backingTrack.xnb</Output>
       <Extra>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\BGM\backingTrack.wma</Extra>
-      <Time>2015-03-18T16:52:27.5674294+02:00</Time>
+      <Time>2015-03-18T16:42:02.6640924+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\sheet.png</Source>
@@ -364,7 +364,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\sheet.xnb</Output>
-      <Time>2015-03-18T16:52:27.646382+02:00</Time>
+      <Time>2015-03-18T19:03:15.321535+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\guitarmonkey.png</Source>
@@ -373,7 +373,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\guitarmonkey.xnb</Output>
-      <Time>2015-03-18T18:50:07.0552672+02:00</Time>
+      <Time>2015-03-18T19:03:15.321535+02:00</Time>
     </Item>
     <Item>
       <Source>Sprites\monkeydeath.png</Source>
@@ -382,7 +382,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\user1\Documents\GitHub\MonkeyBusiness\MonkeyBusiness\MonkeyBusiness\bin\x86\Debug\Content\Sprites\monkeydeath.xnb</Output>
-      <Time>2015-03-18T17:20:20.9754103+02:00</Time>
+      <Time>2015-03-18T19:03:15.321535+02:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

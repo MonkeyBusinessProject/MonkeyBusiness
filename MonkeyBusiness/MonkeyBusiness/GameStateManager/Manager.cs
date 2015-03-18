@@ -19,21 +19,37 @@ namespace GameStateManager
     /// </summary>
     public class Manager : Microsoft.Xna.Framework.Game
     {
+        /// <summary>
+        /// Engine fields
+        /// </summary>
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        /// <summary>
+        /// Minigame choosing
+        /// </summary>
         Stack<MiniGame> miniGames = new Stack<MiniGame>();
         Stack<MiniGame> miniGamesDone = new Stack<MiniGame>();
         MiniGame miniGame;
-        public int count = 0;// TODO: remove, just for debugging
+        /// <summary>
+        /// Gameplay fields
+        /// </summary>
         bool isRunning = false;
         public Score score;
 
         #region get and set
+        /// <summary>
+        /// Returns the graphic device of the manager.
+        /// </summary>
+        /// <returns></returns>
         public GraphicsDeviceManager GetGraphicDevice()
         {
             return graphics;
         }
 
+        /// <summary>
+        /// Returns the spritebatch of the manager.
+        /// </summary>
+        /// <returns></returns>
         public SpriteBatch GetSpriteBatch()
         {
             return spriteBatch;
@@ -41,6 +57,9 @@ namespace GameStateManager
         #endregion
 
         #region Constractor and Initialize
+        /// <summary>
+        /// Creates the manager. set the graphic device and load the content folder.
+        /// </summary>
         public Manager()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -52,6 +71,8 @@ namespace GameStateManager
         /// This is where it can query for any required services and load any non-graphic
         /// related content.  Calling base.Initialize will enumerate through any components
         /// and initialize them as well.
+        /// 
+        /// Load all minigames to the manager.
         /// </summary>
         protected override void Initialize()
         {
@@ -76,11 +97,8 @@ namespace GameStateManager
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            //System.Diagnostics.Debug.WriteLine("stuff");
             if (isRunning)
                 miniGame.LoadContent();
-
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
@@ -110,20 +128,6 @@ namespace GameStateManager
 
             if (isRunning)
                 miniGame.Update(gameTime);
-            //// TODO: Remove
-            /*
-            if (count == 100)
-            {
-                NextMiniGame();
-            }
-            if (count == 200)
-            {
-                LastMiniGame();
-                count = 0;
-            }
-            count++;
-             */
-            ////
 
             base.Update(gameTime);
         }
@@ -146,24 +150,31 @@ namespace GameStateManager
 
         #region Manager
 
+        /// <summary>
+        /// This function loads all minigames to a stack.
+        /// </summary>
         private void AddAllMiniGames()
         {
             // TODO: Add all mini-games
             //Add in reversed order
-           // miniGames.Push(new LevelLast(this));
-           // miniGames.Push(new PreUsingKeys(this));
-           // miniGames.Push(new StarWars4(this));
+
+            //miniGames.Push(new LevelLast(this));
+            //miniGames.Push(new PreUsingKeys(this));
+            //miniGames.Push(new StarWars4(this));
             miniGames.Push(new Level03(this));
-           // miniGames.Push(new PreGuitar(this));
-           // miniGames.Push(new StarWars3(this));
-           // miniGames.Push(new Level02(this));
-           // miniGames.Push(new PreUsingMouse(this));
-           // miniGames.Push(new StarWars2(this));
-           // miniGames.Push(new Level01(this));
-           // miniGames.Push(new PreUsingMouse(this));
-           // miniGames.Push(new StarWars1(this));
+            miniGames.Push(new PreGuitar(this));
+            //miniGames.Push(new StarWars3(this));
+            //miniGames.Push(new Level02(this));
+            //miniGames.Push(new PreUsingMouse(this));
+            //miniGames.Push(new StarWars2(this));
+            //miniGames.Push(new Level01(this));
+            //miniGames.Push(new PreUsingMouse(this));
+            //miniGames.Push(new StarWars1(this));
         }
 
+        /// <summary>
+        /// This function sets the first minigame as the current minigame.
+        /// </summary>
         private void SetFirstMiniGameAsCurrent()
         {
             if (miniGames.Count != 0)
@@ -179,6 +190,9 @@ namespace GameStateManager
             }
         }
 
+        /// <summary>
+        /// This function restarts the current minigame
+        /// </summary>
         public void RestartMiniGame()
         {
             miniGame.UnloadContent();
@@ -186,6 +200,9 @@ namespace GameStateManager
             miniGame.LoadContent();
         }
 
+        /// <summary>
+        /// This function starts the next minigame.
+        /// </summary>
         public void SetNextMiniGameAsCurrent()
         {
             if (miniGames.Count != 0)
@@ -202,6 +219,9 @@ namespace GameStateManager
             }
         }
 
+        /// <summary>
+        /// This function goes one minigame backward.
+        /// </summary>
         public void SetPreviousMiniGameAsCurrent()
         {
             if (miniGamesDone.Count != 0)
