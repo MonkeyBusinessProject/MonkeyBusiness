@@ -121,6 +121,7 @@
     <Compile Include="MiniGames\StarWars2.cs" />
     <Compile Include="MiniGames\StarWars3.cs" />
     <Compile Include="MiniGames\StarWars4.cs" />
+    <Compile Include="Objects\AnimatedSprite.cs" />
     <Compile Include="Objects\Timer.cs" />
     <Compile Include="Objects\InteractiveObject.cs" />
     <Compile Include="Objects\DrawableObject.cs" />

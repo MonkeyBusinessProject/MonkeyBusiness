@@ -24,7 +24,10 @@ namespace MonkeyBusiness.MiniGames
         int initialScores, widthOfAColumn = 100; //defines the initial scores and the width of each note column
         KeyboardState lastKeyboardState = Keyboard.GetState(); //sets the game to recieve keyboard state
         private SpriteFont font;
-
+        private AnimatedSprite GuitarPlayingSprite; //creats a new variable for an animated sprite
+        //sets the variables for the location of the guitar-playing monkey animated texture
+        Vector2 GuitarPlayingSpriteLocation = new Vector2(0,0);
+        const int guitarMonkeyX = 15;
         private Song backingTrack; //sets the background music
         private SoundEffect[] notesSounds; //set an array for the sound each note makes
         #endregion
@@ -113,7 +116,7 @@ namespace MonkeyBusiness.MiniGames
                     currentHeight -= distanceBetweenNotes / 2;
             }
         }
-        //handles the input from the player, and checks to see if the player has hit the correct notes at the right time, if so the note isp played, removed and score is given, otherwise score is deducted.
+        //handles the input from the player, and checks to see if the player has hit the correct notes at the right time, if so the note is played, removed and score is given, otherwise score is deducted.
         private void HandleInput()
         {
             KeyboardState keyboardState = Keyboard.GetState();
@@ -176,16 +179,7 @@ namespace MonkeyBusiness.MiniGames
             manager.IsMouseVisible = true;//Or not...
             currentHeight = initialHeight;
 
-            ////////
-
-            //notes.Add(1);
-            //notes.Add(2);
-            /*notes.Add(1);
-            notes.Add(4);
-            notes.Add(0);
-            notes.Add(3);
-            notes.Add(2);
-            notes.Add(1);*/
+         
             try
             {
                 xmlDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\Guitar.xml";
@@ -198,7 +192,7 @@ namespace MonkeyBusiness.MiniGames
             numberOfNotes = notes.Count;
             totalScores = scoresForNote * numberOfNotes;
 
-            ///////
+           
         }
 
         /// <summary>
@@ -208,8 +202,10 @@ namespace MonkeyBusiness.MiniGames
         {
             UpdateGraphicDevices();
             graphics.GraphicsDevice.Clear(Color.CornflowerBlue);
+            DrawScenery();
+            GuitarPlayingSprite.Draw(spriteBatch, GuitarPlayingSpriteLocation);
             spriteBatch.Begin();
-
+            
             Utillities.DrawAllObjects(objects, manager.score, spriteBatch);
 
 
@@ -233,23 +229,26 @@ namespace MonkeyBusiness.MiniGames
             // TODO: Handle input
             //Example:          player.HandleInput();
             HandleInput();
-
+            GuitarPlayingSprite.Update(gameTime);
             Utillities.UpdateAllObjects(objects, gameTime, viewport);
             CheckOutsideScreenNotes();
             CheckWinning();
         }
 
         /// <summary>
-        /// Load content
-        /// Here you should:
-        ///     1. Load objects' textures
-        ///     2. Add all objects to the object' list
+        /// Loads the textures for notes, note collectors, background, the guitar playing monkey, and font for the score
+        /// creats the note collectors and notes from the loaded textures
+        /// loads the music for the background and plays it at a set volume
+        /// creates an array of note sounds
         /// </summary>
         public override void LoadContent()
         {
             Texture2D NoteTexture = Content.Load<Texture2D>("Sprites/note");
             Texture2D NoteCollectorTexture = Content.Load<Texture2D>("Sprites/notesCollector");
             backgroundTexture = Content.Load<Texture2D>("backgrounds/stage");
+            Texture2D guitarMonkey = Content.Load<Texture2D>("Sprites/guitarmonkey");
+            GuitarPlayingSprite = new AnimatedSprite(guitarMonkey, 1,4 );
+            GuitarPlayingSpriteLocation = new Vector2(guitarMonkeyX, viewport.Height - guitarMonkey.Height);
             font = Content.Load<SpriteFont>("GameFont");
 
             CreateNoteCollectors(NoteCollectorTexture);
@@ -262,7 +261,7 @@ namespace MonkeyBusiness.MiniGames
             MediaPlayer.Play(backingTrack);
             MediaPlayer.Volume = 0.5f;
 
-            //TODO
+            
             notesSounds = new SoundEffect[numberOfCollectors + 1];
             for (int i = 0; i < numberOfCollectors + 1; i++)
             {
@@ -295,7 +294,9 @@ namespace MonkeyBusiness.MiniGames
         private void DrawScenery()
         {
             Rectangle screenRectangle = new Rectangle(0, 0, viewport.Width, viewport.Height);
+            spriteBatch.Begin();
             spriteBatch.Draw(backgroundTexture, screenRectangle, Color.White);
+            spriteBatch.End();
 
         }
         #endregion

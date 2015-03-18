@@ -150,18 +150,18 @@ namespace GameStateManager
         {
             // TODO: Add all mini-games
             //Add in reversed order
-            //miniGames.Push(new LevelLast(this));
-            //miniGames.Push(new PreUsingKeys(this));
-            //miniGames.Push(new StarWars4(this));
+           // miniGames.Push(new LevelLast(this));
+           // miniGames.Push(new PreUsingKeys(this));
+           // miniGames.Push(new StarWars4(this));
             miniGames.Push(new Level03(this));
-            miniGames.Push(new PreGuitar(this));
-            //miniGames.Push(new StarWars3(this));
-            //miniGames.Push(new Level02(this));
-            //miniGames.Push(new PreUsingMouse(this));
-            //miniGames.Push(new StarWars2(this));
-            //miniGames.Push(new Level01(this));
-            //miniGames.Push(new PreUsingMouse(this));
-            //miniGames.Push(new StarWars1(this));
+           // miniGames.Push(new PreGuitar(this));
+           // miniGames.Push(new StarWars3(this));
+           // miniGames.Push(new Level02(this));
+           // miniGames.Push(new PreUsingMouse(this));
+           // miniGames.Push(new StarWars2(this));
+           // miniGames.Push(new Level01(this));
+           // miniGames.Push(new PreUsingMouse(this));
+           // miniGames.Push(new StarWars1(this));
         }
 
         private void SetFirstMiniGameAsCurrent()

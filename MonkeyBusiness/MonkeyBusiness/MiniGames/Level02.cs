@@ -33,7 +33,7 @@ namespace MonkeyBusiness.MiniGames
 
         //Timer
         Timer timer = new Timer();
-        private int timeLimit = 5;
+        private int timeLimit = 60;
 
         #endregion
 
@@ -145,7 +145,7 @@ namespace MonkeyBusiness.MiniGames
         public override void LoadContent()
         {
 
-            //TODO: Load Content
+           
             device = graphics.GraphicsDevice;
             //loads all the textures for the level
             backgroundTexture = Content.Load<Texture2D>("backgrounds/officebackground");

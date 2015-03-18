@@ -232,10 +232,10 @@ namespace MonkeyBusiness.MiniGames
         {
             //TODO: Load Content
             device = graphics.GraphicsDevice;
-            //loads the textures for the background and the monkey, animates the player using a spritesheet
+            //loads the textures for the background and the monkey
             backgroundTexture = Content.Load<Texture2D>("backgrounds/mallBackground");
             Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
-            player.LoadAnimation(Content.Load<Texture2D>("sheet"));
+            
 
             Vector2 pos = new Vector2(viewport.Width / 2 - MonkeyTexture.Width / 2, viewport.Height - MonkeyTexture.Height - MonkeyInitialHeight);
             //loads the soundbytes for collecting money and various bananas
@@ -245,7 +245,8 @@ namespace MonkeyBusiness.MiniGames
             //spawns the player and sets their speed
             player = new Player(MonkeyTexture, pos);
             player.speed = monkeySpeed;
-            
+            //animates the player using a spritesheet
+            player.LoadAnimation(Content.Load<Texture2D>("backgrounds/sheet"));
             //objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
             objects.Add(player);
             initialScores = manager.score.scores;

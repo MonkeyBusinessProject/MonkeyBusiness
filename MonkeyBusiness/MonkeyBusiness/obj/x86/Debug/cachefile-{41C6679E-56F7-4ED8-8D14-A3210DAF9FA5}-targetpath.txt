@@ -7,7 +7,6 @@ Content\Sprites\trash.xnb
 Content\Sprites\alarm.xnb
 Content\Sprites\note.xnb
 Content\Sprites\notesCollector.xnb
-Content\sheet.xnb
 Content\Sprites\banana.xnb
 Content\Sprites\poisonbanana.xnb
 Content\backgrounds\arrowsPrescreen.xnb
@@ -35,11 +34,14 @@ Content\BGM\LevelLastMusic.xnb
 Content\BGM\LevelLastMusic.wma
 Content\BGM\starwars.xnb
 Content\BGM\starwars.wma
-Content\BGM\backingTrack.xnb
-Content\BGM\backingTrack.wma
 Content\BGM\notes\0.xnb
 Content\BGM\notes\1.xnb
 Content\BGM\notes\2.xnb
 Content\BGM\notes\3.xnb
 Content\BGM\notes\4.xnb
 Content\BGM\notes\5.xnb
+Content\BGM\backingTrack.xnb
+Content\BGM\backingTrack.wma
+Content\Sprites\sheet.xnb
+Content\Sprites\guitarmonkey.xnb
+Content\Sprites\monkeydeath.xnb
