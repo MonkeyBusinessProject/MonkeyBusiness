@@ -66,6 +66,7 @@ namespace MonkeyBusiness.MiniGames
             List<DrawableObject> collidedAlarms = Utillities.GetColliadedObjects(player, objects, "alarm");
             if (collidedAlarms.Count != 0)
             {
+                alarmhit.Play();
                 Die();
             }
         }
@@ -85,7 +86,7 @@ namespace MonkeyBusiness.MiniGames
 
         private void RestartLevel() //a function that restarts the level upon losing, including the score and the timer
         {
-            alarmhit.Play();
+            
             manager.score.scores = initialScores;
             timer = new Timer();
             manager.RestartMiniGame();
@@ -171,6 +172,7 @@ namespace MonkeyBusiness.MiniGames
             Vector2 pos = playerInitial;
             Texture2D DollarTexture = Content.Load<Texture2D>("Sprites/money");
             Texture2D AlarmTexture = Content.Load<Texture2D>("Sprites/alarm");
+            diedMonkey = Content.Load<Texture2D>("Sprites/monkeydeath");
             backgroundTexture = Content.Load<Texture2D>("backgrounds/firstlevelbg");
             //loads the sounds for collision with alarms and money
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
@@ -196,7 +198,7 @@ namespace MonkeyBusiness.MiniGames
             //Load objects to objects' list
             objects.Add(player);
             initialScores = manager.score.scores;
-            diedMonkey = Content.Load<Texture2D>("Sprites/alfredo");
+            
             safeZoneTexture = Content.Load<Texture2D>("Sprites/safeZone");
 
         }
