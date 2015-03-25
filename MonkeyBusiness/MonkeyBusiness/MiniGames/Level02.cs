@@ -150,7 +150,7 @@ namespace MonkeyBusiness.MiniGames
             //loads all the textures for the level
             backgroundTexture = Content.Load<Texture2D>("backgrounds/officebackground");
             Texture2D TrashTexture = Content.Load<Texture2D>("Sprites/trash");
-            Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/monkey");
+            Texture2D MonkeyTexture = Content.Load<Texture2D>("Sprites/alfredo");
             Texture2D CanTexture = Content.Load<Texture2D>("Sprites/TrashCan");
 
             //loads the sound effects for collisions

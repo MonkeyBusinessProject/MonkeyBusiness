@@ -19,7 +19,7 @@ namespace MonkeyBusiness.MiniGames
         Texture2D diedMonkey;
         Texture2D safeZoneTexture;
 
-        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 10; //sets the number of dollars to spawn, score for each dollar, how much score is needed to win, and number of alarms to spawn
+        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 7; //sets the number of dollars to spawn, score for each dollar, how much score is needed to win, and number of alarms to spawn
         float alarmspeed = 0.5f, playerSpeed = 0.2f; //the movement speed of the player and alarms
         int initialScores;
         Player player;

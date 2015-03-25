@@ -158,6 +158,7 @@ namespace GameStateManager
             // TODO: Add all mini-games
             //Add in reversed order
 
+            miniGames.Push(new EndOfTheGame(this));
             //miniGames.Push(new LevelLast(this));
             //miniGames.Push(new PreUsingKeys(this));
             //miniGames.Push(new StarWars4(this));
@@ -167,9 +168,10 @@ namespace GameStateManager
             //miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars2(this));
-            miniGames.Push(new Level01(this));
+            //miniGames.Push(new Level01(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars1(this));
+            //miniGames.Push(new MainMenu(this));
         }
 
         /// <summary>
@@ -236,6 +238,17 @@ namespace GameStateManager
             {
                 isRunning = false;
             }
+        }
+
+        public void BackToFirstLevel()
+        {
+            while(miniGamesDone.Count != 0)
+            {
+                miniGames.Push(miniGamesDone.Pop());
+            }/*
+            if(miniGames.First<MiniGame>() is MainMenu){
+                miniGames.Pop();
+            }*/
         }
 
         #endregion
