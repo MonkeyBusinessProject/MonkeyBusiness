@@ -35,6 +35,7 @@ namespace GameStateManager
         /// </summary>
         bool isRunning = false;
         public Score score;
+        public int diff = 0;
 
         #region get and set
         /// <summary>
@@ -168,10 +169,10 @@ namespace GameStateManager
             //miniGames.Push(new Level02(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars2(this));
-            //miniGames.Push(new Level01(this));
+            miniGames.Push(new Level01(this));
             //miniGames.Push(new PreUsingMouse(this));
             //miniGames.Push(new StarWars1(this));
-            //miniGames.Push(new MainMenu(this));
+            miniGames.Push(new MainMenu(this));
         }
 
         /// <summary>

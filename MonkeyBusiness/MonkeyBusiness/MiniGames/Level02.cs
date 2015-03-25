@@ -21,7 +21,10 @@ namespace MonkeyBusiness.MiniGames
         Player player;
         InteractiveObject trashcan;
 
-        const int numberOfTrashes = 10, scoreForTrash = 100, totalScores = scoreForTrash * numberOfTrashes, trashMovementTime = 1; //sets the number of trashes to spawn, how much score is given for each trash that is cleaned and how much score is needed to win, and how long a trash moves after collision
+        const int scoreForTrash = 100, trashMovementTime = 1; //sets the number of trashes to spawn, how much score is given for each trash that is cleaned and how much score is needed to win, and how long a trash moves after collision
+        int[] numberOfTrashes = {3, 7, 10, 138};
+        int totalScores;
+
         int initialScores;
         List<DrawableObject> objects = new List<DrawableObject>(); //list of all spawned objects
         private GameTime gameTime;
@@ -33,7 +36,7 @@ namespace MonkeyBusiness.MiniGames
 
         //Timer
         Timer timer = new Timer();
-        private int timeLimit = 60;
+        private int[] timeLimit = {40, 60, 80, 100000000};
 
         #endregion
 
@@ -98,6 +101,7 @@ namespace MonkeyBusiness.MiniGames
         public override void Initialize()
         {
             manager.IsMouseVisible = true;
+            totalScores = scoreForTrash * numberOfTrashes[manager.diff];
         }
 
         /// <summary>
@@ -133,7 +137,7 @@ namespace MonkeyBusiness.MiniGames
 
             //if the timer is not working, a new timer is created, otherwise it is updated based on the elapsed game time
             if (!timer.isWorking)
-                timer = new Timer(manager.score.font, gameTime, timeLimit);
+                timer = new Timer(manager.score.font, gameTime, timeLimit[manager.diff]);
             else
                 timer.Update(gameTime);
         }
@@ -163,7 +167,7 @@ namespace MonkeyBusiness.MiniGames
             player = new Player(MonkeyTexture, monkeyPos);
             player.speed = 0.13f; //the player's movement speed
             trashcan = new InteractiveObject(CanTexture, canPos, "trashCan");
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes, TrashTexture, viewport, "trash", true)); 
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfTrashes[manager.diff], TrashTexture, viewport, "trash", true)); 
 
             //TODO: Load to objects' list
             objects.Add(trashcan);

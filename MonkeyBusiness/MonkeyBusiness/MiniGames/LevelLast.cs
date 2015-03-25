@@ -22,7 +22,9 @@ namespace MonkeyBusiness.MiniGames
         private int timeLimit = 25;
 
 
-        const int numberOfDollars = 30, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars; //creats the number of dollars that will "fall from the sky", sets the score for collecting dollars and how much is needed to win
+        const int  scoreForDollar = 100;
+        int totalScores; //creats the number of dollars that will "fall from the sky", sets the score for collecting dollars and how much is needed to win
+        int[] numberOfDollars = { 30, 50, 100, 8000000 };
         int initialScores; //defines the initial score based on previous levels
         Player player;
         private GameTime gameTime;
@@ -183,6 +185,7 @@ namespace MonkeyBusiness.MiniGames
             maximumDollarSpeed = initialMaximumDollarSpeed;
             maximumInterval = initialMaximumInterval;
             minimumInterval = initialMinimumInterval;
+            totalScores = scoreForDollar * numberOfDollars[manager.diff];
         }
 
         /// <summary>

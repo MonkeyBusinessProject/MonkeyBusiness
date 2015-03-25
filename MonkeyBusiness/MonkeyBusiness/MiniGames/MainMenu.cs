@@ -50,6 +50,7 @@ namespace MonkeyBusiness.MiniGames
         private void LoadMenuItems()
         {
             items.Add("Play");
+            items.Add("Easy");
             items.Add("Exit");
         }
 
@@ -77,6 +78,26 @@ namespace MonkeyBusiness.MiniGames
                 else if (items[chosenItem] == "Exit")
                 {
                     manager.Exit();
+                }
+                else if (items[chosenItem] == "Easy")
+                {
+                    items[chosenItem] = "Medium";
+                    manager.diff = 1;
+                }
+                else if (items[chosenItem] == "Medium")
+                {
+                    items[chosenItem] = "Hard";
+                    manager.diff = 2;
+                }
+                else if (items[chosenItem] == "Hard")
+                {
+                    items[chosenItem] = "Insane";
+                    manager.diff = 3;
+                }
+                else if (items[chosenItem] == "Insane")
+                {
+                    items[chosenItem] = "Easy";
+                    manager.diff = 0;
                 }
             }
 

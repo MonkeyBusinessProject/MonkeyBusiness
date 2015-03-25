@@ -19,7 +19,10 @@ namespace MonkeyBusiness.MiniGames
         Texture2D diedMonkey;
         Texture2D safeZoneTexture;
 
-        const int numberOfDollars = 5, scoreForDollar = 100, totalScores = scoreForDollar * numberOfDollars, numberOfAlarms = 7; //sets the number of dollars to spawn, score for each dollar, how much score is needed to win, and number of alarms to spawn
+        int[] numberOfDollars = {5, 5, 10, 1}, numberOfAlarms = {3, 7, 10, 30};
+        const int scoreForDollar = 100;
+        int totalScores; //sets the number of dollars to spawn, score for each dollar, how much score is needed to win, and number of alarms to spawn
+            
         float alarmspeed = 0.5f, playerSpeed = 0.2f; //the movement speed of the player and alarms
         int initialScores;
         Player player;
@@ -37,7 +40,7 @@ namespace MonkeyBusiness.MiniGames
 
         //Timer
         Timer timer = new Timer();
-        private int timeLimit = 25;
+        private int[] timeLimit = {15, 25, 25, 100000};
         
         /// <summary>
         /// Constractor
@@ -105,6 +108,7 @@ namespace MonkeyBusiness.MiniGames
         
         public override void Initialize() {
             manager.IsMouseVisible = true; //makes the mouse visible
+            totalScores = scoreForDollar * numberOfDollars[manager.diff];
         }
 
         /// <summary>
@@ -132,12 +136,12 @@ namespace MonkeyBusiness.MiniGames
         public override void Update(GameTime gameTime)
         {
             if (!timer.isWorking) //if the timer is not working, a new timer is created, otherwise it is updated based on the elapsed game time
-                timer = new Timer(manager.score.font, gameTime, timeLimit);
+                timer = new Timer(manager.score.font, gameTime, timeLimit[manager.diff]);
             else
                 timer.Update(gameTime);
             if (!isDead) //if the player hasn't lost due to hitting an alarm or the timer running out, they are able to play, and the game continues to check for colliding with objects, winning, and/or the timer running out
             {
-                if(timer.seconds != timeLimit)
+                if(timer.seconds != timeLimit[manager.diff])
                     player.HandleInput(true);
                 CheckIfTimePassed();
                 CheckCollision();
@@ -182,8 +186,8 @@ namespace MonkeyBusiness.MiniGames
             player.speed = playerSpeed;
 
             //spawns the dollar and alarm objects in random positions on the screen outside the safe zone
-            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositionsOutsideSafeZone(numberOfDollars, DollarTexture, viewport, "dollar", safeZone));
-            List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZoneAndSomeOtherUnimportantWordsThatTheirPurposeIsToCreateTheLongesterFunctionNameEver111111111111(numberOfAlarms, AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
+            objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositionsOutsideSafeZone(numberOfDollars[manager.diff], DollarTexture, viewport, "dollar", safeZone));
+            List<InteractiveObject> alarms = Utillities.CreateListOfInteractiveObjectsInRandomPositionsWithVelocityOutsideSafeZoneAndSomeOtherUnimportantWordsThatTheirPurposeIsToCreateTheLongesterFunctionNameEver111111111111(numberOfAlarms[manager.diff], AlarmTexture, viewport, "alarm", -alarmspeed, alarmspeed, safeZone);
            
             foreach (InteractiveObject alarm in alarms)
             {
