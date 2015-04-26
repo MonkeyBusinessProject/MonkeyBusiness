@@ -12,8 +12,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
-    // TODO: change class name
-    // TODO: add your mini game to the manager
+   
     class Level02 : MiniGame
     {
         #region Fields

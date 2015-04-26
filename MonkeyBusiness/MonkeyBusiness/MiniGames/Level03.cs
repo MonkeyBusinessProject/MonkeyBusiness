@@ -14,7 +14,7 @@ using System.Media;
 
 namespace MonkeyBusiness.MiniGames
 {
-    // TODO: add your mini game to the manager
+    
     class Level03 : MiniGame
     {
         #region Fields

@@ -14,9 +14,7 @@ using MonkeyBusiness;
 
 namespace GameStateManager
 {
-    /// <summary>
-    /// This is the main type for your game
-    /// </summary>
+    
     public class Manager : Microsoft.Xna.Framework.Game
     {
         /// <summary>
