@@ -29,10 +29,13 @@ namespace MonkeyBusiness.MiniGames
         //declaring variables for sounds
         private SoundEffect alarmhit;
         private SoundEffect moneycollect;
+        private SoundEffect clock;
+        private SoundEffect timeover;
         private Song backgroundMusic;
 
         List<DrawableObject> objects = new List<DrawableObject>(); //a list that will contain all the spawned objects
-        bool isDead = false;
+        bool isDead = false, tenSecondsFlag = false;
+        int secondsToAlarm = 5;
 
         Vector2 playerInitial = new Vector2(75, 75); //spawn point for the player
         static Rectangle initialSafeZone = new Rectangle(0, 0, 150, 150); //the place and dimensions of the safe zone
@@ -77,7 +80,15 @@ namespace MonkeyBusiness.MiniGames
         private void CheckIfTimePassed() //a function that checks of a predetermined amount of time has passed before the player won. If so, the player loses
         {
             if (timer.seconds <= 0 && !isDead)
+            {
                 Die();
+                timeover.Play();
+            }
+            if (timer.seconds == secondsToAlarm && !tenSecondsFlag)
+            {
+                tenSecondsFlag = true;
+                clock.Play();
+            }
         }
 
         private void Die() //a function that handles loses.
@@ -109,6 +120,7 @@ namespace MonkeyBusiness.MiniGames
         public override void Initialize() {
             manager.IsMouseVisible = true; //makes the mouse visible
             totalScores = scoreForDollar * numberOfDollars[manager.diff];
+            tenSecondsFlag = false;
         }
 
         /// <summary>
@@ -161,6 +173,7 @@ namespace MonkeyBusiness.MiniGames
             {
                 while (Mouse.GetState().LeftButton == ButtonState.Pressed);
                 while (Mouse.GetState().LeftButton == ButtonState.Released);
+                //timeover.Dispose();
                 RestartLevel();
             }
         }
@@ -181,6 +194,8 @@ namespace MonkeyBusiness.MiniGames
             //loads the sounds for collision with alarms and money
             alarmhit = Content.Load<SoundEffect>("SoundFX/alarmhit");
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
+            clock = Content.Load<SoundEffect>("SoundFX/clock");
+            timeover = Content.Load<SoundEffect>("SoundFX/timeover");
             //creats the player character and sets its speed
             player = new Player(SpriteTexture, pos);
             player.speed = playerSpeed;
@@ -204,7 +219,6 @@ namespace MonkeyBusiness.MiniGames
             initialScores = manager.score.scores;
             
             safeZoneTexture = Content.Load<Texture2D>("Sprites/safeZone");
-
         }
 
         /// <summary>

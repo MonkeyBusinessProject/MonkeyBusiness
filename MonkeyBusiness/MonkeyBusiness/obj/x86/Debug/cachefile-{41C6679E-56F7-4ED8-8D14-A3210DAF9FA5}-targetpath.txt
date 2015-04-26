@@ -20,9 +20,13 @@ Content\backgrounds\stage.xnb
 Content\backgrounds\starwarsbg.xnb
 Content\Sprites\guitarmonkey.xnb
 Content\Sprites\monkeydeath.xnb
+Content\backgrounds\MenuBackground.xnb
+Content\Menu\logo.xnb
+Content\Menu\blank.xnb
 Content\Score.xnb
 Content\GameFont.xnb
 Content\StarWarsFont.xnb
+Content\MenuItem.xnb
 Content\SoundFX\alarmhit.xnb
 Content\SoundFX\moneypop.xnb
 Content\SoundFX\MonkeySounds.xnb
@@ -45,9 +49,9 @@ Content\BGM\notes\4.xnb
 Content\BGM\notes\5.xnb
 Content\BGM\backingTrack.xnb
 Content\BGM\backingTrack.wma
-Content\backgrounds\MenuBackground.xnb
+Content\BGM\EndOfTheGame.xnb
+Content\BGM\EndOfTheGame.wma
 Content\BGM\MenuMusic.xnb
 Content\BGM\MenuMusic.wma
-Content\MenuItem.xnb
-Content\Menu\logo.xnb
-Content\Menu\blank.xnb
+Content\SoundFX\timeover.xnb
+Content\SoundFX\clock.xnb

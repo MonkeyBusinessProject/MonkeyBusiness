@@ -30,6 +30,10 @@ namespace MonkeyBusiness.MiniGames
         private GameTime gameTime;
         private SoundEffect trashInCan; //sound for collision between trash and trashcan
         private SoundEffect trashKick; //sound for collision between player and trash
+        private SoundEffect clock;
+        private SoundEffect timeover;
+        bool tenSecondsFlag = false;
+        int secondsToAlarm = 5;
 
         private Song backgroundMusic;
 
@@ -74,7 +78,15 @@ namespace MonkeyBusiness.MiniGames
         private void CheckIfTimePassed()
         {
             if (timer.seconds <= 0)
+            {
                 RestartLevel();
+                timeover.Play();
+            }
+            if (timer.seconds == secondsToAlarm && !tenSecondsFlag)
+            {
+                tenSecondsFlag = true;
+                clock.Play();
+            }
         }
         // restarts the level and resets the score and timer
         private void RestartLevel()
@@ -100,6 +112,7 @@ namespace MonkeyBusiness.MiniGames
 
         public override void Initialize()
         {
+            tenSecondsFlag = true;
             manager.IsMouseVisible = true;
             totalScores = scoreForTrash * numberOfTrashes[manager.diff];
         }
@@ -160,6 +173,8 @@ namespace MonkeyBusiness.MiniGames
             //loads the sound effects for collisions
             trashInCan = Content.Load<SoundEffect>("SoundFX/TrashInCan");
             trashKick = Content.Load<SoundEffect>("SoundFX/TrashKick");
+            clock = Content.Load<SoundEffect>("SoundFX/clock");
+            timeover = Content.Load<SoundEffect>("SoundFX/timeover");
             //creates the spawn point for the player and the trash can
             Vector2 monkeyPos = Utillities.RandomPosition(viewport, MonkeyTexture.Bounds);
             Vector2 canPos = new Vector2(viewport.Bounds.Center.X, viewport.Bounds.Center.Y);

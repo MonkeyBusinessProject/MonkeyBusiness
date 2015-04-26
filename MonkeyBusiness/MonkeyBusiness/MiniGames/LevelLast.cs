@@ -19,12 +19,12 @@ namespace MonkeyBusiness.MiniGames
 
         //Timer
         Timer timer = new Timer();
-        private int timeLimit = 25;
+        private int[] timeLimit = { 50, 100, 130, 90000000};
 
 
         const int  scoreForDollar = 100;
         int totalScores; //creats the number of dollars that will "fall from the sky", sets the score for collecting dollars and how much is needed to win
-        int[] numberOfDollars = { 30, 50, 100, 8000000 };
+        int[] numberOfDollars = { 30, 50, 100, 1000 };
         int initialScores; //defines the initial score based on previous levels
         Player player;
         private GameTime gameTime;
@@ -33,12 +33,16 @@ namespace MonkeyBusiness.MiniGames
         
         private SoundEffect moneycollect;
         private SoundEffect monkeySounds;
+        private SoundEffect clock;
+        private SoundEffect timeover;
+        bool tenSecondsFlag = false;
+        int secondsToAlarm = 5;
 
-        static int minimumInterval = 900, maximumInterval = 1000; //the minimum and maximum intervals between falling dollars
-        const int initialMinimumInterval = 900, initialMaximumInterval = 1000; //the initial minimum and maximum intervals
-        const int minInterval = 500;
+        static int[] minimumInterval = {900, 900, 700, 100}, maximumInterval = {1000, 1000, 800, 150}; //the minimum and maximum intervals between falling dollars
+        static int[] initialMinimumInterval = { 900, 900, 700, 100 }, initialMaximumInterval = { 1000, 1000, 800, 150 }; //the initial minimum and maximum intervals
+        static int[] minInterval = { 500, 500, 400, 80 };
         int timeFromLastDollar = 0; //the time from the last fallen dollar
-        int timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);//the time untill another dollar falls, generated randomly between the minimum and maximum intervals
+        int timeToNextDollar = 0; //the time untill another dollar falls, generated randomly between the minimum and maximum intervals
 
         float minimumDollarSpeed = 0.05f, maximumDollarSpeed = 0.06f, initialMinimumDollarSpeed = 0.05f, initialMaximumDollarSpeed = 0.06f; //the minimum and maximum speed of falling dollars
         const float maxSpeed = 0.2f;
@@ -81,13 +85,13 @@ namespace MonkeyBusiness.MiniGames
             {
                 moneycollect.Play();
                 if(maximumDollarSpeed < maxSpeed)
-                    minimumDollarSpeed += 0.01f;
-                if (minimumDollarSpeed < maxSpeed)
                     maximumDollarSpeed += 0.01f;
-                if (minimumInterval > minInterval)
-                    minimumInterval -= 10;
-                if (maximumInterval > minInterval)
-                    maximumInterval -= 10;
+                if (minimumDollarSpeed < maxSpeed)
+                    minimumDollarSpeed += 0.01f;
+                if (minimumInterval[manager.diff] > minInterval[manager.diff])
+                    minimumInterval[manager.diff] -= 10;
+                if (maximumInterval[manager.diff] > minInterval[manager.diff])
+                    maximumInterval[manager.diff] -= 10;
             }
         }
         //checks to see if the player collected a yellow banana. If so, the banana is removed, a soundbyte is played, and the player gains momentary increased movement speed
@@ -142,7 +146,7 @@ namespace MonkeyBusiness.MiniGames
                 createdObject = new InteractiveObject(texture, position, objectType);
                 createdObject.SetVelocity(0, dollarSpeed);
                 objects.Add(createdObject);
-                timeToNextDollar = Utillities.rnd.Next(minimumInterval, maximumInterval);
+                timeToNextDollar = Utillities.rnd.Next(minimumInterval[manager.diff], maximumInterval[manager.diff]);
                 timeFromLastDollar = 0;
             }
         }
@@ -156,7 +160,15 @@ namespace MonkeyBusiness.MiniGames
         private void CheckIfTimePassed()
         {
             if (timer.seconds <= 0)
+            {
                 RestartLevel();
+                timeover.Play();
+            }
+            if (timer.seconds == secondsToAlarm && !tenSecondsFlag)
+            {
+                tenSecondsFlag = true;
+                clock.Play();
+            }
         }
         //restarts the level
         private void RestartLevel()
@@ -180,6 +192,7 @@ namespace MonkeyBusiness.MiniGames
 
         public override void Initialize()
         {
+            tenSecondsFlag = false;
             manager.IsMouseVisible = true;//Or not...
             minimumDollarSpeed = initialMinimumDollarSpeed;
             maximumDollarSpeed = initialMaximumDollarSpeed;
@@ -224,7 +237,7 @@ namespace MonkeyBusiness.MiniGames
 
             //if the timer is not working, creates a new one, otherwise updates it.
             if (!timer.isWorking)
-                timer = new Timer(manager.score.font, gameTime, timeLimit);
+                timer = new Timer(manager.score.font, gameTime, timeLimit[manager.diff]);
             else
                 timer.Update(gameTime);
 
@@ -245,11 +258,13 @@ namespace MonkeyBusiness.MiniGames
             moneycollect = Content.Load<SoundEffect>("SoundFX/moneypop");
             monkeySounds = Content.Load<SoundEffect>("SoundFX/MonkeySounds");
             SEFBrownBananaCollect = Content.Load<SoundEffect>("SoundFX/BrownBananaCollect");
+            clock = Content.Load<SoundEffect>("SoundFX/clock");
+            timeover = Content.Load<SoundEffect>("SoundFX/timeover");
             //spawns the player and sets their speed
             player = new Player(MonkeyTexture, pos);
             player.speed = monkeySpeed;
             //animates the player using a spritesheet
-            player.LoadAnimation(Content.Load<Texture2D>("backgrounds/sheet"));
+            player.LoadAnimation(Content.Load<Texture2D>("sprites/sheet"));
             //objects.AddRange(Utillities.CreateListOfInteractiveObjectsInRandomPositions(numberOfDollars, DollarTexture, viewport, "dollar"));
             objects.Add(player);
             initialScores = manager.score.scores;

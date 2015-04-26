@@ -314,13 +314,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BGM\MenuMusic.mp3">
-      <Name>MenuMusic</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="backgrounds\MenuBackground.jpg">
       <Name>MenuBackground</Name>
       <Importer>TextureImporter</Importer>
@@ -346,6 +339,32 @@
       <Name>blank</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BGM\Queen - %27We Are The Champions%27.mp3">
+      <Name>EndOfTheGame</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+    <Compile Include="BGM\The Beatles - Everybody%27s Got Something to Hide Except Me and My Monkey.mp3">
+      <Name>MenuMusic</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\Cuckoo Clock-SoundBible.com-1776874523.mp3">
+      <Name>timeover</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SoundFX\clock.mp3">
+      <Name>clock</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

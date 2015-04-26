@@ -55,6 +55,7 @@ namespace MonkeyBusiness.MiniGames
         private void LoadMenuItems()
         {
             items.Add("Play Again");
+            items.Add("Easy");
             items.Add("Exit");
         }
 
@@ -83,6 +84,26 @@ namespace MonkeyBusiness.MiniGames
                 else if (items[chosenItem] == "Exit")
                 {
                     manager.Exit();
+                }
+                else if (items[chosenItem] == "Easy")
+                {
+                    items[chosenItem] = "Medium";
+                    manager.diff = 1;
+                }
+                else if (items[chosenItem] == "Medium")
+                {
+                    items[chosenItem] = "Hard";
+                    manager.diff = 2;
+                }
+                else if (items[chosenItem] == "Hard")
+                {
+                    items[chosenItem] = "Insane";
+                    manager.diff = 3;
+                }
+                else if (items[chosenItem] == "Insane")
+                {
+                    items[chosenItem] = "Easy";
+                    manager.diff = 0;
                 }
             }
 
@@ -177,7 +198,7 @@ namespace MonkeyBusiness.MiniGames
             fontItem = Content.Load<SpriteFont>("MenuItem");
 
             //loads the background music and plays it
-            backgroundMusic = Content.Load<Song>("BGM/MenuMusic");
+            backgroundMusic = Content.Load<Song>("BGM/EndOfTheGame");
             MediaPlayer.Play(backgroundMusic);
 
             cong = "Good job!\nYou completed the game\nand earned " + manager.score.scores.ToString() + " points!\nYou can restart the game\nand try to earn more points\nor exit and find some friends.\nGood luck!";
